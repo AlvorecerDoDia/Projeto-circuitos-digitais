@@ -1,0 +1,1359 @@
+TimeQuest Timing Analyzer report for top_level
+Fri Jun 19 10:37:36 2026
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clk_50'
+ 12. Slow Model Hold: 'clk_50'
+ 13. Slow Model Minimum Pulse Width: 'clk_50'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Propagation Delay
+ 19. Minimum Propagation Delay
+ 20. Fast Model Setup Summary
+ 21. Fast Model Hold Summary
+ 22. Fast Model Recovery Summary
+ 23. Fast Model Removal Summary
+ 24. Fast Model Minimum Pulse Width Summary
+ 25. Fast Model Setup: 'clk_50'
+ 26. Fast Model Hold: 'clk_50'
+ 27. Fast Model Minimum Pulse Width: 'clk_50'
+ 28. Setup Times
+ 29. Hold Times
+ 30. Clock to Output Times
+ 31. Minimum Clock to Output Times
+ 32. Propagation Delay
+ 33. Minimum Propagation Delay
+ 34. Multicorner Timing Analysis Summary
+ 35. Setup Times
+ 36. Hold Times
+ 37. Clock to Output Times
+ 38. Minimum Clock to Output Times
+ 39. Progagation Delay
+ 40. Minimum Progagation Delay
+ 41. Setup Transfers
+ 42. Hold Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; top_level                                                         ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C20F484C7                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 20     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                             ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets    ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; clk_50     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk_50 } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 236.41 MHz ; 236.41 MHz      ; clk_50     ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------+
+; Slow Model Setup Summary        ;
++--------+--------+---------------+
+; Clock  ; Slack  ; End Point TNS ;
++--------+--------+---------------+
+; clk_50 ; -3.230 ; -242.636      ;
++--------+--------+---------------+
+
+
++--------------------------------+
+; Slow Model Hold Summary        ;
++--------+-------+---------------+
+; Clock  ; Slack ; End Point TNS ;
++--------+-------+---------------+
+; clk_50 ; 0.445 ; 0.000         ;
++--------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++--------+--------+----------------------+
+; Clock  ; Slack  ; End Point TNS        ;
++--------+--------+----------------------+
+; clk_50 ; -1.631 ; -132.385             ;
++--------+--------+----------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk_50'                                                                                                                                              ;
++--------+--------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                  ; To Node                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -3.230 ; debounce:U_FILTRO1|contador[3]             ; debounce:U_FILTRO1|contador[0]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.268      ;
+; -3.230 ; debounce:U_FILTRO1|contador[3]             ; debounce:U_FILTRO1|contador[1]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.268      ;
+; -3.230 ; debounce:U_FILTRO1|contador[3]             ; debounce:U_FILTRO1|contador[2]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.268      ;
+; -3.230 ; debounce:U_FILTRO1|contador[3]             ; debounce:U_FILTRO1|contador[3]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.268      ;
+; -3.230 ; debounce:U_FILTRO1|contador[3]             ; debounce:U_FILTRO1|contador[4]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.268      ;
+; -3.230 ; debounce:U_FILTRO1|contador[3]             ; debounce:U_FILTRO1|contador[5]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.268      ;
+; -3.230 ; debounce:U_FILTRO1|contador[3]             ; debounce:U_FILTRO1|contador[6]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.268      ;
+; -3.230 ; debounce:U_FILTRO1|contador[3]             ; debounce:U_FILTRO1|contador[7]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.268      ;
+; -3.175 ; debounce:U_FILTRO2|contador[5]             ; debounce:U_FILTRO2|contador[1]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.213      ;
+; -3.175 ; debounce:U_FILTRO2|contador[5]             ; debounce:U_FILTRO2|contador[2]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.213      ;
+; -3.175 ; debounce:U_FILTRO2|contador[5]             ; debounce:U_FILTRO2|contador[3]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.213      ;
+; -3.175 ; debounce:U_FILTRO2|contador[5]             ; debounce:U_FILTRO2|contador[4]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.213      ;
+; -3.175 ; debounce:U_FILTRO2|contador[5]             ; debounce:U_FILTRO2|contador[5]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.213      ;
+; -3.175 ; debounce:U_FILTRO2|contador[5]             ; debounce:U_FILTRO2|contador[6]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.213      ;
+; -3.175 ; debounce:U_FILTRO2|contador[5]             ; debounce:U_FILTRO2|contador[7]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.213      ;
+; -3.175 ; debounce:U_FILTRO2|contador[5]             ; debounce:U_FILTRO2|contador[0]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.213      ;
+; -3.175 ; debounce:U_FILTRO1|contador[2]             ; debounce:U_FILTRO1|contador[0]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.213      ;
+; -3.175 ; debounce:U_FILTRO1|contador[2]             ; debounce:U_FILTRO1|contador[1]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.213      ;
+; -3.175 ; debounce:U_FILTRO1|contador[2]             ; debounce:U_FILTRO1|contador[2]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.213      ;
+; -3.175 ; debounce:U_FILTRO1|contador[2]             ; debounce:U_FILTRO1|contador[3]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.213      ;
+; -3.175 ; debounce:U_FILTRO1|contador[2]             ; debounce:U_FILTRO1|contador[4]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.213      ;
+; -3.175 ; debounce:U_FILTRO1|contador[2]             ; debounce:U_FILTRO1|contador[5]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.213      ;
+; -3.175 ; debounce:U_FILTRO1|contador[2]             ; debounce:U_FILTRO1|contador[6]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.213      ;
+; -3.175 ; debounce:U_FILTRO1|contador[2]             ; debounce:U_FILTRO1|contador[7]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.213      ;
+; -3.166 ; debounce:U_FILTRO1|contador[9]             ; debounce:U_FILTRO1|contador[0]              ; clk_50       ; clk_50      ; 1.000        ; 0.006      ; 4.210      ;
+; -3.166 ; debounce:U_FILTRO1|contador[9]             ; debounce:U_FILTRO1|contador[1]              ; clk_50       ; clk_50      ; 1.000        ; 0.006      ; 4.210      ;
+; -3.166 ; debounce:U_FILTRO1|contador[9]             ; debounce:U_FILTRO1|contador[2]              ; clk_50       ; clk_50      ; 1.000        ; 0.006      ; 4.210      ;
+; -3.166 ; debounce:U_FILTRO1|contador[9]             ; debounce:U_FILTRO1|contador[3]              ; clk_50       ; clk_50      ; 1.000        ; 0.006      ; 4.210      ;
+; -3.166 ; debounce:U_FILTRO1|contador[9]             ; debounce:U_FILTRO1|contador[4]              ; clk_50       ; clk_50      ; 1.000        ; 0.006      ; 4.210      ;
+; -3.166 ; debounce:U_FILTRO1|contador[9]             ; debounce:U_FILTRO1|contador[5]              ; clk_50       ; clk_50      ; 1.000        ; 0.006      ; 4.210      ;
+; -3.166 ; debounce:U_FILTRO1|contador[9]             ; debounce:U_FILTRO1|contador[6]              ; clk_50       ; clk_50      ; 1.000        ; 0.006      ; 4.210      ;
+; -3.166 ; debounce:U_FILTRO1|contador[9]             ; debounce:U_FILTRO1|contador[7]              ; clk_50       ; clk_50      ; 1.000        ; 0.006      ; 4.210      ;
+; -3.162 ; debounce:U_FILTRO3|contador[5]             ; debounce:U_FILTRO3|contador[1]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.200      ;
+; -3.162 ; debounce:U_FILTRO3|contador[5]             ; debounce:U_FILTRO3|contador[2]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.200      ;
+; -3.162 ; debounce:U_FILTRO3|contador[5]             ; debounce:U_FILTRO3|contador[3]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.200      ;
+; -3.162 ; debounce:U_FILTRO3|contador[5]             ; debounce:U_FILTRO3|contador[4]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.200      ;
+; -3.162 ; debounce:U_FILTRO3|contador[5]             ; debounce:U_FILTRO3|contador[5]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.200      ;
+; -3.162 ; debounce:U_FILTRO3|contador[5]             ; debounce:U_FILTRO3|contador[6]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.200      ;
+; -3.162 ; debounce:U_FILTRO3|contador[5]             ; debounce:U_FILTRO3|contador[7]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.200      ;
+; -3.162 ; debounce:U_FILTRO3|contador[5]             ; debounce:U_FILTRO3|contador[0]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.200      ;
+; -3.149 ; debounce:U_FILTRO2|contador[9]             ; debounce:U_FILTRO2|contador[1]              ; clk_50       ; clk_50      ; 1.000        ; 0.009      ; 4.196      ;
+; -3.149 ; debounce:U_FILTRO2|contador[9]             ; debounce:U_FILTRO2|contador[2]              ; clk_50       ; clk_50      ; 1.000        ; 0.009      ; 4.196      ;
+; -3.149 ; debounce:U_FILTRO2|contador[9]             ; debounce:U_FILTRO2|contador[3]              ; clk_50       ; clk_50      ; 1.000        ; 0.009      ; 4.196      ;
+; -3.149 ; debounce:U_FILTRO2|contador[9]             ; debounce:U_FILTRO2|contador[4]              ; clk_50       ; clk_50      ; 1.000        ; 0.009      ; 4.196      ;
+; -3.149 ; debounce:U_FILTRO2|contador[9]             ; debounce:U_FILTRO2|contador[5]              ; clk_50       ; clk_50      ; 1.000        ; 0.009      ; 4.196      ;
+; -3.149 ; debounce:U_FILTRO2|contador[9]             ; debounce:U_FILTRO2|contador[6]              ; clk_50       ; clk_50      ; 1.000        ; 0.009      ; 4.196      ;
+; -3.149 ; debounce:U_FILTRO2|contador[9]             ; debounce:U_FILTRO2|contador[7]              ; clk_50       ; clk_50      ; 1.000        ; 0.009      ; 4.196      ;
+; -3.149 ; debounce:U_FILTRO2|contador[9]             ; debounce:U_FILTRO2|contador[0]              ; clk_50       ; clk_50      ; 1.000        ; 0.009      ; 4.196      ;
+; -3.125 ; debounce:U_FILTRO2|contador[4]             ; debounce:U_FILTRO2|contador[1]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.163      ;
+; -3.125 ; debounce:U_FILTRO2|contador[4]             ; debounce:U_FILTRO2|contador[2]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.163      ;
+; -3.125 ; debounce:U_FILTRO2|contador[4]             ; debounce:U_FILTRO2|contador[3]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.163      ;
+; -3.125 ; debounce:U_FILTRO2|contador[4]             ; debounce:U_FILTRO2|contador[4]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.163      ;
+; -3.125 ; debounce:U_FILTRO2|contador[4]             ; debounce:U_FILTRO2|contador[5]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.163      ;
+; -3.125 ; debounce:U_FILTRO2|contador[4]             ; debounce:U_FILTRO2|contador[6]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.163      ;
+; -3.125 ; debounce:U_FILTRO2|contador[4]             ; debounce:U_FILTRO2|contador[7]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.163      ;
+; -3.125 ; debounce:U_FILTRO2|contador[4]             ; debounce:U_FILTRO2|contador[0]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.163      ;
+; -3.112 ; debounce:U_FILTRO3|contador[4]             ; debounce:U_FILTRO3|contador[1]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.150      ;
+; -3.112 ; debounce:U_FILTRO3|contador[4]             ; debounce:U_FILTRO3|contador[2]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.150      ;
+; -3.112 ; debounce:U_FILTRO3|contador[4]             ; debounce:U_FILTRO3|contador[3]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.150      ;
+; -3.112 ; debounce:U_FILTRO3|contador[4]             ; debounce:U_FILTRO3|contador[4]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.150      ;
+; -3.112 ; debounce:U_FILTRO3|contador[4]             ; debounce:U_FILTRO3|contador[5]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.150      ;
+; -3.112 ; debounce:U_FILTRO3|contador[4]             ; debounce:U_FILTRO3|contador[6]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.150      ;
+; -3.112 ; debounce:U_FILTRO3|contador[4]             ; debounce:U_FILTRO3|contador[7]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.150      ;
+; -3.112 ; debounce:U_FILTRO3|contador[4]             ; debounce:U_FILTRO3|contador[0]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.150      ;
+; -3.104 ; debounce:U_FILTRO2|contador[8]             ; debounce:U_FILTRO2|contador[1]              ; clk_50       ; clk_50      ; 1.000        ; 0.009      ; 4.151      ;
+; -3.104 ; debounce:U_FILTRO2|contador[8]             ; debounce:U_FILTRO2|contador[2]              ; clk_50       ; clk_50      ; 1.000        ; 0.009      ; 4.151      ;
+; -3.104 ; debounce:U_FILTRO2|contador[8]             ; debounce:U_FILTRO2|contador[3]              ; clk_50       ; clk_50      ; 1.000        ; 0.009      ; 4.151      ;
+; -3.104 ; debounce:U_FILTRO2|contador[8]             ; debounce:U_FILTRO2|contador[4]              ; clk_50       ; clk_50      ; 1.000        ; 0.009      ; 4.151      ;
+; -3.104 ; debounce:U_FILTRO2|contador[8]             ; debounce:U_FILTRO2|contador[5]              ; clk_50       ; clk_50      ; 1.000        ; 0.009      ; 4.151      ;
+; -3.104 ; debounce:U_FILTRO2|contador[8]             ; debounce:U_FILTRO2|contador[6]              ; clk_50       ; clk_50      ; 1.000        ; 0.009      ; 4.151      ;
+; -3.104 ; debounce:U_FILTRO2|contador[8]             ; debounce:U_FILTRO2|contador[7]              ; clk_50       ; clk_50      ; 1.000        ; 0.009      ; 4.151      ;
+; -3.104 ; debounce:U_FILTRO2|contador[8]             ; debounce:U_FILTRO2|contador[0]              ; clk_50       ; clk_50      ; 1.000        ; 0.009      ; 4.151      ;
+; -3.102 ; datapath:U_BLOCO_DADOS|estq_sonho_valsa[0] ; mef:U_CONTROLE|estado_atual.ENTREGA_PRODUTO ; clk_50       ; clk_50      ; 1.000        ; -0.001     ; 4.139      ;
+; -3.101 ; debounce:U_FILTRO1|contador[5]             ; debounce:U_FILTRO1|contador[0]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.139      ;
+; -3.101 ; debounce:U_FILTRO1|contador[5]             ; debounce:U_FILTRO1|contador[1]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.139      ;
+; -3.101 ; debounce:U_FILTRO1|contador[5]             ; debounce:U_FILTRO1|contador[2]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.139      ;
+; -3.101 ; debounce:U_FILTRO1|contador[5]             ; debounce:U_FILTRO1|contador[3]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.139      ;
+; -3.101 ; debounce:U_FILTRO1|contador[5]             ; debounce:U_FILTRO1|contador[4]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.139      ;
+; -3.101 ; debounce:U_FILTRO1|contador[5]             ; debounce:U_FILTRO1|contador[5]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.139      ;
+; -3.101 ; debounce:U_FILTRO1|contador[5]             ; debounce:U_FILTRO1|contador[6]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.139      ;
+; -3.101 ; debounce:U_FILTRO1|contador[5]             ; debounce:U_FILTRO1|contador[7]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.139      ;
+; -3.101 ; debounce:U_FILTRO1|contador[8]             ; debounce:U_FILTRO1|contador[0]              ; clk_50       ; clk_50      ; 1.000        ; 0.005      ; 4.144      ;
+; -3.101 ; debounce:U_FILTRO1|contador[8]             ; debounce:U_FILTRO1|contador[1]              ; clk_50       ; clk_50      ; 1.000        ; 0.005      ; 4.144      ;
+; -3.101 ; debounce:U_FILTRO1|contador[8]             ; debounce:U_FILTRO1|contador[2]              ; clk_50       ; clk_50      ; 1.000        ; 0.005      ; 4.144      ;
+; -3.101 ; debounce:U_FILTRO1|contador[8]             ; debounce:U_FILTRO1|contador[3]              ; clk_50       ; clk_50      ; 1.000        ; 0.005      ; 4.144      ;
+; -3.101 ; debounce:U_FILTRO1|contador[8]             ; debounce:U_FILTRO1|contador[4]              ; clk_50       ; clk_50      ; 1.000        ; 0.005      ; 4.144      ;
+; -3.101 ; debounce:U_FILTRO1|contador[8]             ; debounce:U_FILTRO1|contador[5]              ; clk_50       ; clk_50      ; 1.000        ; 0.005      ; 4.144      ;
+; -3.101 ; debounce:U_FILTRO1|contador[8]             ; debounce:U_FILTRO1|contador[6]              ; clk_50       ; clk_50      ; 1.000        ; 0.005      ; 4.144      ;
+; -3.101 ; debounce:U_FILTRO1|contador[8]             ; debounce:U_FILTRO1|contador[7]              ; clk_50       ; clk_50      ; 1.000        ; 0.005      ; 4.144      ;
+; -3.100 ; datapath:U_BLOCO_DADOS|estq_sonho_valsa[0] ; mef:U_CONTROLE|estado_atual.ESPERA          ; clk_50       ; clk_50      ; 1.000        ; -0.001     ; 4.137      ;
+; -3.100 ; debounce:U_FILTRO2|contador[6]             ; debounce:U_FILTRO2|contador[1]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.138      ;
+; -3.100 ; debounce:U_FILTRO2|contador[6]             ; debounce:U_FILTRO2|contador[2]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.138      ;
+; -3.100 ; debounce:U_FILTRO2|contador[6]             ; debounce:U_FILTRO2|contador[3]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.138      ;
+; -3.100 ; debounce:U_FILTRO2|contador[6]             ; debounce:U_FILTRO2|contador[4]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.138      ;
+; -3.100 ; debounce:U_FILTRO2|contador[6]             ; debounce:U_FILTRO2|contador[5]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.138      ;
+; -3.100 ; debounce:U_FILTRO2|contador[6]             ; debounce:U_FILTRO2|contador[6]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.138      ;
+; -3.100 ; debounce:U_FILTRO2|contador[6]             ; debounce:U_FILTRO2|contador[7]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.138      ;
+; -3.100 ; debounce:U_FILTRO2|contador[6]             ; debounce:U_FILTRO2|contador[0]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.138      ;
+; -3.087 ; debounce:U_FILTRO3|contador[6]             ; debounce:U_FILTRO3|contador[1]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.125      ;
+; -3.087 ; debounce:U_FILTRO3|contador[6]             ; debounce:U_FILTRO3|contador[2]              ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.125      ;
++--------+--------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk_50'                                                                                                                                             ;
++-------+--------------------------------------------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                  ; To Node                                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.445 ; debounce:U_FILTRO3|botao_estavel           ; debounce:U_FILTRO3|botao_estavel           ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; debounce:U_FILTRO1|botao_estavel           ; debounce:U_FILTRO1|botao_estavel           ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; debounce:U_FILTRO2|botao_estavel           ; debounce:U_FILTRO2|botao_estavel           ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; datapath:U_BLOCO_DADOS|estq_kitkat[0]      ; datapath:U_BLOCO_DADOS|estq_kitkat[0]      ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; datapath:U_BLOCO_DADOS|estq_kitkat[1]      ; datapath:U_BLOCO_DADOS|estq_kitkat[1]      ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; datapath:U_BLOCO_DADOS|estq_kitkat[2]      ; datapath:U_BLOCO_DADOS|estq_kitkat[2]      ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; datapath:U_BLOCO_DADOS|estq_trident[0]     ; datapath:U_BLOCO_DADOS|estq_trident[0]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; datapath:U_BLOCO_DADOS|estq_trident[1]     ; datapath:U_BLOCO_DADOS|estq_trident[1]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; datapath:U_BLOCO_DADOS|estq_trident[2]     ; datapath:U_BLOCO_DADOS|estq_trident[2]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; datapath:U_BLOCO_DADOS|estq_trident[3]     ; datapath:U_BLOCO_DADOS|estq_trident[3]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; datapath:U_BLOCO_DADOS|estq_sonho_valsa[0] ; datapath:U_BLOCO_DADOS|estq_sonho_valsa[0] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; datapath:U_BLOCO_DADOS|estq_sonho_valsa[1] ; datapath:U_BLOCO_DADOS|estq_sonho_valsa[1] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; datapath:U_BLOCO_DADOS|estq_sonho_valsa[2] ; datapath:U_BLOCO_DADOS|estq_sonho_valsa[2] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; datapath:U_BLOCO_DADOS|estq_ouro_branco[0] ; datapath:U_BLOCO_DADOS|estq_ouro_branco[0] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; datapath:U_BLOCO_DADOS|estq_ouro_branco[1] ; datapath:U_BLOCO_DADOS|estq_ouro_branco[1] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; datapath:U_BLOCO_DADOS|estq_ouro_branco[2] ; datapath:U_BLOCO_DADOS|estq_ouro_branco[2] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; datapath:U_BLOCO_DADOS|estq_bis_caixa[0]   ; datapath:U_BLOCO_DADOS|estq_bis_caixa[0]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; datapath:U_BLOCO_DADOS|estq_bis_caixa[1]   ; datapath:U_BLOCO_DADOS|estq_bis_caixa[1]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; datapath:U_BLOCO_DADOS|estq_bis_caixa[2]   ; datapath:U_BLOCO_DADOS|estq_bis_caixa[2]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; datapath:U_BLOCO_DADOS|estq_bis_extra[0]   ; datapath:U_BLOCO_DADOS|estq_bis_extra[0]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; datapath:U_BLOCO_DADOS|estq_bis_extra[1]   ; datapath:U_BLOCO_DADOS|estq_bis_extra[1]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; datapath:U_BLOCO_DADOS|estq_bis_extra[2]   ; datapath:U_BLOCO_DADOS|estq_bis_extra[2]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; datapath:U_BLOCO_DADOS|estq_mms[0]         ; datapath:U_BLOCO_DADOS|estq_mms[0]         ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; datapath:U_BLOCO_DADOS|estq_mms[1]         ; datapath:U_BLOCO_DADOS|estq_mms[1]         ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; datapath:U_BLOCO_DADOS|estq_mms[2]         ; datapath:U_BLOCO_DADOS|estq_mms[2]         ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; datapath:U_BLOCO_DADOS|estq_snickers[0]    ; datapath:U_BLOCO_DADOS|estq_snickers[0]    ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; datapath:U_BLOCO_DADOS|estq_snickers[1]    ; datapath:U_BLOCO_DADOS|estq_snickers[1]    ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; datapath:U_BLOCO_DADOS|estq_snickers[2]    ; datapath:U_BLOCO_DADOS|estq_snickers[2]    ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; datapath:U_BLOCO_DADOS|estq_snickers[3]    ; datapath:U_BLOCO_DADOS|estq_snickers[3]    ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.628 ; debounce:U_FILTRO2|contador[18]            ; debounce:U_FILTRO2|contador[18]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.914      ;
+; 0.628 ; datapath:U_BLOCO_DADOS|estq_ouro_branco[1] ; datapath:U_BLOCO_DADOS|estq_ouro_branco[2] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.914      ;
+; 0.633 ; debounce:U_FILTRO3|contador[18]            ; debounce:U_FILTRO3|contador[18]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.919      ;
+; 0.633 ; datapath:U_BLOCO_DADOS|soma_atual[9]       ; datapath:U_BLOCO_DADOS|soma_atual[9]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.919      ;
+; 0.637 ; debounce:U_FILTRO1|contador[18]            ; debounce:U_FILTRO1|contador[18]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.923      ;
+; 0.867 ; debounce:U_FILTRO1|botao_ant               ; debounce:U_FILTRO1|botao_pulso             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.153      ;
+; 0.869 ; debounce:U_FILTRO2|botao_ant               ; debounce:U_FILTRO2|botao_pulso             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.155      ;
+; 0.908 ; debounce:U_FILTRO3|botao_ant               ; debounce:U_FILTRO3|botao_pulso             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.194      ;
+; 0.966 ; debounce:U_FILTRO3|contador[9]             ; debounce:U_FILTRO3|contador[9]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.252      ;
+; 0.968 ; debounce:U_FILTRO3|contador[0]             ; debounce:U_FILTRO3|contador[0]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.254      ;
+; 0.968 ; debounce:U_FILTRO1|contador[0]             ; debounce:U_FILTRO1|contador[0]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.254      ;
+; 0.968 ; debounce:U_FILTRO1|contador[9]             ; debounce:U_FILTRO1|contador[9]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.254      ;
+; 0.968 ; debounce:U_FILTRO2|contador[9]             ; debounce:U_FILTRO2|contador[9]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.254      ;
+; 0.968 ; debounce:U_FILTRO2|contador[0]             ; debounce:U_FILTRO2|contador[0]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.254      ;
+; 0.971 ; debounce:U_FILTRO1|contador[2]             ; debounce:U_FILTRO1|contador[2]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.257      ;
+; 0.972 ; debounce:U_FILTRO3|contador[7]             ; debounce:U_FILTRO3|contador[7]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.258      ;
+; 0.972 ; debounce:U_FILTRO2|contador[7]             ; debounce:U_FILTRO2|contador[7]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.258      ;
+; 0.974 ; debounce:U_FILTRO3|contador[10]            ; debounce:U_FILTRO3|contador[10]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.260      ;
+; 0.976 ; debounce:U_FILTRO3|contador[2]             ; debounce:U_FILTRO3|contador[2]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.262      ;
+; 0.976 ; debounce:U_FILTRO3|contador[4]             ; debounce:U_FILTRO3|contador[4]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.262      ;
+; 0.976 ; debounce:U_FILTRO1|contador[6]             ; debounce:U_FILTRO1|contador[6]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.262      ;
+; 0.976 ; debounce:U_FILTRO1|contador[7]             ; debounce:U_FILTRO1|contador[7]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.262      ;
+; 0.976 ; debounce:U_FILTRO2|contador[2]             ; debounce:U_FILTRO2|contador[2]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.262      ;
+; 0.976 ; debounce:U_FILTRO2|contador[4]             ; debounce:U_FILTRO2|contador[4]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.262      ;
+; 0.976 ; datapath:U_BLOCO_DADOS|estq_bis_extra[1]   ; datapath:U_BLOCO_DADOS|estq_bis_extra[2]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.262      ;
+; 0.977 ; debounce:U_FILTRO3|contador[6]             ; debounce:U_FILTRO3|contador[6]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.263      ;
+; 0.977 ; debounce:U_FILTRO1|contador[4]             ; debounce:U_FILTRO1|contador[4]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.263      ;
+; 0.977 ; debounce:U_FILTRO2|contador[6]             ; debounce:U_FILTRO2|contador[6]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.263      ;
+; 0.977 ; datapath:U_BLOCO_DADOS|estq_bis_caixa[0]   ; datapath:U_BLOCO_DADOS|estq_bis_caixa[1]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.263      ;
+; 0.977 ; datapath:U_BLOCO_DADOS|estq_bis_caixa[0]   ; datapath:U_BLOCO_DADOS|estq_bis_caixa[2]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.263      ;
+; 0.980 ; debounce:U_FILTRO3|contador[11]            ; debounce:U_FILTRO3|contador[11]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.266      ;
+; 0.980 ; debounce:U_FILTRO3|contador[13]            ; debounce:U_FILTRO3|contador[13]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.266      ;
+; 0.980 ; debounce:U_FILTRO1|contador[13]            ; debounce:U_FILTRO1|contador[13]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.266      ;
+; 0.980 ; debounce:U_FILTRO1|contador[16]            ; debounce:U_FILTRO1|contador[16]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.266      ;
+; 0.981 ; datapath:U_BLOCO_DADOS|soma_atual[2]       ; datapath:U_BLOCO_DADOS|soma_atual[2]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.267      ;
+; 0.981 ; datapath:U_BLOCO_DADOS|soma_atual[7]       ; datapath:U_BLOCO_DADOS|soma_atual[7]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.267      ;
+; 0.982 ; debounce:U_FILTRO1|contador[10]            ; debounce:U_FILTRO1|contador[10]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.268      ;
+; 0.982 ; datapath:U_BLOCO_DADOS|estq_kitkat[1]      ; datapath:U_BLOCO_DADOS|estq_kitkat[2]      ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.268      ;
+; 0.982 ; datapath:U_BLOCO_DADOS|estq_sonho_valsa[1] ; datapath:U_BLOCO_DADOS|estq_sonho_valsa[2] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.268      ;
+; 0.983 ; datapath:U_BLOCO_DADOS|estq_ouro_branco[0] ; datapath:U_BLOCO_DADOS|estq_ouro_branco[1] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.269      ;
+; 0.984 ; debounce:U_FILTRO2|contador[11]            ; debounce:U_FILTRO2|contador[11]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.270      ;
+; 0.984 ; debounce:U_FILTRO2|contador[13]            ; debounce:U_FILTRO2|contador[13]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.270      ;
+; 0.984 ; datapath:U_BLOCO_DADOS|estq_ouro_branco[0] ; datapath:U_BLOCO_DADOS|estq_ouro_branco[2] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.270      ;
+; 0.985 ; debounce:U_FILTRO3|contador[16]            ; debounce:U_FILTRO3|contador[16]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.271      ;
+; 0.985 ; debounce:U_FILTRO2|contador[16]            ; debounce:U_FILTRO2|contador[16]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.271      ;
+; 0.987 ; datapath:U_BLOCO_DADOS|estq_snickers[0]    ; datapath:U_BLOCO_DADOS|estq_snickers[1]    ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.273      ;
+; 1.007 ; debounce:U_FILTRO2|botao_pulso             ; mef:U_CONTROLE|estado_atual.DEVOLUCAO      ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.293      ;
+; 1.011 ; datapath:U_BLOCO_DADOS|soma_atual[8]       ; datapath:U_BLOCO_DADOS|soma_atual[8]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.297      ;
+; 1.014 ; debounce:U_FILTRO1|contador[17]            ; debounce:U_FILTRO1|contador[17]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.300      ;
+; 1.014 ; debounce:U_FILTRO2|contador[12]            ; debounce:U_FILTRO2|contador[12]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.300      ;
+; 1.014 ; debounce:U_FILTRO2|contador[17]            ; debounce:U_FILTRO2|contador[17]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.300      ;
+; 1.015 ; debounce:U_FILTRO3|contador[12]            ; debounce:U_FILTRO3|contador[12]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.301      ;
+; 1.015 ; debounce:U_FILTRO3|contador[15]            ; debounce:U_FILTRO3|contador[15]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.301      ;
+; 1.015 ; debounce:U_FILTRO3|contador[17]            ; debounce:U_FILTRO3|contador[17]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.301      ;
+; 1.015 ; debounce:U_FILTRO1|contador[14]            ; debounce:U_FILTRO1|contador[14]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.301      ;
+; 1.015 ; debounce:U_FILTRO1|contador[15]            ; debounce:U_FILTRO1|contador[15]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.301      ;
+; 1.015 ; debounce:U_FILTRO2|contador[15]            ; debounce:U_FILTRO2|contador[15]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.301      ;
+; 1.016 ; datapath:U_BLOCO_DADOS|soma_atual[3]       ; datapath:U_BLOCO_DADOS|soma_atual[3]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.302      ;
+; 1.021 ; debounce:U_FILTRO1|contador[1]             ; debounce:U_FILTRO1|contador[1]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.307      ;
+; 1.022 ; debounce:U_FILTRO3|contador[1]             ; debounce:U_FILTRO3|contador[1]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.308      ;
+; 1.022 ; debounce:U_FILTRO3|contador[3]             ; debounce:U_FILTRO3|contador[3]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.308      ;
+; 1.022 ; debounce:U_FILTRO1|contador[3]             ; debounce:U_FILTRO1|contador[3]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.308      ;
+; 1.022 ; debounce:U_FILTRO1|contador[5]             ; debounce:U_FILTRO1|contador[5]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.308      ;
+; 1.022 ; debounce:U_FILTRO2|contador[1]             ; debounce:U_FILTRO2|contador[1]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.308      ;
+; 1.022 ; debounce:U_FILTRO2|contador[3]             ; debounce:U_FILTRO2|contador[3]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.308      ;
+; 1.023 ; debounce:U_FILTRO3|contador[5]             ; debounce:U_FILTRO3|contador[5]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.309      ;
+; 1.023 ; debounce:U_FILTRO2|contador[5]             ; debounce:U_FILTRO2|contador[5]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.309      ;
+; 1.023 ; datapath:U_BLOCO_DADOS|estq_mms[1]         ; datapath:U_BLOCO_DADOS|estq_mms[2]         ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.309      ;
+; 1.024 ; datapath:U_BLOCO_DADOS|soma_atual[5]       ; datapath:U_BLOCO_DADOS|soma_atual[5]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.310      ;
+; 1.027 ; datapath:U_BLOCO_DADOS|soma_atual[6]       ; datapath:U_BLOCO_DADOS|soma_atual[6]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.313      ;
+; 1.027 ; datapath:U_BLOCO_DADOS|estq_bis_extra[0]   ; datapath:U_BLOCO_DADOS|estq_bis_extra[1]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.313      ;
++-------+--------------------------------------------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk_50'                                                                                     ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                                     ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------------------------+
+; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; clk_50 ; Rise       ; clk_50                                     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_bis_caixa[0]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_bis_caixa[0]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_bis_caixa[1]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_bis_caixa[1]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_bis_caixa[2]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_bis_caixa[2]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_bis_extra[0]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_bis_extra[0]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_bis_extra[1]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_bis_extra[1]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_bis_extra[2]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_bis_extra[2]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_kitkat[0]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_kitkat[0]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_kitkat[1]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_kitkat[1]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_kitkat[2]      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_kitkat[2]      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_mms[0]         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_mms[0]         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_mms[1]         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_mms[1]         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_mms[2]         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_mms[2]         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_ouro_branco[0] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_ouro_branco[0] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_ouro_branco[1] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_ouro_branco[1] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_ouro_branco[2] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_ouro_branco[2] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_snickers[0]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_snickers[0]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_snickers[1]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_snickers[1]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_snickers[2]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_snickers[2]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_snickers[3]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_snickers[3]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_sonho_valsa[0] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_sonho_valsa[0] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_sonho_valsa[1] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_sonho_valsa[1] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_sonho_valsa[2] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_sonho_valsa[2] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_trident[0]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_trident[0]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_trident[1]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_trident[1]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_trident[2]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_trident[2]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_trident[3]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_trident[3]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|soma_atual[0]       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|soma_atual[0]       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|soma_atual[1]       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|soma_atual[1]       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|soma_atual[2]       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|soma_atual[2]       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|soma_atual[3]       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|soma_atual[3]       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|soma_atual[4]       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|soma_atual[4]       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|soma_atual[5]       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|soma_atual[5]       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|soma_atual[6]       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|soma_atual[6]       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|soma_atual[7]       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|soma_atual[7]       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|soma_atual[8]       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|soma_atual[8]       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|soma_atual[9]       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|soma_atual[9]       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; debounce:U_FILTRO1|botao_ant               ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; debounce:U_FILTRO1|botao_ant               ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; debounce:U_FILTRO1|botao_estavel           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; debounce:U_FILTRO1|botao_estavel           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; debounce:U_FILTRO1|botao_pulso             ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; debounce:U_FILTRO1|botao_pulso             ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[0]             ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[0]             ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[10]            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[10]            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[11]            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[11]            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[12]            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[12]            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[13]            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[13]            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[14]            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[14]            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[15]            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[15]            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[16]            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[16]            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[17]            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[17]            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[18]            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[18]            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[1]             ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------------------------+
+
+
++--------------------------------------------------------------------------------+
+; Setup Times                                                                    ;
++--------------------+------------+-------+-------+------------+-----------------+
+; Data Port          ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------------+------------+-------+-------+------------+-----------------+
+; btn_confirmar      ; clk_50     ; 5.617 ; 5.617 ; Rise       ; clk_50          ;
+; btn_desistir       ; clk_50     ; 5.680 ; 5.680 ; Rise       ; clk_50          ;
+; btn_inserir_moeda  ; clk_50     ; 5.424 ; 5.424 ; Rise       ; clk_50          ;
+; ch_produto[*]      ; clk_50     ; 4.867 ; 4.867 ; Rise       ; clk_50          ;
+;  ch_produto[0]     ; clk_50     ; 4.582 ; 4.582 ; Rise       ; clk_50          ;
+;  ch_produto[1]     ; clk_50     ; 4.219 ; 4.219 ; Rise       ; clk_50          ;
+;  ch_produto[2]     ; clk_50     ; 4.867 ; 4.867 ; Rise       ; clk_50          ;
+; ch_valor_moeda[*]  ; clk_50     ; 2.203 ; 2.203 ; Rise       ; clk_50          ;
+;  ch_valor_moeda[0] ; clk_50     ; 1.834 ; 1.834 ; Rise       ; clk_50          ;
+;  ch_valor_moeda[1] ; clk_50     ; 2.203 ; 2.203 ; Rise       ; clk_50          ;
+;  ch_valor_moeda[2] ; clk_50     ; 1.992 ; 1.992 ; Rise       ; clk_50          ;
++--------------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------------+
+; Hold Times                                                                       ;
++--------------------+------------+--------+--------+------------+-----------------+
+; Data Port          ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------------+------------+--------+--------+------------+-----------------+
+; btn_confirmar      ; clk_50     ; -4.055 ; -4.055 ; Rise       ; clk_50          ;
+; btn_desistir       ; clk_50     ; -4.120 ; -4.120 ; Rise       ; clk_50          ;
+; btn_inserir_moeda  ; clk_50     ; -3.870 ; -3.870 ; Rise       ; clk_50          ;
+; ch_produto[*]      ; clk_50     ; -0.220 ; -0.220 ; Rise       ; clk_50          ;
+;  ch_produto[0]     ; clk_50     ; -0.220 ; -0.220 ; Rise       ; clk_50          ;
+;  ch_produto[1]     ; clk_50     ; -0.874 ; -0.874 ; Rise       ; clk_50          ;
+;  ch_produto[2]     ; clk_50     ; -0.228 ; -0.228 ; Rise       ; clk_50          ;
+; ch_valor_moeda[*]  ; clk_50     ; -0.283 ; -0.283 ; Rise       ; clk_50          ;
+;  ch_valor_moeda[0] ; clk_50     ; -0.283 ; -0.283 ; Rise       ; clk_50          ;
+;  ch_valor_moeda[1] ; clk_50     ; -0.638 ; -0.638 ; Rise       ; clk_50          ;
+;  ch_valor_moeda[2] ; clk_50     ; -0.433 ; -0.433 ; Rise       ; clk_50          ;
++--------------------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Clock to Output Times                                                          ;
++------------------+------------+--------+--------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------------+------------+--------+--------+------------+-----------------+
+; hex_centenas[*]  ; clk_50     ; 22.962 ; 22.962 ; Rise       ; clk_50          ;
+;  hex_centenas[0] ; clk_50     ; 22.594 ; 22.594 ; Rise       ; clk_50          ;
+;  hex_centenas[1] ; clk_50     ; 22.595 ; 22.595 ; Rise       ; clk_50          ;
+;  hex_centenas[2] ; clk_50     ; 22.634 ; 22.634 ; Rise       ; clk_50          ;
+;  hex_centenas[3] ; clk_50     ; 22.638 ; 22.638 ; Rise       ; clk_50          ;
+;  hex_centenas[4] ; clk_50     ; 22.962 ; 22.962 ; Rise       ; clk_50          ;
+;  hex_centenas[5] ; clk_50     ; 22.606 ; 22.606 ; Rise       ; clk_50          ;
+;  hex_centenas[6] ; clk_50     ; 22.948 ; 22.948 ; Rise       ; clk_50          ;
+; hex_dezenas[*]   ; clk_50     ; 46.580 ; 46.580 ; Rise       ; clk_50          ;
+;  hex_dezenas[0]  ; clk_50     ; 45.840 ; 45.840 ; Rise       ; clk_50          ;
+;  hex_dezenas[1]  ; clk_50     ; 46.070 ; 46.070 ; Rise       ; clk_50          ;
+;  hex_dezenas[2]  ; clk_50     ; 45.891 ; 45.891 ; Rise       ; clk_50          ;
+;  hex_dezenas[3]  ; clk_50     ; 46.211 ; 46.211 ; Rise       ; clk_50          ;
+;  hex_dezenas[4]  ; clk_50     ; 45.830 ; 45.830 ; Rise       ; clk_50          ;
+;  hex_dezenas[5]  ; clk_50     ; 46.346 ; 46.346 ; Rise       ; clk_50          ;
+;  hex_dezenas[6]  ; clk_50     ; 46.580 ; 46.580 ; Rise       ; clk_50          ;
+; hex_unidades[*]  ; clk_50     ; 54.335 ; 54.335 ; Rise       ; clk_50          ;
+;  hex_unidades[0] ; clk_50     ; 53.079 ; 53.079 ; Rise       ; clk_50          ;
+;  hex_unidades[1] ; clk_50     ; 53.106 ; 53.106 ; Rise       ; clk_50          ;
+;  hex_unidades[2] ; clk_50     ; 53.471 ; 53.471 ; Rise       ; clk_50          ;
+;  hex_unidades[3] ; clk_50     ; 53.928 ; 53.928 ; Rise       ; clk_50          ;
+;  hex_unidades[4] ; clk_50     ; 52.343 ; 52.343 ; Rise       ; clk_50          ;
+;  hex_unidades[5] ; clk_50     ; 54.335 ; 54.335 ; Rise       ; clk_50          ;
+;  hex_unidades[6] ; clk_50     ; 54.304 ; 54.304 ; Rise       ; clk_50          ;
+; led_devolver     ; clk_50     ; 9.289  ; 9.289  ; Rise       ; clk_50          ;
+; led_liberar      ; clk_50     ; 8.254  ; 8.254  ; Rise       ; clk_50          ;
+; led_sem_estoque  ; clk_50     ; 7.992  ; 7.992  ; Rise       ; clk_50          ;
+; led_troco        ; clk_50     ; 11.873 ; 11.873 ; Rise       ; clk_50          ;
++------------------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                  ;
++------------------+------------+--------+--------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------------+------------+--------+--------+------------+-----------------+
+; hex_centenas[*]  ; clk_50     ; 12.170 ; 12.170 ; Rise       ; clk_50          ;
+;  hex_centenas[0] ; clk_50     ; 12.170 ; 12.170 ; Rise       ; clk_50          ;
+;  hex_centenas[1] ; clk_50     ; 12.189 ; 12.189 ; Rise       ; clk_50          ;
+;  hex_centenas[2] ; clk_50     ; 12.228 ; 12.228 ; Rise       ; clk_50          ;
+;  hex_centenas[3] ; clk_50     ; 12.218 ; 12.218 ; Rise       ; clk_50          ;
+;  hex_centenas[4] ; clk_50     ; 12.543 ; 12.543 ; Rise       ; clk_50          ;
+;  hex_centenas[5] ; clk_50     ; 12.200 ; 12.200 ; Rise       ; clk_50          ;
+;  hex_centenas[6] ; clk_50     ; 12.541 ; 12.541 ; Rise       ; clk_50          ;
+; hex_dezenas[*]   ; clk_50     ; 14.151 ; 14.151 ; Rise       ; clk_50          ;
+;  hex_dezenas[0]  ; clk_50     ; 14.445 ; 14.445 ; Rise       ; clk_50          ;
+;  hex_dezenas[1]  ; clk_50     ; 14.675 ; 14.675 ; Rise       ; clk_50          ;
+;  hex_dezenas[2]  ; clk_50     ; 14.496 ; 14.496 ; Rise       ; clk_50          ;
+;  hex_dezenas[3]  ; clk_50     ; 14.816 ; 14.816 ; Rise       ; clk_50          ;
+;  hex_dezenas[4]  ; clk_50     ; 14.151 ; 14.151 ; Rise       ; clk_50          ;
+;  hex_dezenas[5]  ; clk_50     ; 14.951 ; 14.951 ; Rise       ; clk_50          ;
+;  hex_dezenas[6]  ; clk_50     ; 15.185 ; 15.185 ; Rise       ; clk_50          ;
+; hex_unidades[*]  ; clk_50     ; 13.215 ; 13.215 ; Rise       ; clk_50          ;
+;  hex_unidades[0] ; clk_50     ; 13.299 ; 13.299 ; Rise       ; clk_50          ;
+;  hex_unidades[1] ; clk_50     ; 13.328 ; 13.328 ; Rise       ; clk_50          ;
+;  hex_unidades[2] ; clk_50     ; 13.683 ; 13.683 ; Rise       ; clk_50          ;
+;  hex_unidades[3] ; clk_50     ; 13.790 ; 13.790 ; Rise       ; clk_50          ;
+;  hex_unidades[4] ; clk_50     ; 13.215 ; 13.215 ; Rise       ; clk_50          ;
+;  hex_unidades[5] ; clk_50     ; 13.845 ; 13.845 ; Rise       ; clk_50          ;
+;  hex_unidades[6] ; clk_50     ; 13.248 ; 13.248 ; Rise       ; clk_50          ;
+; led_devolver     ; clk_50     ; 8.881  ; 8.881  ; Rise       ; clk_50          ;
+; led_liberar      ; clk_50     ; 8.254  ; 8.254  ; Rise       ; clk_50          ;
+; led_sem_estoque  ; clk_50     ; 7.992  ; 7.992  ; Rise       ; clk_50          ;
+; led_troco        ; clk_50     ; 9.261  ; 9.261  ; Rise       ; clk_50          ;
++------------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------+
+; Propagation Delay                                               ;
++---------------+-------------+--------+--------+--------+--------+
+; Input Port    ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++---------------+-------------+--------+--------+--------+--------+
+; ch_produto[0] ; led_troco   ; 11.781 ; 10.789 ; 10.789 ; 11.781 ;
+; ch_produto[1] ; led_troco   ; 11.628 ; 10.363 ; 10.363 ; 11.628 ;
+; ch_produto[2] ; led_troco   ; 12.204 ; 11.108 ; 11.108 ; 12.204 ;
++---------------+-------------+--------+--------+--------+--------+
+
+
++---------------------------------------------------------------+
+; Minimum Propagation Delay                                     ;
++---------------+-------------+--------+-------+-------+--------+
+; Input Port    ; Output Port ; RR     ; RF    ; FR    ; FF     ;
++---------------+-------------+--------+-------+-------+--------+
+; ch_produto[0] ; led_troco   ; 10.505 ; 9.257 ; 9.257 ; 10.505 ;
+; ch_produto[1] ; led_troco   ; 10.149 ; 8.924 ; 8.924 ; 10.149 ;
+; ch_produto[2] ; led_troco   ; 10.602 ; 9.332 ; 9.332 ; 10.602 ;
++---------------+-------------+--------+-------+-------+--------+
+
+
++---------------------------------+
+; Fast Model Setup Summary        ;
++--------+--------+---------------+
+; Clock  ; Slack  ; End Point TNS ;
++--------+--------+---------------+
+; clk_50 ; -0.657 ; -34.801       ;
++--------+--------+---------------+
+
+
++--------------------------------+
+; Fast Model Hold Summary        ;
++--------+-------+---------------+
+; Clock  ; Slack ; End Point TNS ;
++--------+-------+---------------+
+; clk_50 ; 0.215 ; 0.000         ;
++--------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++--------+--------+----------------------+
+; Clock  ; Slack  ; End Point TNS        ;
++--------+--------+----------------------+
+; clk_50 ; -1.380 ; -108.380             ;
++--------+--------+----------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk_50'                                                                                                                     ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.657 ; debounce:U_FILTRO1|contador[3] ; debounce:U_FILTRO1|contador[0] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.689      ;
+; -0.657 ; debounce:U_FILTRO1|contador[3] ; debounce:U_FILTRO1|contador[1] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.689      ;
+; -0.657 ; debounce:U_FILTRO1|contador[3] ; debounce:U_FILTRO1|contador[2] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.689      ;
+; -0.657 ; debounce:U_FILTRO1|contador[3] ; debounce:U_FILTRO1|contador[3] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.689      ;
+; -0.657 ; debounce:U_FILTRO1|contador[3] ; debounce:U_FILTRO1|contador[4] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.689      ;
+; -0.657 ; debounce:U_FILTRO1|contador[3] ; debounce:U_FILTRO1|contador[5] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.689      ;
+; -0.657 ; debounce:U_FILTRO1|contador[3] ; debounce:U_FILTRO1|contador[6] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.689      ;
+; -0.657 ; debounce:U_FILTRO1|contador[3] ; debounce:U_FILTRO1|contador[7] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.689      ;
+; -0.644 ; debounce:U_FILTRO2|contador[5] ; debounce:U_FILTRO2|contador[1] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.676      ;
+; -0.644 ; debounce:U_FILTRO2|contador[5] ; debounce:U_FILTRO2|contador[2] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.676      ;
+; -0.644 ; debounce:U_FILTRO2|contador[5] ; debounce:U_FILTRO2|contador[3] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.676      ;
+; -0.644 ; debounce:U_FILTRO2|contador[5] ; debounce:U_FILTRO2|contador[4] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.676      ;
+; -0.644 ; debounce:U_FILTRO2|contador[5] ; debounce:U_FILTRO2|contador[5] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.676      ;
+; -0.644 ; debounce:U_FILTRO2|contador[5] ; debounce:U_FILTRO2|contador[6] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.676      ;
+; -0.644 ; debounce:U_FILTRO2|contador[5] ; debounce:U_FILTRO2|contador[7] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.676      ;
+; -0.644 ; debounce:U_FILTRO2|contador[5] ; debounce:U_FILTRO2|contador[0] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.676      ;
+; -0.638 ; debounce:U_FILTRO3|contador[5] ; debounce:U_FILTRO3|contador[1] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.670      ;
+; -0.638 ; debounce:U_FILTRO3|contador[5] ; debounce:U_FILTRO3|contador[2] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.670      ;
+; -0.638 ; debounce:U_FILTRO3|contador[5] ; debounce:U_FILTRO3|contador[3] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.670      ;
+; -0.638 ; debounce:U_FILTRO3|contador[5] ; debounce:U_FILTRO3|contador[4] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.670      ;
+; -0.638 ; debounce:U_FILTRO3|contador[5] ; debounce:U_FILTRO3|contador[5] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.670      ;
+; -0.638 ; debounce:U_FILTRO3|contador[5] ; debounce:U_FILTRO3|contador[6] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.670      ;
+; -0.638 ; debounce:U_FILTRO3|contador[5] ; debounce:U_FILTRO3|contador[7] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.670      ;
+; -0.638 ; debounce:U_FILTRO3|contador[5] ; debounce:U_FILTRO3|contador[0] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.670      ;
+; -0.637 ; debounce:U_FILTRO1|contador[2] ; debounce:U_FILTRO1|contador[0] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.669      ;
+; -0.637 ; debounce:U_FILTRO1|contador[2] ; debounce:U_FILTRO1|contador[1] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.669      ;
+; -0.637 ; debounce:U_FILTRO1|contador[2] ; debounce:U_FILTRO1|contador[2] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.669      ;
+; -0.637 ; debounce:U_FILTRO1|contador[2] ; debounce:U_FILTRO1|contador[3] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.669      ;
+; -0.637 ; debounce:U_FILTRO1|contador[2] ; debounce:U_FILTRO1|contador[4] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.669      ;
+; -0.637 ; debounce:U_FILTRO1|contador[2] ; debounce:U_FILTRO1|contador[5] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.669      ;
+; -0.637 ; debounce:U_FILTRO1|contador[2] ; debounce:U_FILTRO1|contador[6] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.669      ;
+; -0.637 ; debounce:U_FILTRO1|contador[2] ; debounce:U_FILTRO1|contador[7] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.669      ;
+; -0.632 ; debounce:U_FILTRO2|contador[6] ; debounce:U_FILTRO2|contador[1] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.664      ;
+; -0.632 ; debounce:U_FILTRO2|contador[6] ; debounce:U_FILTRO2|contador[2] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.664      ;
+; -0.632 ; debounce:U_FILTRO2|contador[6] ; debounce:U_FILTRO2|contador[3] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.664      ;
+; -0.632 ; debounce:U_FILTRO2|contador[6] ; debounce:U_FILTRO2|contador[4] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.664      ;
+; -0.632 ; debounce:U_FILTRO2|contador[6] ; debounce:U_FILTRO2|contador[5] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.664      ;
+; -0.632 ; debounce:U_FILTRO2|contador[6] ; debounce:U_FILTRO2|contador[6] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.664      ;
+; -0.632 ; debounce:U_FILTRO2|contador[6] ; debounce:U_FILTRO2|contador[7] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.664      ;
+; -0.632 ; debounce:U_FILTRO2|contador[6] ; debounce:U_FILTRO2|contador[0] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.664      ;
+; -0.628 ; debounce:U_FILTRO2|contador[4] ; debounce:U_FILTRO2|contador[1] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.660      ;
+; -0.628 ; debounce:U_FILTRO2|contador[4] ; debounce:U_FILTRO2|contador[2] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.660      ;
+; -0.628 ; debounce:U_FILTRO2|contador[4] ; debounce:U_FILTRO2|contador[3] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.660      ;
+; -0.628 ; debounce:U_FILTRO2|contador[4] ; debounce:U_FILTRO2|contador[4] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.660      ;
+; -0.628 ; debounce:U_FILTRO2|contador[4] ; debounce:U_FILTRO2|contador[5] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.660      ;
+; -0.628 ; debounce:U_FILTRO2|contador[4] ; debounce:U_FILTRO2|contador[6] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.660      ;
+; -0.628 ; debounce:U_FILTRO2|contador[4] ; debounce:U_FILTRO2|contador[7] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.660      ;
+; -0.628 ; debounce:U_FILTRO2|contador[4] ; debounce:U_FILTRO2|contador[0] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.660      ;
+; -0.626 ; debounce:U_FILTRO3|contador[6] ; debounce:U_FILTRO3|contador[1] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.658      ;
+; -0.626 ; debounce:U_FILTRO3|contador[6] ; debounce:U_FILTRO3|contador[2] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.658      ;
+; -0.626 ; debounce:U_FILTRO3|contador[6] ; debounce:U_FILTRO3|contador[3] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.658      ;
+; -0.626 ; debounce:U_FILTRO3|contador[6] ; debounce:U_FILTRO3|contador[4] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.658      ;
+; -0.626 ; debounce:U_FILTRO3|contador[6] ; debounce:U_FILTRO3|contador[5] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.658      ;
+; -0.626 ; debounce:U_FILTRO3|contador[6] ; debounce:U_FILTRO3|contador[6] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.658      ;
+; -0.626 ; debounce:U_FILTRO3|contador[6] ; debounce:U_FILTRO3|contador[7] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.658      ;
+; -0.626 ; debounce:U_FILTRO3|contador[6] ; debounce:U_FILTRO3|contador[0] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.658      ;
+; -0.622 ; debounce:U_FILTRO3|contador[4] ; debounce:U_FILTRO3|contador[1] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.654      ;
+; -0.622 ; debounce:U_FILTRO3|contador[4] ; debounce:U_FILTRO3|contador[2] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.654      ;
+; -0.622 ; debounce:U_FILTRO3|contador[4] ; debounce:U_FILTRO3|contador[3] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.654      ;
+; -0.622 ; debounce:U_FILTRO3|contador[4] ; debounce:U_FILTRO3|contador[4] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.654      ;
+; -0.622 ; debounce:U_FILTRO3|contador[4] ; debounce:U_FILTRO3|contador[5] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.654      ;
+; -0.622 ; debounce:U_FILTRO3|contador[4] ; debounce:U_FILTRO3|contador[6] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.654      ;
+; -0.622 ; debounce:U_FILTRO3|contador[4] ; debounce:U_FILTRO3|contador[7] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.654      ;
+; -0.622 ; debounce:U_FILTRO3|contador[4] ; debounce:U_FILTRO3|contador[0] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.654      ;
+; -0.597 ; debounce:U_FILTRO1|contador[9] ; debounce:U_FILTRO1|contador[0] ; clk_50       ; clk_50      ; 1.000        ; 0.005      ; 1.634      ;
+; -0.597 ; debounce:U_FILTRO1|contador[9] ; debounce:U_FILTRO1|contador[1] ; clk_50       ; clk_50      ; 1.000        ; 0.005      ; 1.634      ;
+; -0.597 ; debounce:U_FILTRO1|contador[9] ; debounce:U_FILTRO1|contador[2] ; clk_50       ; clk_50      ; 1.000        ; 0.005      ; 1.634      ;
+; -0.597 ; debounce:U_FILTRO1|contador[9] ; debounce:U_FILTRO1|contador[3] ; clk_50       ; clk_50      ; 1.000        ; 0.005      ; 1.634      ;
+; -0.597 ; debounce:U_FILTRO1|contador[9] ; debounce:U_FILTRO1|contador[4] ; clk_50       ; clk_50      ; 1.000        ; 0.005      ; 1.634      ;
+; -0.597 ; debounce:U_FILTRO1|contador[9] ; debounce:U_FILTRO1|contador[5] ; clk_50       ; clk_50      ; 1.000        ; 0.005      ; 1.634      ;
+; -0.597 ; debounce:U_FILTRO1|contador[9] ; debounce:U_FILTRO1|contador[6] ; clk_50       ; clk_50      ; 1.000        ; 0.005      ; 1.634      ;
+; -0.597 ; debounce:U_FILTRO1|contador[9] ; debounce:U_FILTRO1|contador[7] ; clk_50       ; clk_50      ; 1.000        ; 0.005      ; 1.634      ;
+; -0.593 ; debounce:U_FILTRO2|contador[3] ; debounce:U_FILTRO2|contador[1] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.625      ;
+; -0.593 ; debounce:U_FILTRO2|contador[3] ; debounce:U_FILTRO2|contador[2] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.625      ;
+; -0.593 ; debounce:U_FILTRO2|contador[3] ; debounce:U_FILTRO2|contador[3] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.625      ;
+; -0.593 ; debounce:U_FILTRO2|contador[3] ; debounce:U_FILTRO2|contador[4] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.625      ;
+; -0.593 ; debounce:U_FILTRO2|contador[3] ; debounce:U_FILTRO2|contador[5] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.625      ;
+; -0.593 ; debounce:U_FILTRO2|contador[3] ; debounce:U_FILTRO2|contador[6] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.625      ;
+; -0.593 ; debounce:U_FILTRO2|contador[3] ; debounce:U_FILTRO2|contador[7] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.625      ;
+; -0.593 ; debounce:U_FILTRO2|contador[3] ; debounce:U_FILTRO2|contador[0] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.625      ;
+; -0.591 ; debounce:U_FILTRO1|contador[5] ; debounce:U_FILTRO1|contador[0] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.623      ;
+; -0.591 ; debounce:U_FILTRO1|contador[5] ; debounce:U_FILTRO1|contador[1] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.623      ;
+; -0.591 ; debounce:U_FILTRO1|contador[5] ; debounce:U_FILTRO1|contador[2] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.623      ;
+; -0.591 ; debounce:U_FILTRO1|contador[5] ; debounce:U_FILTRO1|contador[3] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.623      ;
+; -0.591 ; debounce:U_FILTRO1|contador[5] ; debounce:U_FILTRO1|contador[4] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.623      ;
+; -0.591 ; debounce:U_FILTRO1|contador[5] ; debounce:U_FILTRO1|contador[5] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.623      ;
+; -0.591 ; debounce:U_FILTRO1|contador[5] ; debounce:U_FILTRO1|contador[6] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.623      ;
+; -0.591 ; debounce:U_FILTRO1|contador[5] ; debounce:U_FILTRO1|contador[7] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.623      ;
+; -0.587 ; debounce:U_FILTRO3|contador[3] ; debounce:U_FILTRO3|contador[1] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.619      ;
+; -0.587 ; debounce:U_FILTRO3|contador[3] ; debounce:U_FILTRO3|contador[2] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.619      ;
+; -0.587 ; debounce:U_FILTRO3|contador[3] ; debounce:U_FILTRO3|contador[3] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.619      ;
+; -0.587 ; debounce:U_FILTRO3|contador[3] ; debounce:U_FILTRO3|contador[4] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.619      ;
+; -0.587 ; debounce:U_FILTRO3|contador[3] ; debounce:U_FILTRO3|contador[5] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.619      ;
+; -0.587 ; debounce:U_FILTRO3|contador[3] ; debounce:U_FILTRO3|contador[6] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.619      ;
+; -0.587 ; debounce:U_FILTRO3|contador[3] ; debounce:U_FILTRO3|contador[7] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.619      ;
+; -0.587 ; debounce:U_FILTRO3|contador[3] ; debounce:U_FILTRO3|contador[0] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.619      ;
+; -0.586 ; debounce:U_FILTRO2|contador[9] ; debounce:U_FILTRO2|contador[1] ; clk_50       ; clk_50      ; 1.000        ; 0.006      ; 1.624      ;
+; -0.586 ; debounce:U_FILTRO2|contador[9] ; debounce:U_FILTRO2|contador[2] ; clk_50       ; clk_50      ; 1.000        ; 0.006      ; 1.624      ;
+; -0.586 ; debounce:U_FILTRO2|contador[9] ; debounce:U_FILTRO2|contador[3] ; clk_50       ; clk_50      ; 1.000        ; 0.006      ; 1.624      ;
+; -0.586 ; debounce:U_FILTRO2|contador[9] ; debounce:U_FILTRO2|contador[4] ; clk_50       ; clk_50      ; 1.000        ; 0.006      ; 1.624      ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk_50'                                                                                                                                             ;
++-------+--------------------------------------------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                  ; To Node                                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; debounce:U_FILTRO3|botao_estavel           ; debounce:U_FILTRO3|botao_estavel           ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; debounce:U_FILTRO1|botao_estavel           ; debounce:U_FILTRO1|botao_estavel           ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; debounce:U_FILTRO2|botao_estavel           ; debounce:U_FILTRO2|botao_estavel           ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; datapath:U_BLOCO_DADOS|estq_kitkat[0]      ; datapath:U_BLOCO_DADOS|estq_kitkat[0]      ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; datapath:U_BLOCO_DADOS|estq_kitkat[1]      ; datapath:U_BLOCO_DADOS|estq_kitkat[1]      ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; datapath:U_BLOCO_DADOS|estq_kitkat[2]      ; datapath:U_BLOCO_DADOS|estq_kitkat[2]      ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; datapath:U_BLOCO_DADOS|estq_trident[0]     ; datapath:U_BLOCO_DADOS|estq_trident[0]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; datapath:U_BLOCO_DADOS|estq_trident[1]     ; datapath:U_BLOCO_DADOS|estq_trident[1]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; datapath:U_BLOCO_DADOS|estq_trident[2]     ; datapath:U_BLOCO_DADOS|estq_trident[2]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; datapath:U_BLOCO_DADOS|estq_trident[3]     ; datapath:U_BLOCO_DADOS|estq_trident[3]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; datapath:U_BLOCO_DADOS|estq_sonho_valsa[0] ; datapath:U_BLOCO_DADOS|estq_sonho_valsa[0] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; datapath:U_BLOCO_DADOS|estq_sonho_valsa[1] ; datapath:U_BLOCO_DADOS|estq_sonho_valsa[1] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; datapath:U_BLOCO_DADOS|estq_sonho_valsa[2] ; datapath:U_BLOCO_DADOS|estq_sonho_valsa[2] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; datapath:U_BLOCO_DADOS|estq_ouro_branco[0] ; datapath:U_BLOCO_DADOS|estq_ouro_branco[0] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; datapath:U_BLOCO_DADOS|estq_ouro_branco[1] ; datapath:U_BLOCO_DADOS|estq_ouro_branco[1] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; datapath:U_BLOCO_DADOS|estq_ouro_branco[2] ; datapath:U_BLOCO_DADOS|estq_ouro_branco[2] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; datapath:U_BLOCO_DADOS|estq_bis_caixa[0]   ; datapath:U_BLOCO_DADOS|estq_bis_caixa[0]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; datapath:U_BLOCO_DADOS|estq_bis_caixa[1]   ; datapath:U_BLOCO_DADOS|estq_bis_caixa[1]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; datapath:U_BLOCO_DADOS|estq_bis_caixa[2]   ; datapath:U_BLOCO_DADOS|estq_bis_caixa[2]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; datapath:U_BLOCO_DADOS|estq_bis_extra[0]   ; datapath:U_BLOCO_DADOS|estq_bis_extra[0]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; datapath:U_BLOCO_DADOS|estq_bis_extra[1]   ; datapath:U_BLOCO_DADOS|estq_bis_extra[1]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; datapath:U_BLOCO_DADOS|estq_bis_extra[2]   ; datapath:U_BLOCO_DADOS|estq_bis_extra[2]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; datapath:U_BLOCO_DADOS|estq_mms[0]         ; datapath:U_BLOCO_DADOS|estq_mms[0]         ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; datapath:U_BLOCO_DADOS|estq_mms[1]         ; datapath:U_BLOCO_DADOS|estq_mms[1]         ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; datapath:U_BLOCO_DADOS|estq_mms[2]         ; datapath:U_BLOCO_DADOS|estq_mms[2]         ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; datapath:U_BLOCO_DADOS|estq_snickers[0]    ; datapath:U_BLOCO_DADOS|estq_snickers[0]    ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; datapath:U_BLOCO_DADOS|estq_snickers[1]    ; datapath:U_BLOCO_DADOS|estq_snickers[1]    ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; datapath:U_BLOCO_DADOS|estq_snickers[2]    ; datapath:U_BLOCO_DADOS|estq_snickers[2]    ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; datapath:U_BLOCO_DADOS|estq_snickers[3]    ; datapath:U_BLOCO_DADOS|estq_snickers[3]    ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.243 ; datapath:U_BLOCO_DADOS|soma_atual[9]       ; datapath:U_BLOCO_DADOS|soma_atual[9]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.395      ;
+; 0.244 ; debounce:U_FILTRO2|contador[18]            ; debounce:U_FILTRO2|contador[18]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.396      ;
+; 0.244 ; datapath:U_BLOCO_DADOS|estq_ouro_branco[1] ; datapath:U_BLOCO_DADOS|estq_ouro_branco[2] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.396      ;
+; 0.245 ; debounce:U_FILTRO3|contador[18]            ; debounce:U_FILTRO3|contador[18]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.397      ;
+; 0.249 ; debounce:U_FILTRO1|contador[18]            ; debounce:U_FILTRO1|contador[18]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.401      ;
+; 0.355 ; debounce:U_FILTRO1|contador[9]             ; debounce:U_FILTRO1|contador[9]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.507      ;
+; 0.355 ; debounce:U_FILTRO1|botao_ant               ; debounce:U_FILTRO1|botao_pulso             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.507      ;
+; 0.355 ; debounce:U_FILTRO2|contador[9]             ; debounce:U_FILTRO2|contador[9]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.507      ;
+; 0.356 ; debounce:U_FILTRO3|contador[0]             ; debounce:U_FILTRO3|contador[0]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.508      ;
+; 0.356 ; debounce:U_FILTRO1|contador[0]             ; debounce:U_FILTRO1|contador[0]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.508      ;
+; 0.356 ; debounce:U_FILTRO2|contador[0]             ; debounce:U_FILTRO2|contador[0]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.508      ;
+; 0.357 ; debounce:U_FILTRO3|contador[9]             ; debounce:U_FILTRO3|contador[9]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.509      ;
+; 0.357 ; debounce:U_FILTRO2|botao_ant               ; debounce:U_FILTRO2|botao_pulso             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.509      ;
+; 0.360 ; debounce:U_FILTRO1|contador[2]             ; debounce:U_FILTRO1|contador[2]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; debounce:U_FILTRO1|contador[4]             ; debounce:U_FILTRO1|contador[4]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.512      ;
+; 0.361 ; debounce:U_FILTRO3|contador[6]             ; debounce:U_FILTRO3|contador[6]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; debounce:U_FILTRO3|contador[7]             ; debounce:U_FILTRO3|contador[7]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; debounce:U_FILTRO3|contador[10]            ; debounce:U_FILTRO3|contador[10]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; datapath:U_BLOCO_DADOS|soma_atual[2]       ; datapath:U_BLOCO_DADOS|soma_atual[2]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; datapath:U_BLOCO_DADOS|soma_atual[7]       ; datapath:U_BLOCO_DADOS|soma_atual[7]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; debounce:U_FILTRO2|contador[6]             ; debounce:U_FILTRO2|contador[6]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; debounce:U_FILTRO2|contador[7]             ; debounce:U_FILTRO2|contador[7]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.513      ;
+; 0.362 ; debounce:U_FILTRO3|contador[2]             ; debounce:U_FILTRO3|contador[2]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.514      ;
+; 0.362 ; debounce:U_FILTRO3|contador[4]             ; debounce:U_FILTRO3|contador[4]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.514      ;
+; 0.362 ; debounce:U_FILTRO2|contador[2]             ; debounce:U_FILTRO2|contador[2]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.514      ;
+; 0.362 ; debounce:U_FILTRO2|contador[4]             ; debounce:U_FILTRO2|contador[4]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.514      ;
+; 0.363 ; debounce:U_FILTRO1|contador[6]             ; debounce:U_FILTRO1|contador[6]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363 ; debounce:U_FILTRO1|contador[7]             ; debounce:U_FILTRO1|contador[7]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.515      ;
+; 0.364 ; debounce:U_FILTRO1|contador[10]            ; debounce:U_FILTRO1|contador[10]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.516      ;
+; 0.364 ; datapath:U_BLOCO_DADOS|estq_bis_caixa[0]   ; datapath:U_BLOCO_DADOS|estq_bis_caixa[1]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.516      ;
+; 0.364 ; datapath:U_BLOCO_DADOS|estq_bis_caixa[0]   ; datapath:U_BLOCO_DADOS|estq_bis_caixa[2]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.516      ;
+; 0.364 ; datapath:U_BLOCO_DADOS|estq_bis_extra[1]   ; datapath:U_BLOCO_DADOS|estq_bis_extra[2]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.516      ;
+; 0.365 ; debounce:U_FILTRO3|contador[11]            ; debounce:U_FILTRO3|contador[11]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.517      ;
+; 0.365 ; debounce:U_FILTRO3|contador[13]            ; debounce:U_FILTRO3|contador[13]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.517      ;
+; 0.365 ; debounce:U_FILTRO1|contador[13]            ; debounce:U_FILTRO1|contador[13]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.517      ;
+; 0.365 ; debounce:U_FILTRO1|contador[16]            ; debounce:U_FILTRO1|contador[16]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.517      ;
+; 0.366 ; debounce:U_FILTRO3|contador[16]            ; debounce:U_FILTRO3|contador[16]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.518      ;
+; 0.366 ; debounce:U_FILTRO3|botao_ant               ; debounce:U_FILTRO3|botao_pulso             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.518      ;
+; 0.367 ; debounce:U_FILTRO2|contador[11]            ; debounce:U_FILTRO2|contador[11]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.519      ;
+; 0.367 ; debounce:U_FILTRO2|contador[13]            ; debounce:U_FILTRO2|contador[13]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.519      ;
+; 0.367 ; datapath:U_BLOCO_DADOS|estq_kitkat[1]      ; datapath:U_BLOCO_DADOS|estq_kitkat[2]      ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.519      ;
+; 0.367 ; datapath:U_BLOCO_DADOS|estq_sonho_valsa[1] ; datapath:U_BLOCO_DADOS|estq_sonho_valsa[2] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.519      ;
+; 0.368 ; datapath:U_BLOCO_DADOS|soma_atual[8]       ; datapath:U_BLOCO_DADOS|soma_atual[8]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.520      ;
+; 0.368 ; debounce:U_FILTRO2|contador[16]            ; debounce:U_FILTRO2|contador[16]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.520      ;
+; 0.369 ; datapath:U_BLOCO_DADOS|estq_ouro_branco[0] ; datapath:U_BLOCO_DADOS|estq_ouro_branco[1] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369 ; datapath:U_BLOCO_DADOS|estq_ouro_branco[0] ; datapath:U_BLOCO_DADOS|estq_ouro_branco[2] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369 ; datapath:U_BLOCO_DADOS|estq_snickers[0]    ; datapath:U_BLOCO_DADOS|estq_snickers[1]    ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.521      ;
+; 0.371 ; debounce:U_FILTRO3|contador[17]            ; debounce:U_FILTRO3|contador[17]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371 ; datapath:U_BLOCO_DADOS|soma_atual[3]       ; datapath:U_BLOCO_DADOS|soma_atual[3]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.523      ;
+; 0.373 ; debounce:U_FILTRO3|contador[12]            ; debounce:U_FILTRO3|contador[12]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.525      ;
+; 0.373 ; debounce:U_FILTRO1|contador[17]            ; debounce:U_FILTRO1|contador[17]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.525      ;
+; 0.373 ; debounce:U_FILTRO2|contador[12]            ; debounce:U_FILTRO2|contador[12]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.525      ;
+; 0.373 ; debounce:U_FILTRO2|contador[15]            ; debounce:U_FILTRO2|contador[15]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.525      ;
+; 0.373 ; debounce:U_FILTRO2|contador[17]            ; debounce:U_FILTRO2|contador[17]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.525      ;
+; 0.374 ; debounce:U_FILTRO3|contador[15]            ; debounce:U_FILTRO3|contador[15]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.526      ;
+; 0.374 ; debounce:U_FILTRO1|contador[14]            ; debounce:U_FILTRO1|contador[14]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.526      ;
+; 0.374 ; debounce:U_FILTRO1|contador[15]            ; debounce:U_FILTRO1|contador[15]            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.526      ;
+; 0.374 ; debounce:U_FILTRO2|botao_pulso             ; mef:U_CONTROLE|estado_atual.DEVOLUCAO      ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.526      ;
+; 0.375 ; datapath:U_BLOCO_DADOS|soma_atual[5]       ; datapath:U_BLOCO_DADOS|soma_atual[5]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.527      ;
+; 0.375 ; datapath:U_BLOCO_DADOS|soma_atual[6]       ; datapath:U_BLOCO_DADOS|soma_atual[6]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.527      ;
+; 0.377 ; debounce:U_FILTRO3|contador[1]             ; debounce:U_FILTRO3|contador[1]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.529      ;
+; 0.377 ; debounce:U_FILTRO3|contador[3]             ; debounce:U_FILTRO3|contador[3]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.529      ;
+; 0.377 ; debounce:U_FILTRO1|contador[1]             ; debounce:U_FILTRO1|contador[1]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.529      ;
+; 0.377 ; debounce:U_FILTRO1|contador[3]             ; debounce:U_FILTRO1|contador[3]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.529      ;
+; 0.377 ; debounce:U_FILTRO2|contador[1]             ; debounce:U_FILTRO2|contador[1]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.529      ;
+; 0.377 ; debounce:U_FILTRO2|contador[3]             ; debounce:U_FILTRO2|contador[3]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.529      ;
+; 0.378 ; debounce:U_FILTRO3|contador[5]             ; debounce:U_FILTRO3|contador[5]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.530      ;
+; 0.378 ; debounce:U_FILTRO1|contador[5]             ; debounce:U_FILTRO1|contador[5]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.530      ;
+; 0.378 ; debounce:U_FILTRO2|contador[5]             ; debounce:U_FILTRO2|contador[5]             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.530      ;
+; 0.378 ; datapath:U_BLOCO_DADOS|estq_mms[1]         ; datapath:U_BLOCO_DADOS|estq_mms[2]         ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.530      ;
+; 0.380 ; datapath:U_BLOCO_DADOS|estq_bis_caixa[1]   ; datapath:U_BLOCO_DADOS|estq_bis_caixa[2]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.532      ;
++-------+--------------------------------------------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk_50'                                                                                     ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                                     ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk_50 ; Rise       ; clk_50                                     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_bis_caixa[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_bis_caixa[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_bis_caixa[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_bis_caixa[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_bis_caixa[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_bis_caixa[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_bis_extra[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_bis_extra[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_bis_extra[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_bis_extra[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_bis_extra[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_bis_extra[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_kitkat[0]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_kitkat[0]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_kitkat[1]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_kitkat[1]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_kitkat[2]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_kitkat[2]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_mms[0]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_mms[0]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_mms[1]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_mms[1]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_mms[2]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_mms[2]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_ouro_branco[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_ouro_branco[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_ouro_branco[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_ouro_branco[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_ouro_branco[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_ouro_branco[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_snickers[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_snickers[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_snickers[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_snickers[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_snickers[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_snickers[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_snickers[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_snickers[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_sonho_valsa[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_sonho_valsa[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_sonho_valsa[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_sonho_valsa[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_sonho_valsa[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_sonho_valsa[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_trident[0]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_trident[0]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_trident[1]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_trident[1]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_trident[2]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_trident[2]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_trident[3]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|estq_trident[3]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|soma_atual[0]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|soma_atual[0]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|soma_atual[1]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|soma_atual[1]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|soma_atual[2]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|soma_atual[2]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|soma_atual[3]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|soma_atual[3]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|soma_atual[4]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|soma_atual[4]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|soma_atual[5]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|soma_atual[5]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|soma_atual[6]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|soma_atual[6]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|soma_atual[7]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|soma_atual[7]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|soma_atual[8]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|soma_atual[8]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|soma_atual[9]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; datapath:U_BLOCO_DADOS|soma_atual[9]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; debounce:U_FILTRO1|botao_ant               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; debounce:U_FILTRO1|botao_ant               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; debounce:U_FILTRO1|botao_estavel           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; debounce:U_FILTRO1|botao_estavel           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; debounce:U_FILTRO1|botao_pulso             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; debounce:U_FILTRO1|botao_pulso             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[0]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[0]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[10]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[10]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[11]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[11]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[12]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[12]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[13]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[13]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[14]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[14]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[15]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[15]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[16]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[16]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[17]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[17]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[18]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[18]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; debounce:U_FILTRO1|contador[1]             ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------------------------+
+
+
++--------------------------------------------------------------------------------+
+; Setup Times                                                                    ;
++--------------------+------------+-------+-------+------------+-----------------+
+; Data Port          ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------------+------------+-------+-------+------------+-----------------+
+; btn_confirmar      ; clk_50     ; 2.478 ; 2.478 ; Rise       ; clk_50          ;
+; btn_desistir       ; clk_50     ; 2.527 ; 2.527 ; Rise       ; clk_50          ;
+; btn_inserir_moeda  ; clk_50     ; 2.379 ; 2.379 ; Rise       ; clk_50          ;
+; ch_produto[*]      ; clk_50     ; 1.295 ; 1.295 ; Rise       ; clk_50          ;
+;  ch_produto[0]     ; clk_50     ; 1.219 ; 1.219 ; Rise       ; clk_50          ;
+;  ch_produto[1]     ; clk_50     ; 1.094 ; 1.094 ; Rise       ; clk_50          ;
+;  ch_produto[2]     ; clk_50     ; 1.295 ; 1.295 ; Rise       ; clk_50          ;
+; ch_valor_moeda[*]  ; clk_50     ; 0.277 ; 0.277 ; Rise       ; clk_50          ;
+;  ch_valor_moeda[0] ; clk_50     ; 0.166 ; 0.166 ; Rise       ; clk_50          ;
+;  ch_valor_moeda[1] ; clk_50     ; 0.277 ; 0.277 ; Rise       ; clk_50          ;
+;  ch_valor_moeda[2] ; clk_50     ; 0.202 ; 0.202 ; Rise       ; clk_50          ;
++--------------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------------+
+; Hold Times                                                                       ;
++--------------------+------------+--------+--------+------------+-----------------+
+; Data Port          ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------------+------------+--------+--------+------------+-----------------+
+; btn_confirmar      ; clk_50     ; -1.807 ; -1.807 ; Rise       ; clk_50          ;
+; btn_desistir       ; clk_50     ; -1.860 ; -1.860 ; Rise       ; clk_50          ;
+; btn_inserir_moeda  ; clk_50     ; -1.714 ; -1.714 ; Rise       ; clk_50          ;
+; ch_produto[*]      ; clk_50     ; 0.485  ; 0.485  ; Rise       ; clk_50          ;
+;  ch_produto[0]     ; clk_50     ; 0.431  ; 0.431  ; Rise       ; clk_50          ;
+;  ch_produto[1]     ; clk_50     ; 0.189  ; 0.189  ; Rise       ; clk_50          ;
+;  ch_produto[2]     ; clk_50     ; 0.485  ; 0.485  ; Rise       ; clk_50          ;
+; ch_valor_moeda[*]  ; clk_50     ; 0.489  ; 0.489  ; Rise       ; clk_50          ;
+;  ch_valor_moeda[0] ; clk_50     ; 0.489  ; 0.489  ; Rise       ; clk_50          ;
+;  ch_valor_moeda[1] ; clk_50     ; 0.330  ; 0.330  ; Rise       ; clk_50          ;
+;  ch_valor_moeda[2] ; clk_50     ; 0.436  ; 0.436  ; Rise       ; clk_50          ;
++--------------------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Clock to Output Times                                                          ;
++------------------+------------+--------+--------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------------+------------+--------+--------+------------+-----------------+
+; hex_centenas[*]  ; clk_50     ; 9.744  ; 9.744  ; Rise       ; clk_50          ;
+;  hex_centenas[0] ; clk_50     ; 9.562  ; 9.562  ; Rise       ; clk_50          ;
+;  hex_centenas[1] ; clk_50     ; 9.561  ; 9.561  ; Rise       ; clk_50          ;
+;  hex_centenas[2] ; clk_50     ; 9.607  ; 9.607  ; Rise       ; clk_50          ;
+;  hex_centenas[3] ; clk_50     ; 9.605  ; 9.605  ; Rise       ; clk_50          ;
+;  hex_centenas[4] ; clk_50     ; 9.744  ; 9.744  ; Rise       ; clk_50          ;
+;  hex_centenas[5] ; clk_50     ; 9.574  ; 9.574  ; Rise       ; clk_50          ;
+;  hex_centenas[6] ; clk_50     ; 9.710  ; 9.710  ; Rise       ; clk_50          ;
+; hex_dezenas[*]   ; clk_50     ; 18.588 ; 18.588 ; Rise       ; clk_50          ;
+;  hex_dezenas[0]  ; clk_50     ; 18.325 ; 18.325 ; Rise       ; clk_50          ;
+;  hex_dezenas[1]  ; clk_50     ; 18.405 ; 18.405 ; Rise       ; clk_50          ;
+;  hex_dezenas[2]  ; clk_50     ; 18.336 ; 18.336 ; Rise       ; clk_50          ;
+;  hex_dezenas[3]  ; clk_50     ; 18.433 ; 18.433 ; Rise       ; clk_50          ;
+;  hex_dezenas[4]  ; clk_50     ; 18.312 ; 18.312 ; Rise       ; clk_50          ;
+;  hex_dezenas[5]  ; clk_50     ; 18.553 ; 18.553 ; Rise       ; clk_50          ;
+;  hex_dezenas[6]  ; clk_50     ; 18.588 ; 18.588 ; Rise       ; clk_50          ;
+; hex_unidades[*]  ; clk_50     ; 21.708 ; 21.708 ; Rise       ; clk_50          ;
+;  hex_unidades[0] ; clk_50     ; 21.181 ; 21.181 ; Rise       ; clk_50          ;
+;  hex_unidades[1] ; clk_50     ; 21.251 ; 21.251 ; Rise       ; clk_50          ;
+;  hex_unidades[2] ; clk_50     ; 21.390 ; 21.390 ; Rise       ; clk_50          ;
+;  hex_unidades[3] ; clk_50     ; 21.570 ; 21.570 ; Rise       ; clk_50          ;
+;  hex_unidades[4] ; clk_50     ; 20.999 ; 20.999 ; Rise       ; clk_50          ;
+;  hex_unidades[5] ; clk_50     ; 21.708 ; 21.708 ; Rise       ; clk_50          ;
+;  hex_unidades[6] ; clk_50     ; 21.696 ; 21.696 ; Rise       ; clk_50          ;
+; led_devolver     ; clk_50     ; 4.639  ; 4.639  ; Rise       ; clk_50          ;
+; led_liberar      ; clk_50     ; 4.230  ; 4.230  ; Rise       ; clk_50          ;
+; led_sem_estoque  ; clk_50     ; 4.186  ; 4.186  ; Rise       ; clk_50          ;
+; led_troco        ; clk_50     ; 5.582  ; 5.582  ; Rise       ; clk_50          ;
++------------------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                ;
++------------------+------------+-------+-------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------------+------------+-------+-------+------------+-----------------+
+; hex_centenas[*]  ; clk_50     ; 5.812 ; 5.812 ; Rise       ; clk_50          ;
+;  hex_centenas[0] ; clk_50     ; 5.812 ; 5.812 ; Rise       ; clk_50          ;
+;  hex_centenas[1] ; clk_50     ; 5.828 ; 5.828 ; Rise       ; clk_50          ;
+;  hex_centenas[2] ; clk_50     ; 5.867 ; 5.867 ; Rise       ; clk_50          ;
+;  hex_centenas[3] ; clk_50     ; 5.859 ; 5.859 ; Rise       ; clk_50          ;
+;  hex_centenas[4] ; clk_50     ; 5.974 ; 5.974 ; Rise       ; clk_50          ;
+;  hex_centenas[5] ; clk_50     ; 5.840 ; 5.840 ; Rise       ; clk_50          ;
+;  hex_centenas[6] ; clk_50     ; 5.977 ; 5.977 ; Rise       ; clk_50          ;
+; hex_dezenas[*]   ; clk_50     ; 6.444 ; 6.444 ; Rise       ; clk_50          ;
+;  hex_dezenas[0]  ; clk_50     ; 6.538 ; 6.538 ; Rise       ; clk_50          ;
+;  hex_dezenas[1]  ; clk_50     ; 6.618 ; 6.618 ; Rise       ; clk_50          ;
+;  hex_dezenas[2]  ; clk_50     ; 6.549 ; 6.549 ; Rise       ; clk_50          ;
+;  hex_dezenas[3]  ; clk_50     ; 6.646 ; 6.646 ; Rise       ; clk_50          ;
+;  hex_dezenas[4]  ; clk_50     ; 6.444 ; 6.444 ; Rise       ; clk_50          ;
+;  hex_dezenas[5]  ; clk_50     ; 6.766 ; 6.766 ; Rise       ; clk_50          ;
+;  hex_dezenas[6]  ; clk_50     ; 6.801 ; 6.801 ; Rise       ; clk_50          ;
+; hex_unidades[*]  ; clk_50     ; 6.116 ; 6.116 ; Rise       ; clk_50          ;
+;  hex_unidades[0] ; clk_50     ; 6.131 ; 6.131 ; Rise       ; clk_50          ;
+;  hex_unidades[1] ; clk_50     ; 6.160 ; 6.160 ; Rise       ; clk_50          ;
+;  hex_unidades[2] ; clk_50     ; 6.289 ; 6.289 ; Rise       ; clk_50          ;
+;  hex_unidades[3] ; clk_50     ; 6.325 ; 6.325 ; Rise       ; clk_50          ;
+;  hex_unidades[4] ; clk_50     ; 6.116 ; 6.116 ; Rise       ; clk_50          ;
+;  hex_unidades[5] ; clk_50     ; 6.377 ; 6.377 ; Rise       ; clk_50          ;
+;  hex_unidades[6] ; clk_50     ; 6.176 ; 6.176 ; Rise       ; clk_50          ;
+; led_devolver     ; clk_50     ; 4.484 ; 4.484 ; Rise       ; clk_50          ;
+; led_liberar      ; clk_50     ; 4.230 ; 4.230 ; Rise       ; clk_50          ;
+; led_sem_estoque  ; clk_50     ; 4.186 ; 4.186 ; Rise       ; clk_50          ;
+; led_troco        ; clk_50     ; 4.567 ; 4.567 ; Rise       ; clk_50          ;
++------------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------+
+; Propagation Delay                                           ;
++---------------+-------------+-------+-------+-------+-------+
+; Input Port    ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++---------------+-------------+-------+-------+-------+-------+
+; ch_produto[0] ; led_troco   ; 5.025 ; 4.610 ; 4.610 ; 5.025 ;
+; ch_produto[1] ; led_troco   ; 4.970 ; 4.485 ; 4.485 ; 4.970 ;
+; ch_produto[2] ; led_troco   ; 5.187 ; 4.652 ; 4.652 ; 5.187 ;
++---------------+-------------+-------+-------+-------+-------+
+
+
++-------------------------------------------------------------+
+; Minimum Propagation Delay                                   ;
++---------------+-------------+-------+-------+-------+-------+
+; Input Port    ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++---------------+-------------+-------+-------+-------+-------+
+; ch_produto[0] ; led_troco   ; 4.496 ; 4.060 ; 4.060 ; 4.496 ;
+; ch_produto[1] ; led_troco   ; 4.377 ; 3.930 ; 3.930 ; 4.377 ;
+; ch_produto[2] ; led_troco   ; 4.510 ; 4.067 ; 4.067 ; 4.510 ;
++---------------+-------------+-------+-------+-------+-------+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -3.230   ; 0.215 ; N/A      ; N/A     ; -1.631              ;
+;  clk_50          ; -3.230   ; 0.215 ; N/A      ; N/A     ; -1.631              ;
+; Design-wide TNS  ; -242.636 ; 0.0   ; 0.0      ; 0.0     ; -132.385            ;
+;  clk_50          ; -242.636 ; 0.000 ; N/A      ; N/A     ; -132.385            ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++--------------------------------------------------------------------------------+
+; Setup Times                                                                    ;
++--------------------+------------+-------+-------+------------+-----------------+
+; Data Port          ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------------+------------+-------+-------+------------+-----------------+
+; btn_confirmar      ; clk_50     ; 5.617 ; 5.617 ; Rise       ; clk_50          ;
+; btn_desistir       ; clk_50     ; 5.680 ; 5.680 ; Rise       ; clk_50          ;
+; btn_inserir_moeda  ; clk_50     ; 5.424 ; 5.424 ; Rise       ; clk_50          ;
+; ch_produto[*]      ; clk_50     ; 4.867 ; 4.867 ; Rise       ; clk_50          ;
+;  ch_produto[0]     ; clk_50     ; 4.582 ; 4.582 ; Rise       ; clk_50          ;
+;  ch_produto[1]     ; clk_50     ; 4.219 ; 4.219 ; Rise       ; clk_50          ;
+;  ch_produto[2]     ; clk_50     ; 4.867 ; 4.867 ; Rise       ; clk_50          ;
+; ch_valor_moeda[*]  ; clk_50     ; 2.203 ; 2.203 ; Rise       ; clk_50          ;
+;  ch_valor_moeda[0] ; clk_50     ; 1.834 ; 1.834 ; Rise       ; clk_50          ;
+;  ch_valor_moeda[1] ; clk_50     ; 2.203 ; 2.203 ; Rise       ; clk_50          ;
+;  ch_valor_moeda[2] ; clk_50     ; 1.992 ; 1.992 ; Rise       ; clk_50          ;
++--------------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------------+
+; Hold Times                                                                       ;
++--------------------+------------+--------+--------+------------+-----------------+
+; Data Port          ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------------+------------+--------+--------+------------+-----------------+
+; btn_confirmar      ; clk_50     ; -1.807 ; -1.807 ; Rise       ; clk_50          ;
+; btn_desistir       ; clk_50     ; -1.860 ; -1.860 ; Rise       ; clk_50          ;
+; btn_inserir_moeda  ; clk_50     ; -1.714 ; -1.714 ; Rise       ; clk_50          ;
+; ch_produto[*]      ; clk_50     ; 0.485  ; 0.485  ; Rise       ; clk_50          ;
+;  ch_produto[0]     ; clk_50     ; 0.431  ; 0.431  ; Rise       ; clk_50          ;
+;  ch_produto[1]     ; clk_50     ; 0.189  ; 0.189  ; Rise       ; clk_50          ;
+;  ch_produto[2]     ; clk_50     ; 0.485  ; 0.485  ; Rise       ; clk_50          ;
+; ch_valor_moeda[*]  ; clk_50     ; 0.489  ; 0.489  ; Rise       ; clk_50          ;
+;  ch_valor_moeda[0] ; clk_50     ; 0.489  ; 0.489  ; Rise       ; clk_50          ;
+;  ch_valor_moeda[1] ; clk_50     ; 0.330  ; 0.330  ; Rise       ; clk_50          ;
+;  ch_valor_moeda[2] ; clk_50     ; 0.436  ; 0.436  ; Rise       ; clk_50          ;
++--------------------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Clock to Output Times                                                          ;
++------------------+------------+--------+--------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------------+------------+--------+--------+------------+-----------------+
+; hex_centenas[*]  ; clk_50     ; 22.962 ; 22.962 ; Rise       ; clk_50          ;
+;  hex_centenas[0] ; clk_50     ; 22.594 ; 22.594 ; Rise       ; clk_50          ;
+;  hex_centenas[1] ; clk_50     ; 22.595 ; 22.595 ; Rise       ; clk_50          ;
+;  hex_centenas[2] ; clk_50     ; 22.634 ; 22.634 ; Rise       ; clk_50          ;
+;  hex_centenas[3] ; clk_50     ; 22.638 ; 22.638 ; Rise       ; clk_50          ;
+;  hex_centenas[4] ; clk_50     ; 22.962 ; 22.962 ; Rise       ; clk_50          ;
+;  hex_centenas[5] ; clk_50     ; 22.606 ; 22.606 ; Rise       ; clk_50          ;
+;  hex_centenas[6] ; clk_50     ; 22.948 ; 22.948 ; Rise       ; clk_50          ;
+; hex_dezenas[*]   ; clk_50     ; 46.580 ; 46.580 ; Rise       ; clk_50          ;
+;  hex_dezenas[0]  ; clk_50     ; 45.840 ; 45.840 ; Rise       ; clk_50          ;
+;  hex_dezenas[1]  ; clk_50     ; 46.070 ; 46.070 ; Rise       ; clk_50          ;
+;  hex_dezenas[2]  ; clk_50     ; 45.891 ; 45.891 ; Rise       ; clk_50          ;
+;  hex_dezenas[3]  ; clk_50     ; 46.211 ; 46.211 ; Rise       ; clk_50          ;
+;  hex_dezenas[4]  ; clk_50     ; 45.830 ; 45.830 ; Rise       ; clk_50          ;
+;  hex_dezenas[5]  ; clk_50     ; 46.346 ; 46.346 ; Rise       ; clk_50          ;
+;  hex_dezenas[6]  ; clk_50     ; 46.580 ; 46.580 ; Rise       ; clk_50          ;
+; hex_unidades[*]  ; clk_50     ; 54.335 ; 54.335 ; Rise       ; clk_50          ;
+;  hex_unidades[0] ; clk_50     ; 53.079 ; 53.079 ; Rise       ; clk_50          ;
+;  hex_unidades[1] ; clk_50     ; 53.106 ; 53.106 ; Rise       ; clk_50          ;
+;  hex_unidades[2] ; clk_50     ; 53.471 ; 53.471 ; Rise       ; clk_50          ;
+;  hex_unidades[3] ; clk_50     ; 53.928 ; 53.928 ; Rise       ; clk_50          ;
+;  hex_unidades[4] ; clk_50     ; 52.343 ; 52.343 ; Rise       ; clk_50          ;
+;  hex_unidades[5] ; clk_50     ; 54.335 ; 54.335 ; Rise       ; clk_50          ;
+;  hex_unidades[6] ; clk_50     ; 54.304 ; 54.304 ; Rise       ; clk_50          ;
+; led_devolver     ; clk_50     ; 9.289  ; 9.289  ; Rise       ; clk_50          ;
+; led_liberar      ; clk_50     ; 8.254  ; 8.254  ; Rise       ; clk_50          ;
+; led_sem_estoque  ; clk_50     ; 7.992  ; 7.992  ; Rise       ; clk_50          ;
+; led_troco        ; clk_50     ; 11.873 ; 11.873 ; Rise       ; clk_50          ;
++------------------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                ;
++------------------+------------+-------+-------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------------+------------+-------+-------+------------+-----------------+
+; hex_centenas[*]  ; clk_50     ; 5.812 ; 5.812 ; Rise       ; clk_50          ;
+;  hex_centenas[0] ; clk_50     ; 5.812 ; 5.812 ; Rise       ; clk_50          ;
+;  hex_centenas[1] ; clk_50     ; 5.828 ; 5.828 ; Rise       ; clk_50          ;
+;  hex_centenas[2] ; clk_50     ; 5.867 ; 5.867 ; Rise       ; clk_50          ;
+;  hex_centenas[3] ; clk_50     ; 5.859 ; 5.859 ; Rise       ; clk_50          ;
+;  hex_centenas[4] ; clk_50     ; 5.974 ; 5.974 ; Rise       ; clk_50          ;
+;  hex_centenas[5] ; clk_50     ; 5.840 ; 5.840 ; Rise       ; clk_50          ;
+;  hex_centenas[6] ; clk_50     ; 5.977 ; 5.977 ; Rise       ; clk_50          ;
+; hex_dezenas[*]   ; clk_50     ; 6.444 ; 6.444 ; Rise       ; clk_50          ;
+;  hex_dezenas[0]  ; clk_50     ; 6.538 ; 6.538 ; Rise       ; clk_50          ;
+;  hex_dezenas[1]  ; clk_50     ; 6.618 ; 6.618 ; Rise       ; clk_50          ;
+;  hex_dezenas[2]  ; clk_50     ; 6.549 ; 6.549 ; Rise       ; clk_50          ;
+;  hex_dezenas[3]  ; clk_50     ; 6.646 ; 6.646 ; Rise       ; clk_50          ;
+;  hex_dezenas[4]  ; clk_50     ; 6.444 ; 6.444 ; Rise       ; clk_50          ;
+;  hex_dezenas[5]  ; clk_50     ; 6.766 ; 6.766 ; Rise       ; clk_50          ;
+;  hex_dezenas[6]  ; clk_50     ; 6.801 ; 6.801 ; Rise       ; clk_50          ;
+; hex_unidades[*]  ; clk_50     ; 6.116 ; 6.116 ; Rise       ; clk_50          ;
+;  hex_unidades[0] ; clk_50     ; 6.131 ; 6.131 ; Rise       ; clk_50          ;
+;  hex_unidades[1] ; clk_50     ; 6.160 ; 6.160 ; Rise       ; clk_50          ;
+;  hex_unidades[2] ; clk_50     ; 6.289 ; 6.289 ; Rise       ; clk_50          ;
+;  hex_unidades[3] ; clk_50     ; 6.325 ; 6.325 ; Rise       ; clk_50          ;
+;  hex_unidades[4] ; clk_50     ; 6.116 ; 6.116 ; Rise       ; clk_50          ;
+;  hex_unidades[5] ; clk_50     ; 6.377 ; 6.377 ; Rise       ; clk_50          ;
+;  hex_unidades[6] ; clk_50     ; 6.176 ; 6.176 ; Rise       ; clk_50          ;
+; led_devolver     ; clk_50     ; 4.484 ; 4.484 ; Rise       ; clk_50          ;
+; led_liberar      ; clk_50     ; 4.230 ; 4.230 ; Rise       ; clk_50          ;
+; led_sem_estoque  ; clk_50     ; 4.186 ; 4.186 ; Rise       ; clk_50          ;
+; led_troco        ; clk_50     ; 4.567 ; 4.567 ; Rise       ; clk_50          ;
++------------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------+
+; Progagation Delay                                               ;
++---------------+-------------+--------+--------+--------+--------+
+; Input Port    ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++---------------+-------------+--------+--------+--------+--------+
+; ch_produto[0] ; led_troco   ; 11.781 ; 10.789 ; 10.789 ; 11.781 ;
+; ch_produto[1] ; led_troco   ; 11.628 ; 10.363 ; 10.363 ; 11.628 ;
+; ch_produto[2] ; led_troco   ; 12.204 ; 11.108 ; 11.108 ; 12.204 ;
++---------------+-------------+--------+--------+--------+--------+
+
+
++-------------------------------------------------------------+
+; Minimum Progagation Delay                                   ;
++---------------+-------------+-------+-------+-------+-------+
+; Input Port    ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++---------------+-------------+-------+-------+-------+-------+
+; ch_produto[0] ; led_troco   ; 4.496 ; 4.060 ; 4.060 ; 4.496 ;
+; ch_produto[1] ; led_troco   ; 4.377 ; 3.930 ; 3.930 ; 4.377 ;
+; ch_produto[2] ; led_troco   ; 4.510 ; 4.067 ; 4.067 ; 4.510 ;
++---------------+-------------+-------+-------+-------+-------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk_50     ; clk_50   ; 2175     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk_50     ; clk_50   ; 2175     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 10    ; 10   ;
+; Unconstrained Input Port Paths  ; 288   ; 288  ;
+; Unconstrained Output Ports      ; 25    ; 25   ;
+; Unconstrained Output Port Paths ; 207   ; 207  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Jun 19 10:37:35 2026
+Info: Command: quartus_sta top_level -c top_level
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'top_level.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk_50 clk_50
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -3.230
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.230      -242.636 clk_50 
+Info (332146): Worst-case hold slack is 0.445
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.445         0.000 clk_50 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.631
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.631      -132.385 clk_50 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.657
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.657       -34.801 clk_50 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 clk_50 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380      -108.380 clk_50 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 32-bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 340 megabytes
+    Info: Processing ended: Fri Jun 19 10:37:36 2026
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

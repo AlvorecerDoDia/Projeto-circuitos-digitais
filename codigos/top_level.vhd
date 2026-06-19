@@ -1,0 +1,121 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity top_level is
+    port(
+        clk_50            : in  std_logic;
+        ch_reset          : in  std_logic;
+        btn_confirmar     : in  std_logic;
+        btn_desistir      : in  std_logic;
+        btn_inserir_moeda : in  std_logic;
+        ch_valor_moeda    : in  std_logic_vector(2 downto 0);
+        ch_produto        : in  std_logic_vector(2 downto 0);
+        led_liberar       : out std_logic;
+        led_troco         : out std_logic;
+        led_devolver      : out std_logic;
+        led_sem_estoque   : out std_logic;
+        hex_centenas      : out std_logic_vector(6 downto 0);
+        hex_dezenas       : out std_logic_vector(6 downto 0);
+        hex_unidades      : out std_logic_vector(6 downto 0)
+    );
+end top_level;
+
+architecture comportamento of top_level is
+    signal confirmar_filtrado   : std_logic;
+    signal desistir_filtrado    : std_logic;
+    signal moeda_filtrada       : std_logic;
+    signal sinal_limpar_soma    : std_logic;
+    signal sinal_habilitar_moeda: std_logic;
+    signal sinal_baixar_estoque : std_logic;
+    signal sinal_estoque_ok     : std_logic;
+    signal sinal_soma_ok        : std_logic;
+    signal sinal_tem_troco      : std_logic;
+    signal sinal_somatorio      : integer range 0 to 1000;
+    
+    
+    signal reset_int            : std_logic;
+    signal btn_confirmar_int    : std_logic;
+    signal btn_desistir_int     : std_logic;
+    signal btn_inserir_moeda_int: std_logic;
+    signal led_liberar_int      : std_logic;
+    signal led_troco_int        : std_logic;
+    signal led_devolver_int     : std_logic;
+    signal led_sem_estoque_int  : std_logic;
+begin
+
+   
+    reset_int <= ch_reset;
+    btn_confirmar_int <= not btn_confirmar;
+    btn_desistir_int <= not btn_desistir;
+    btn_inserir_moeda_int <= not btn_inserir_moeda;
+    
+   
+   led_liberar <= led_liberar_int;
+   led_troco <= led_troco_int;
+   led_devolver <= led_devolver_int;
+   led_sem_estoque <= led_sem_estoque_int;
+    U_FILTRO1: entity work.debounce
+        port map (
+            relogio     => clk_50,
+            reset       => reset_int,
+            botao_in    => btn_confirmar_int,
+            botao_pulso => confirmar_filtrado
+        );
+
+    U_FILTRO2: entity work.debounce
+        port map (
+            relogio     => clk_50,
+            reset       => reset_int,
+            botao_in    => btn_desistir_int,
+            botao_pulso => desistir_filtrado
+        );
+
+    U_FILTRO3: entity work.debounce
+        port map (
+            relogio     => clk_50,
+            reset       => reset_int,
+            botao_in    => btn_inserir_moeda_int,
+            botao_pulso => moeda_filtrada
+        );
+
+    U_BLOCO_DADOS: entity work.datapath port map(
+        relogio         => clk_50,
+        reiniciar       => reset_int,
+        valor_moeda     => ch_valor_moeda,
+        tipo_produto    => ch_produto,
+        limpar_soma     => sinal_limpar_soma,
+        receber_moeda   => sinal_habilitar_moeda,
+        baixar_estoque  => sinal_baixar_estoque,
+        estoque_ok      => sinal_estoque_ok,
+        soma_ok         => sinal_soma_ok,
+        tem_troco       => sinal_tem_troco,
+        somatorio_saida => sinal_somatorio,
+        troco_saida     => open
+    );
+
+    U_CONTROLE: entity work.mef port map(
+        relogio         => clk_50,
+        reiniciar       => reset_int,
+        btn_confirmar   => confirmar_filtrado,
+        btn_desistir    => desistir_filtrado,
+        inserir_moeda   => moeda_filtrada,
+        estoque_ok      => sinal_estoque_ok,
+        soma_ok         => sinal_soma_ok,
+        tem_troco       => sinal_tem_troco,
+        limpar_soma     => sinal_limpar_soma,
+        habilitar_moeda => sinal_habilitar_moeda,
+        baixar_estoque  => sinal_baixar_estoque,
+        liberar_produto => led_liberar_int,
+        liberar_troco   => led_troco_int,
+        devolver_moedas => led_devolver_int,
+        sem_estoque     => led_sem_estoque_int
+    );
+
+    U_DISP: entity work.display_7seg port map(
+        valor        => sinal_somatorio,
+        hex_centenas => hex_centenas,
+        hex_dezenas  => hex_dezenas,
+        hex_unidades => hex_unidades
+    );
+
+end comportamento;
