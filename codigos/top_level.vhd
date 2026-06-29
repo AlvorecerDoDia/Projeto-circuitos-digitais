@@ -41,6 +41,10 @@ architecture comportamento of top_level is
     signal led_troco_int        : std_logic;
     signal led_devolver_int     : std_logic;
     signal led_sem_estoque_int  : std_logic;
+    signal led_liberar_temp     : std_logic;
+    signal led_troco_temp       : std_logic;
+    signal led_devolver_temp    : std_logic;
+    signal led_sem_estoque_temp : std_logic;
 begin
 
    
@@ -50,10 +54,11 @@ begin
     btn_inserir_moeda_int <= not btn_inserir_moeda;
     
    
-   led_liberar <= led_liberar_int;
-   led_troco <= led_troco_int;
-   led_devolver <= led_devolver_int;
-   led_sem_estoque <= led_sem_estoque_int;
+    led_liberar <= led_liberar_temp;
+    led_troco <= led_troco_temp;
+    led_devolver <= led_devolver_temp;
+    led_sem_estoque <= led_sem_estoque_temp;
+
     U_FILTRO1: entity work.debounce
         port map (
             relogio     => clk_50,
@@ -110,6 +115,38 @@ begin
         devolver_moedas => led_devolver_int,
         sem_estoque     => led_sem_estoque_int
     );
+
+    U_LED_LIBERAR: entity work.led_timer
+        port map(
+            relogio   => clk_50,
+            reiniciar => reset_int,
+            pulso     => led_liberar_int,
+            led_saida => led_liberar_temp
+        );
+
+    U_LED_TROCO: entity work.led_timer
+        port map(
+            relogio   => clk_50,
+            reiniciar => reset_int,
+            pulso     => led_troco_int,
+            led_saida => led_troco_temp
+        );
+
+    U_LED_DEVOLVER: entity work.led_timer
+        port map(
+            relogio   => clk_50,
+            reiniciar => reset_int,
+            pulso     => led_devolver_int,
+            led_saida => led_devolver_temp
+        );
+
+    U_LED_SEM_ESTOQUE: entity work.led_timer
+        port map(
+            relogio   => clk_50,
+            reiniciar => reset_int,
+            pulso     => led_sem_estoque_int,
+            led_saida => led_sem_estoque_temp
+        );
 
     U_DISP: entity work.display_7seg port map(
         valor        => sinal_somatorio,
