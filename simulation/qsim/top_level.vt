@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "06/19/2026 10:06:22"
+// Generated on "07/01/2026 09:03:22"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    top_level
 // 
@@ -710,32 +710,21 @@ top_level i1 (
 );
 
 // clk_50
-initial
+always
 begin
-	repeat(49)
-	begin
-		clk_50 = 1'b0;
-		clk_50 = #10000 1'b1;
-		# 10000;
-	end
 	clk_50 = 1'b0;
 	clk_50 = #10000 1'b1;
-	# 9000;
-	repeat(50)
-	begin
-		clk_50 = 1'b0;
-		clk_50 = #10000 1'b1;
-		# 10000;
-	end
-	clk_50 = 1'b0;
+	#10000;
 end 
 
 // btn_confirmar
 initial
 begin
 	btn_confirmar = 1'b1;
-	btn_confirmar = #400000 1'b0;
-	btn_confirmar = #60000 1'b1;
+	btn_confirmar = #320000 1'b0;
+	btn_confirmar = #40000 1'b1;
+	btn_confirmar = #360000 1'b0;
+	btn_confirmar = #40000 1'b1;
 end 
 
 // btn_desistir
@@ -749,9 +738,19 @@ initial
 begin
 	btn_inserir_moeda = 1'b1;
 	btn_inserir_moeda = #80000 1'b0;
-	btn_inserir_moeda = #80000 1'b1;
-	btn_inserir_moeda = #80000 1'b0;
-	btn_inserir_moeda = #80000 1'b1;
+	btn_inserir_moeda = #40000 1'b1;
+	btn_inserir_moeda = #40000 1'b0;
+	btn_inserir_moeda = #40000 1'b1;
+	btn_inserir_moeda = #40000 1'b0;
+	btn_inserir_moeda = #40000 1'b1;
+	btn_inserir_moeda = #120000 1'b0;
+	btn_inserir_moeda = #40000 1'b1;
+	btn_inserir_moeda = #40000 1'b0;
+	btn_inserir_moeda = #40000 1'b1;
+	btn_inserir_moeda = #40000 1'b0;
+	btn_inserir_moeda = #40000 1'b1;
+	btn_inserir_moeda = #40000 1'b0;
+	btn_inserir_moeda = #40000 1'b1;
 end 
 
 // ch_reset
@@ -763,7 +762,7 @@ end
 // ch_produto[ 2 ]
 initial
 begin
-	ch_produto[2] = 1'b0;
+	ch_produto[2] = 1'b1;
 end 
 // ch_produto[ 1 ]
 initial
@@ -774,27 +773,23 @@ end
 initial
 begin
 	ch_produto[0] = 1'b0;
-	ch_produto[0] = #40000 1'b1;
-	ch_produto[0] = #660000 1'b0;
 end 
 // ch_valor_moeda[ 2 ]
 initial
 begin
-	ch_valor_moeda[2] = 1'b0;
+	ch_valor_moeda[2] = 1'b1;
+	ch_valor_moeda[2] = #640000 1'b0;
+	ch_valor_moeda[2] = #60000 1'b1;
 end 
 // ch_valor_moeda[ 1 ]
 initial
 begin
 	ch_valor_moeda[1] = 1'b0;
-	ch_valor_moeda[1] = #40000 1'b1;
-	ch_valor_moeda[1] = #660000 1'b0;
 end 
 // ch_valor_moeda[ 0 ]
 initial
 begin
 	ch_valor_moeda[0] = 1'b0;
-	ch_valor_moeda[0] = #40000 1'b1;
-	ch_valor_moeda[0] = #660000 1'b0;
 end 
 
 top_level_vlg_sample_tst tb_sample (

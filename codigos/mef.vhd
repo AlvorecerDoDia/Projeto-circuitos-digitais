@@ -41,7 +41,7 @@ begin
             when ESPERA =>
                 if btn_desistir = '1' then
                     proximo_estado <= DEVOLUCAO;
-                elsif btn_confirmar = '1' and soma_ok = '1' then
+                elsif btn_confirmar = '1' then
                     proximo_estado <= AVALIA_COMPRA;
                 end if;
                 
@@ -55,8 +55,7 @@ begin
                 end if;
                 
             when ENTREGA_PRODUTO =>
-                -- proximo_estado <= ESPERA;
-                -- CONSERTAR LED AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                 proximo_estado <= ESPERA;
             when DEVOLUCAO =>
                 proximo_estado <= ESPERA;
                 
@@ -85,7 +84,7 @@ begin
             when ENTREGA_PRODUTO =>
                 liberar_produto <= '1';
                 liberar_troco <= tem_troco;
-                -- baixar_estoque <= '1';
+                 baixar_estoque <= '1';
                 limpar_soma <= '1';
                 
             when DEVOLUCAO =>

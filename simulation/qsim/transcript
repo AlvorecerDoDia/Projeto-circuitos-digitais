@@ -28,13 +28,13 @@
 # Loading work.top_level_vlg_sample_tst
 # Loading work.top_level_vlg_check_tst
 # Loading cycloneii_ver.CYCLONEII_PRIM_DFFE
-# ERROR! Vector Mismatch for output port hex_centenas[6] :: @time = 1009000.000 ps
+# ERROR! Vector Mismatch for output port hex_centenas[6] :: @time = 1000000.000 ps
 #      Expected value = 0000000
 #      Real value = 1000000
-# ERROR! Vector Mismatch for output port hex_dezenas[6] :: @time = 1009000.000 ps
+# ERROR! Vector Mismatch for output port hex_dezenas[6] :: @time = 1000000.000 ps
 #      Expected value = 0000000
 #      Real value = 1000000
-# ERROR! Vector Mismatch for output port hex_unidades[6] :: @time = 1009000.000 ps
+# ERROR! Vector Mismatch for output port hex_unidades[6] :: @time = 1000000.000 ps
 #      Expected value = 0000000
 #      Real value = 1000000
 #           3 mismatched vectors : Simulation failed !

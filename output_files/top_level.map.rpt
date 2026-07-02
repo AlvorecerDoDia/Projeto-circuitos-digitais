@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_level
-Fri Jun 19 10:37:24 2026
+Wed Jul 01 09:56:07 2026
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -21,13 +21,17 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  13. Parameter Settings for User Entity Instance: debounce:U_FILTRO1
  14. Parameter Settings for User Entity Instance: debounce:U_FILTRO2
  15. Parameter Settings for User Entity Instance: debounce:U_FILTRO3
- 16. Parameter Settings for Inferred Entity Instance: display_7seg:U_DISP|lpm_divide:Div0
- 17. Parameter Settings for Inferred Entity Instance: display_7seg:U_DISP|lpm_divide:Mod0
- 18. Parameter Settings for Inferred Entity Instance: display_7seg:U_DISP|lpm_divide:Div1
- 19. Parameter Settings for Inferred Entity Instance: display_7seg:U_DISP|lpm_divide:Mod1
- 20. Port Connectivity Checks: "datapath:U_BLOCO_DADOS"
- 21. Elapsed Time Per Partition
- 22. Analysis & Synthesis Messages
+ 16. Parameter Settings for User Entity Instance: led_timer:U_LED_LIBERAR
+ 17. Parameter Settings for User Entity Instance: led_timer:U_LED_TROCO
+ 18. Parameter Settings for User Entity Instance: led_timer:U_LED_DEVOLVER
+ 19. Parameter Settings for User Entity Instance: led_timer:U_LED_SEM_ESTOQUE
+ 20. Parameter Settings for Inferred Entity Instance: display_7seg:U_DISP|lpm_divide:Div0
+ 21. Parameter Settings for Inferred Entity Instance: display_7seg:U_DISP|lpm_divide:Mod0
+ 22. Parameter Settings for Inferred Entity Instance: display_7seg:U_DISP|lpm_divide:Div1
+ 23. Parameter Settings for Inferred Entity Instance: display_7seg:U_DISP|lpm_divide:Mod1
+ 24. Port Connectivity Checks: "datapath:U_BLOCO_DADOS"
+ 25. Elapsed Time Per Partition
+ 26. Analysis & Synthesis Messages
 
 
 
@@ -53,15 +57,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jun 19 10:37:24 2026           ;
+; Analysis & Synthesis Status        ; Successful - Wed Jul 01 09:56:07 2026           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; top_level                                       ;
 ; Top-level Entity Name              ; top_level                                       ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 641                                             ;
-;     Total combinational functions  ; 638                                             ;
-;     Dedicated logic registers      ; 107                                             ;
-; Total registers                    ; 107                                             ;
+; Total logic elements               ; 818                                             ;
+;     Total combinational functions  ; 815                                             ;
+;     Dedicated logic registers      ; 220                                             ;
+; Total registers                    ; 220                                             ;
 ; Total pins                         ; 36                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -166,32 +170,33 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                       ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                   ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------+---------+
-; codigos/debounce.vhd             ; yes             ; User VHDL File               ; C:/Users/mikae/Downloads/circuitos-20260619T031415Z-3-001/circuitos/codigos/debounce.vhd       ;         ;
-; codigos/datapath.vhd             ; yes             ; User VHDL File               ; C:/Users/mikae/Downloads/circuitos-20260619T031415Z-3-001/circuitos/codigos/datapath.vhd       ;         ;
-; codigos/mef.vhd                  ; yes             ; User VHDL File               ; C:/Users/mikae/Downloads/circuitos-20260619T031415Z-3-001/circuitos/codigos/mef.vhd            ;         ;
-; codigos/display_7seg.vhd         ; yes             ; User VHDL File               ; C:/Users/mikae/Downloads/circuitos-20260619T031415Z-3-001/circuitos/codigos/display_7seg.vhd   ;         ;
-; codigos/top_level.vhd            ; yes             ; User VHDL File               ; C:/Users/mikae/Downloads/circuitos-20260619T031415Z-3-001/circuitos/codigos/top_level.vhd      ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_divide.tdf                               ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/abs_divider.inc                              ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sign_div_unsign.inc                          ;         ;
-; aglobal130.inc                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                               ;         ;
-; db/lpm_divide_dem.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/mikae/Downloads/circuitos-20260619T031415Z-3-001/circuitos/db/lpm_divide_dem.tdf      ;         ;
-; db/sign_div_unsign_nlh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/mikae/Downloads/circuitos-20260619T031415Z-3-001/circuitos/db/sign_div_unsign_nlh.tdf ;         ;
-; db/alt_u_div_g2f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/mikae/Downloads/circuitos-20260619T031415Z-3-001/circuitos/db/alt_u_div_g2f.tdf       ;         ;
-; db/add_sub_lkc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/mikae/Downloads/circuitos-20260619T031415Z-3-001/circuitos/db/add_sub_lkc.tdf         ;         ;
-; db/add_sub_mkc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/mikae/Downloads/circuitos-20260619T031415Z-3-001/circuitos/db/add_sub_mkc.tdf         ;         ;
-; db/lpm_divide_q7m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/mikae/Downloads/circuitos-20260619T031415Z-3-001/circuitos/db/lpm_divide_q7m.tdf      ;         ;
-; db/sign_div_unsign_1nh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/mikae/Downloads/circuitos-20260619T031415Z-3-001/circuitos/db/sign_div_unsign_1nh.tdf ;         ;
-; db/alt_u_div_45f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/mikae/Downloads/circuitos-20260619T031415Z-3-001/circuitos/db/alt_u_div_45f.tdf       ;         ;
-; db/lpm_divide_aem.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/mikae/Downloads/circuitos-20260619T031415Z-3-001/circuitos/db/lpm_divide_aem.tdf      ;         ;
-; db/sign_div_unsign_klh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/mikae/Downloads/circuitos-20260619T031415Z-3-001/circuitos/db/sign_div_unsign_klh.tdf ;         ;
-; db/alt_u_div_a2f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/mikae/Downloads/circuitos-20260619T031415Z-3-001/circuitos/db/alt_u_div_a2f.tdf       ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                              ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                          ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+---------+
+; /codigos/debounce.vhd            ; yes             ; User VHDL File               ; /codigos/debounce.vhd                                                 ;         ;
+; /codigos/datapath.vhd            ; yes             ; User VHDL File               ; /codigos/datapath.vhd                                                 ;         ;
+; /codigos/mef.vhd                 ; yes             ; User VHDL File               ; /codigos/mef.vhd                                                      ;         ;
+; /codigos/display_7seg.vhd        ; yes             ; User VHDL File               ; /codigos/display_7seg.vhd                                             ;         ;
+; /codigos/led_timer.vhd           ; yes             ; User VHDL File               ; /codigos/led_timer.vhd                                                ;         ;
+; /codigos/top_level.vhd           ; yes             ; User VHDL File               ; /codigos/top_level.vhd                                                ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc      ;         ;
+; db/lpm_divide_dem.tdf            ; yes             ; Auto-Generated Megafunction  ; Q:/db/lpm_divide_dem.tdf                                              ;         ;
+; db/sign_div_unsign_nlh.tdf       ; yes             ; Auto-Generated Megafunction  ; Q:/db/sign_div_unsign_nlh.tdf                                         ;         ;
+; db/alt_u_div_g2f.tdf             ; yes             ; Auto-Generated Megafunction  ; Q:/db/alt_u_div_g2f.tdf                                               ;         ;
+; db/add_sub_lkc.tdf               ; yes             ; Auto-Generated Megafunction  ; Q:/db/add_sub_lkc.tdf                                                 ;         ;
+; db/add_sub_mkc.tdf               ; yes             ; Auto-Generated Megafunction  ; Q:/db/add_sub_mkc.tdf                                                 ;         ;
+; db/lpm_divide_q7m.tdf            ; yes             ; Auto-Generated Megafunction  ; Q:/db/lpm_divide_q7m.tdf                                              ;         ;
+; db/sign_div_unsign_1nh.tdf       ; yes             ; Auto-Generated Megafunction  ; Q:/db/sign_div_unsign_1nh.tdf                                         ;         ;
+; db/alt_u_div_45f.tdf             ; yes             ; Auto-Generated Megafunction  ; Q:/db/alt_u_div_45f.tdf                                               ;         ;
+; db/lpm_divide_aem.tdf            ; yes             ; Auto-Generated Megafunction  ; Q:/db/lpm_divide_aem.tdf                                              ;         ;
+; db/sign_div_unsign_klh.tdf       ; yes             ; Auto-Generated Megafunction  ; Q:/db/sign_div_unsign_klh.tdf                                         ;         ;
+; db/alt_u_div_a2f.tdf             ; yes             ; Auto-Generated Megafunction  ; Q:/db/alt_u_div_a2f.tdf                                               ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------+
@@ -199,28 +204,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------+
 ; Resource                                    ; Usage  ;
 +---------------------------------------------+--------+
-; Estimated Total logic elements              ; 641    ;
+; Estimated Total logic elements              ; 818    ;
 ;                                             ;        ;
-; Total combinational functions               ; 638    ;
+; Total combinational functions               ; 815    ;
 ; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 186    ;
-;     -- 3 input functions                    ; 198    ;
-;     -- <=2 input functions                  ; 254    ;
+;     -- 4 input functions                    ; 240    ;
+;     -- 3 input functions                    ; 212    ;
+;     -- <=2 input functions                  ; 363    ;
 ;                                             ;        ;
 ; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 439    ;
-;     -- arithmetic mode                      ; 199    ;
+;     -- normal mode                          ; 511    ;
+;     -- arithmetic mode                      ; 304    ;
 ;                                             ;        ;
-; Total registers                             ; 107    ;
-;     -- Dedicated logic registers            ; 107    ;
+; Total registers                             ; 220    ;
+;     -- Dedicated logic registers            ; 220    ;
 ;     -- I/O registers                        ; 0      ;
 ;                                             ;        ;
 ; I/O pins                                    ; 36     ;
 ; Embedded Multiplier 9-bit elements          ; 0      ;
 ; Maximum fan-out node                        ; clk_50 ;
-; Maximum fan-out                             ; 107    ;
-; Total fan-out                               ; 2221   ;
-; Average fan-out                             ; 2.84   ;
+; Maximum fan-out                             ; 220    ;
+; Total fan-out                               ; 3195   ;
+; Average fan-out                             ; 2.98   ;
 +---------------------------------------------+--------+
 
 
@@ -229,12 +234,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                            ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |top_level                                ; 638 (0)           ; 107 (0)      ; 0           ; 0            ; 0       ; 0         ; 36   ; 0            ; |top_level                                                                                                                     ; work         ;
+; |top_level                                ; 815 (1)           ; 220 (0)      ; 0           ; 0            ; 0       ; 0         ; 36   ; 0            ; |top_level                                                                                                                     ; work         ;
 ;    |datapath:U_BLOCO_DADOS|               ; 102 (102)         ; 36 (36)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|datapath:U_BLOCO_DADOS                                                                                              ; work         ;
-;    |debounce:U_FILTRO1|                   ; 28 (28)           ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|debounce:U_FILTRO1                                                                                                  ; work         ;
-;    |debounce:U_FILTRO2|                   ; 28 (28)           ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|debounce:U_FILTRO2                                                                                                  ; work         ;
-;    |debounce:U_FILTRO3|                   ; 28 (28)           ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|debounce:U_FILTRO3                                                                                                  ; work         ;
-;    |display_7seg:U_DISP|                  ; 443 (59)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|display_7seg:U_DISP                                                                                                 ; work         ;
+;    |debounce:U_FILTRO1|                   ; 27 (27)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|debounce:U_FILTRO1                                                                                                  ; work         ;
+;    |debounce:U_FILTRO2|                   ; 27 (27)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|debounce:U_FILTRO2                                                                                                  ; work         ;
+;    |debounce:U_FILTRO3|                   ; 27 (27)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|debounce:U_FILTRO3                                                                                                  ; work         ;
+;    |display_7seg:U_DISP|                  ; 442 (58)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|display_7seg:U_DISP                                                                                                 ; work         ;
 ;       |lpm_divide:Div0|                   ; 69 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|display_7seg:U_DISP|lpm_divide:Div0                                                                                 ; work         ;
 ;          |lpm_divide_dem:auto_generated|  ; 69 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|display_7seg:U_DISP|lpm_divide:Div0|lpm_divide_dem:auto_generated                                                   ; work         ;
 ;             |sign_div_unsign_nlh:divider| ; 69 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|display_7seg:U_DISP|lpm_divide:Div0|lpm_divide_dem:auto_generated|sign_div_unsign_nlh:divider                       ; work         ;
@@ -251,7 +256,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |lpm_divide_q7m:auto_generated|  ; 132 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|display_7seg:U_DISP|lpm_divide:Mod1|lpm_divide_q7m:auto_generated                                                   ; work         ;
 ;             |sign_div_unsign_1nh:divider| ; 132 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|display_7seg:U_DISP|lpm_divide:Mod1|lpm_divide_q7m:auto_generated|sign_div_unsign_1nh:divider                       ; work         ;
 ;                |alt_u_div_45f:divider|    ; 132 (132)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|display_7seg:U_DISP|lpm_divide:Mod1|lpm_divide_q7m:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_45f:divider ; work         ;
-;    |mef:U_CONTROLE|                       ; 9 (9)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|mef:U_CONTROLE                                                                                                      ; work         ;
+;    |led_timer:U_LED_DEVOLVER|             ; 66 (66)           ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|led_timer:U_LED_DEVOLVER                                                                                            ; work         ;
+;    |led_timer:U_LED_LIBERAR|              ; 38 (38)           ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|led_timer:U_LED_LIBERAR                                                                                             ; work         ;
+;    |led_timer:U_LED_SEM_ESTOQUE|          ; 38 (38)           ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|led_timer:U_LED_SEM_ESTOQUE                                                                                         ; work         ;
+;    |led_timer:U_LED_TROCO|                ; 39 (39)           ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|led_timer:U_LED_TROCO                                                                                               ; work         ;
+;    |mef:U_CONTROLE|                       ; 8 (8)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|mef:U_CONTROLE                                                                                                      ; work         ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -290,10 +299,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 107   ;
-; Number of registers using Synchronous Clear  ; 67    ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 107   ;
+; Total registers                              ; 220   ;
+; Number of registers using Synchronous Clear  ; 64    ;
+; Number of registers using Synchronous Load   ; 84    ;
+; Number of registers using Asynchronous Clear ; 220   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 10    ;
 ; Number of registers using Preset             ; 0     ;
@@ -321,19 +330,23 @@ Encoding Type:  One-Hot
 +--------------------------------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |top_level|datapath:U_BLOCO_DADOS|soma_atual[8]    ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |top_level|debounce:U_FILTRO1|contador[15]         ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |top_level|debounce:U_FILTRO2|contador[3]          ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |top_level|debounce:U_FILTRO3|contador[9]          ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |top_level|mef:U_CONTROLE|proximo_estado           ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_level|mef:U_CONTROLE|proximo_estado.DEVOLUCAO ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_level|datapath:U_BLOCO_DADOS|incremento       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |top_level|datapath:U_BLOCO_DADOS|soma_atual[0]     ;
+; 3:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |top_level|debounce:U_FILTRO1|contador[16]          ;
+; 3:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |top_level|debounce:U_FILTRO2|contador[2]           ;
+; 3:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |top_level|debounce:U_FILTRO3|contador[0]           ;
+; 3:1                ; 28 bits   ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; Yes        ; |top_level|led_timer:U_LED_LIBERAR|contador[4]      ;
+; 3:1                ; 28 bits   ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; Yes        ; |top_level|led_timer:U_LED_TROCO|contador[20]       ;
+; 3:1                ; 28 bits   ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; Yes        ; |top_level|led_timer:U_LED_DEVOLVER|contador[8]     ;
+; 3:1                ; 28 bits   ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; Yes        ; |top_level|led_timer:U_LED_SEM_ESTOQUE|contador[25] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |top_level|mef:U_CONTROLE|proximo_estado            ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_level|mef:U_CONTROLE|proximo_estado.DEVOLUCAO  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_level|datapath:U_BLOCO_DADOS|incremento        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
 
 
 +-----------------------------------------------------------------+
@@ -341,7 +354,7 @@ Encoding Type:  One-Hot
 +----------------+--------+---------------------------------------+
 ; Parameter Name ; Value  ; Type                                  ;
 +----------------+--------+---------------------------------------+
-; limite_filtro  ; 500000 ; Signed Integer                        ;
+; limite_filtro  ; 250000 ; Signed Integer                        ;
 +----------------+--------+---------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -351,7 +364,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------+---------------------------------------+
 ; Parameter Name ; Value  ; Type                                  ;
 +----------------+--------+---------------------------------------+
-; limite_filtro  ; 500000 ; Signed Integer                        ;
+; limite_filtro  ; 250000 ; Signed Integer                        ;
 +----------------+--------+---------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -361,8 +374,48 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------+---------------------------------------+
 ; Parameter Name ; Value  ; Type                                  ;
 +----------------+--------+---------------------------------------+
-; limite_filtro  ; 500000 ; Signed Integer                        ;
+; limite_filtro  ; 250000 ; Signed Integer                        ;
 +----------------+--------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_timer:U_LED_LIBERAR ;
++----------------+-----------+-----------------------------------------+
+; Parameter Name ; Value     ; Type                                    ;
++----------------+-----------+-----------------------------------------+
+; tempo_aceso    ; 150000000 ; Signed Integer                          ;
++----------------+-----------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_timer:U_LED_TROCO ;
++----------------+-----------+---------------------------------------+
+; Parameter Name ; Value     ; Type                                  ;
++----------------+-----------+---------------------------------------+
+; tempo_aceso    ; 150000000 ; Signed Integer                        ;
++----------------+-----------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_timer:U_LED_DEVOLVER ;
++----------------+-----------+------------------------------------------+
+; Parameter Name ; Value     ; Type                                     ;
++----------------+-----------+------------------------------------------+
+; tempo_aceso    ; 150000000 ; Signed Integer                           ;
++----------------+-----------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_timer:U_LED_SEM_ESTOQUE ;
++----------------+-----------+---------------------------------------------+
+; Parameter Name ; Value     ; Type                                        ;
++----------------+-----------+---------------------------------------------+
+; tempo_aceso    ; 150000000 ; Signed Integer                              ;
++----------------+-----------+---------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -482,28 +535,32 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Jun 19 10:37:20 2026
+    Info: Processing started: Wed Jul 01 09:56:04 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top_level -c top_level
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 2 design units, including 1 entities, in source file codigos/debounce.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /codigos/debounce.vhd
     Info (12022): Found design unit 1: debounce-comportamento
     Info (12023): Found entity 1: debounce
-Info (12021): Found 2 design units, including 1 entities, in source file codigos/datapath.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /codigos/datapath.vhd
     Info (12022): Found design unit 1: datapath-comportamento
     Info (12023): Found entity 1: datapath
-Info (12021): Found 2 design units, including 1 entities, in source file codigos/mef.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /codigos/mef.vhd
     Info (12022): Found design unit 1: mef-comportamento
     Info (12023): Found entity 1: mef
-Info (12021): Found 2 design units, including 1 entities, in source file codigos/display_7seg.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /codigos/display_7seg.vhd
     Info (12022): Found design unit 1: display_7seg-comportamento
     Info (12023): Found entity 1: display_7seg
-Info (12021): Found 2 design units, including 1 entities, in source file codigos/top_level.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /codigos/led_timer.vhd
+    Info (12022): Found design unit 1: led_timer-comportamento
+    Info (12023): Found entity 1: led_timer
+Info (12021): Found 2 design units, including 1 entities, in source file /codigos/top_level.vhd
     Info (12022): Found design unit 1: top_level-comportamento
     Info (12023): Found entity 1: top_level
 Info (12127): Elaborating entity "top_level" for the top level hierarchy
 Info (12128): Elaborating entity "debounce" for hierarchy "debounce:U_FILTRO1"
 Info (12128): Elaborating entity "datapath" for hierarchy "datapath:U_BLOCO_DADOS"
 Info (12128): Elaborating entity "mef" for hierarchy "mef:U_CONTROLE"
+Info (12128): Elaborating entity "led_timer" for hierarchy "led_timer:U_LED_LIBERAR"
 Info (12128): Elaborating entity "display_7seg" for hierarchy "display_7seg:U_DISP"
 Info (278001): Inferred 4 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "display_7seg:U_DISP|Div0"
@@ -560,14 +617,14 @@ Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 677 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 854 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 25 output pins
-    Info (21061): Implemented 641 logic cells
+    Info (21061): Implemented 818 logic cells
 Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 420 megabytes
-    Info: Processing ended: Fri Jun 19 10:37:24 2026
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 418 megabytes
+    Info: Processing ended: Wed Jul 01 09:56:07 2026
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 

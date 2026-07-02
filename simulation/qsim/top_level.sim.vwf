@@ -450,9 +450,11 @@ TRANSITION_LIST("btn_confirmar")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 400.0;
-		LEVEL 0 FOR 60.0;
-		LEVEL 1 FOR 1540.0;
+		LEVEL 1 FOR 320.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 360.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 1240.0;
 	}
 }
 TRANSITION_LIST("btn_desistir")
@@ -469,10 +471,20 @@ TRANSITION_LIST("btn_inserir_moeda")
 	{
 		REPEAT = 1;
 		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 80.0;
-		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 80.0;
-		LEVEL 1 FOR 1680.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 1320.0;
 	}
 }
 TRANSITION_LIST("ch_produto[2]")
@@ -480,7 +492,7 @@ TRANSITION_LIST("ch_produto[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 2000.0;
+		LEVEL 1 FOR 2000.0;
 	}
 }
 TRANSITION_LIST("ch_produto[1]")
@@ -496,9 +508,7 @@ TRANSITION_LIST("ch_produto[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 40.0;
-		LEVEL 1 FOR 660.0;
-		LEVEL 0 FOR 1300.0;
+		LEVEL 0 FOR 2000.0;
 	}
 }
 TRANSITION_LIST("ch_reset")
@@ -515,7 +525,9 @@ TRANSITION_LIST("ch_valor_moeda[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 2000.0;
+		LEVEL 1 FOR 640.0;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 1300.0;
 	}
 }
 TRANSITION_LIST("ch_valor_moeda[1]")
@@ -523,9 +535,7 @@ TRANSITION_LIST("ch_valor_moeda[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 40.0;
-		LEVEL 1 FOR 660.0;
-		LEVEL 0 FOR 1300.0;
+		LEVEL 0 FOR 2000.0;
 	}
 }
 TRANSITION_LIST("ch_valor_moeda[0]")
@@ -533,9 +543,7 @@ TRANSITION_LIST("ch_valor_moeda[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 40.0;
-		LEVEL 1 FOR 660.0;
-		LEVEL 0 FOR 1300.0;
+		LEVEL 0 FOR 2000.0;
 	}
 }
 TRANSITION_LIST("clk_50")
@@ -642,8 +650,6 @@ TRANSITION_LIST("clk_50")
 		LEVEL 0 FOR 10.0;
 		LEVEL 1 FOR 10.0;
 		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 9.0;
-		LEVEL 0 FOR 10.0;
 		LEVEL 1 FOR 10.0;
 		LEVEL 0 FOR 10.0;
 		LEVEL 1 FOR 10.0;
@@ -743,7 +749,8 @@ TRANSITION_LIST("clk_50")
 		LEVEL 1 FOR 10.0;
 		LEVEL 0 FOR 10.0;
 		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 1.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
 	}
 }
 TRANSITION_LIST("hex_centenas[6]")
@@ -759,9 +766,7 @@ TRANSITION_LIST("hex_centenas[5]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 310.0;
-		LEVEL 1 FOR 200.0;
-		LEVEL 0 FOR 1490.0;
+		LEVEL 0 FOR 2000.0;
 	}
 }
 TRANSITION_LIST("hex_centenas[4]")
@@ -769,9 +774,7 @@ TRANSITION_LIST("hex_centenas[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 310.0;
-		LEVEL 1 FOR 200.0;
-		LEVEL 0 FOR 1490.0;
+		LEVEL 0 FOR 2000.0;
 	}
 }
 TRANSITION_LIST("hex_centenas[3]")
@@ -779,9 +782,7 @@ TRANSITION_LIST("hex_centenas[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 310.0;
-		LEVEL 1 FOR 200.0;
-		LEVEL 0 FOR 1490.0;
+		LEVEL 0 FOR 2000.0;
 	}
 }
 TRANSITION_LIST("hex_centenas[2]")
@@ -805,9 +806,7 @@ TRANSITION_LIST("hex_centenas[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 310.0;
-		LEVEL 1 FOR 200.0;
-		LEVEL 0 FOR 1490.0;
+		LEVEL 0 FOR 2000.0;
 	}
 }
 TRANSITION_LIST("hex_dezenas[6]")
@@ -815,9 +814,7 @@ TRANSITION_LIST("hex_dezenas[6]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 150.0;
-		LEVEL 0 FOR 160.0;
-		LEVEL 1 FOR 1690.0;
+		LEVEL 1 FOR 2000.0;
 	}
 }
 TRANSITION_LIST("hex_dezenas[5]")
@@ -833,9 +830,7 @@ TRANSITION_LIST("hex_dezenas[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 150.0;
-		LEVEL 1 FOR 160.0;
-		LEVEL 0 FOR 1690.0;
+		LEVEL 0 FOR 2000.0;
 	}
 }
 TRANSITION_LIST("hex_dezenas[3]")
@@ -859,9 +854,7 @@ TRANSITION_LIST("hex_dezenas[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 150.0;
-		LEVEL 1 FOR 160.0;
-		LEVEL 0 FOR 1690.0;
+		LEVEL 0 FOR 2000.0;
 	}
 }
 TRANSITION_LIST("hex_dezenas[0]")
@@ -941,9 +934,7 @@ TRANSITION_LIST("led_liberar")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 490.0;
-		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 1490.0;
+		LEVEL 0 FOR 2000.0;
 	}
 }
 TRANSITION_LIST("led_sem_estoque")

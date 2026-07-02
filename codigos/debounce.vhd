@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 
 entity debounce is
     generic(
-        LIMITE_FILTRO : integer := 500000
+        LIMITE_FILTRO : integer := 250000
     );
     port(
         relogio     : in  std_logic;
@@ -17,7 +17,7 @@ end debounce;
 architecture comportamento of debounce is
     signal botao_estavel : std_logic := '0';
     signal botao_ant     : std_logic := '0';
-    signal contador      : integer range 0 to 500000 := 0;
+    signal contador      : integer range 0 to 250000 := 0;
 begin
     process(relogio, reset)
     begin
@@ -37,7 +37,7 @@ begin
             else
                 contador <= 0;
             end if;
-            
+
             botao_ant <= botao_estavel;
             if botao_estavel = '1' and botao_ant = '0' then
                 botao_pulso <= '1';

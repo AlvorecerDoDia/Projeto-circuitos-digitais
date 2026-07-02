@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP2C20F484) Path("C:/Users/mikae/Downloads/circuitos-20260619T031415Z-3-001/circuitos/output_files/") File("top_level.sof") MfrSpec(OpMask(1));
+		Device PartName(EP2C20F484) Path("C:/Users/mikae/OneDrive/Documentos/circuitos/output_files/") File("top_level.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
