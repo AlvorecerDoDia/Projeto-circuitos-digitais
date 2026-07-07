@@ -14,6 +14,7 @@ entity top_level is
         led_troco         : out std_logic;
         led_devolver      : out std_logic;
         led_sem_estoque   : out std_logic;
+        led_estados       : out std_logic_vector(4 downto 0);
         hex_centenas      : out std_logic_vector(6 downto 0);
         hex_dezenas       : out std_logic_vector(6 downto 0);
         hex_unidades      : out std_logic_vector(6 downto 0)
@@ -45,19 +46,23 @@ architecture comportamento of top_level is
     signal led_troco_temp       : std_logic;
     signal led_devolver_temp    : std_logic;
     signal led_sem_estoque_temp : std_logic;
+    
+    signal led_estados_int      : std_logic_vector(4 downto 0);
+    signal led_estados_temp     : std_logic_vector(4 downto 0);
 begin
 
    
     reset_int <= ch_reset;
-    btn_confirmar_int <= not btn_confirmar;
-    btn_desistir_int <= not btn_desistir;
-    btn_inserir_moeda_int <= not btn_inserir_moeda;
+    btn_confirmar_int <= btn_confirmar;
+    btn_desistir_int <= btn_desistir;
+    btn_inserir_moeda_int <= btn_inserir_moeda;
     
    
     led_liberar <= led_liberar_temp;
     led_troco <= led_troco_temp;
     led_devolver <= led_devolver_temp;
     led_sem_estoque <= led_sem_estoque_temp;
+    led_estados <= led_estados_temp;
 
     U_FILTRO1: entity work.debounce
         port map (
@@ -113,7 +118,8 @@ begin
         liberar_produto => led_liberar_int,
         liberar_troco   => led_troco_int,
         devolver_moedas => led_devolver_int,
-        sem_estoque     => led_sem_estoque_int
+        sem_estoque     => led_sem_estoque_int,
+        estado_out      => led_estados_int
     );
 
     U_LED_LIBERAR: entity work.led_timer
@@ -147,6 +153,25 @@ begin
             pulso     => led_sem_estoque_int,
             led_saida => led_sem_estoque_temp
         );
+
+    led_estados_temp(0) <= led_estados_int(0);
+
+    U_LED_EST1: entity work.led_timer port map(
+        relogio   => clk_50, reiniciar => reset_int,
+        pulso     => led_estados_int(1), led_saida => led_estados_temp(1)
+    );
+    U_LED_EST2: entity work.led_timer port map(
+        relogio   => clk_50, reiniciar => reset_int,
+        pulso     => led_estados_int(2), led_saida => led_estados_temp(2)
+    );
+    U_LED_EST3: entity work.led_timer port map(
+        relogio   => clk_50, reiniciar => reset_int,
+        pulso     => led_estados_int(3), led_saida => led_estados_temp(3)
+    );
+    U_LED_EST4: entity work.led_timer port map(
+        relogio   => clk_50, reiniciar => reset_int,
+        pulso     => led_estados_int(4), led_saida => led_estados_temp(4)
+    );
 
     U_DISP: entity work.display_7seg port map(
         valor        => sinal_somatorio,

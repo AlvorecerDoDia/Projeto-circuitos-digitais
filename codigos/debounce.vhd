@@ -15,17 +15,17 @@ entity debounce is
 end debounce;
 
 architecture comportamento of debounce is
-    signal botao_estavel : std_logic := '0';
-    signal botao_ant     : std_logic := '0';
+    signal botao_estavel : std_logic := '1';
+    signal botao_ant     : std_logic := '1';
     signal contador      : integer range 0 to 250000 := 0;
 begin
     process(relogio, reset)
     begin
         if reset = '1' then
             contador <= 0;
-            botao_estavel <= '0';
-            botao_ant <= '0';
-            botao_pulso <= '0';
+            botao_estavel <= '1';
+            botao_ant <= '1';
+            botao_pulso <= '1';
         elsif rising_edge(relogio) then
             if botao_in /= botao_estavel then
                 if contador = LIMITE_FILTRO then
@@ -39,10 +39,10 @@ begin
             end if;
 
             botao_ant <= botao_estavel;
-            if botao_estavel = '1' and botao_ant = '0' then
-                botao_pulso <= '1';
-            else
+            if botao_estavel = '0' and botao_ant = '1' then
                 botao_pulso <= '0';
+            else
+                botao_pulso <= '1';
             end if;
         end if;
     end process;

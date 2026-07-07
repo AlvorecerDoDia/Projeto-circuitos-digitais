@@ -17,7 +17,8 @@ entity mef is
         liberar_produto : out std_logic;
         liberar_troco   : out std_logic;
         devolver_moedas : out std_logic;
-        sem_estoque     : out std_logic
+        sem_estoque     : out std_logic;
+        estado_out      : out std_logic_vector(4 downto 0)
     );
 end mef;
 
@@ -39,9 +40,9 @@ begin
         proximo_estado <= estado_atual;
         case estado_atual is
             when ESPERA =>
-                if btn_desistir = '1' then
+                if btn_desistir = '0' then
                     proximo_estado <= DEVOLUCAO;
-                elsif btn_confirmar = '1' then
+                elsif btn_confirmar = '0' then
                     proximo_estado <= AVALIA_COMPRA;
                 end if;
                 
@@ -73,28 +74,33 @@ begin
         liberar_troco <= '0';
         devolver_moedas <= '0';
         sem_estoque <= '0';
+        estado_out <= (others => '0');
         
         case estado_atual is
             when ESPERA =>
-                habilitar_moeda <= inserir_moeda;
+                habilitar_moeda <= not inserir_moeda;
+                estado_out(0) <= '1';
                 
             when AVALIA_COMPRA =>
-                null;
+                estado_out(1) <= '1';
                 
             when ENTREGA_PRODUTO =>
                 liberar_produto <= '1';
                 liberar_troco <= tem_troco;
                  baixar_estoque <= '1';
                 limpar_soma <= '1';
+                estado_out(2) <= '1';
                 
             when DEVOLUCAO =>
                 devolver_moedas <= '1';
                 limpar_soma <= '1';
+                estado_out(3) <= '1';
                 
             when ERRO_ESTOQUE =>
                 sem_estoque <= '1';
 					 devolver_moedas <= '1';
                 limpar_soma <= '1';
+                estado_out(4) <= '1';
         end case;
     end process;
 end comportamento;
