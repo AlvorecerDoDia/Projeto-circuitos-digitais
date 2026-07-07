@@ -84,7 +84,7 @@ begin
             incremento := 0;
             if limpar_soma = '1' then
                 soma_atual <= 0;
-            elsif receber_moeda = '1' then
+            elsif receber_moeda = '0' then
                 if valor_moeda = "000" then incremento := 5;    
                 elsif valor_moeda = "001" then incremento := 10;   
                 elsif valor_moeda = "010" then incremento := 25;  
