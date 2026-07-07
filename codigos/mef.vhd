@@ -68,7 +68,7 @@ begin
     process(estado_atual, inserir_moeda, tem_troco)
     begin
         limpar_soma <= '0';
-        habilitar_moeda <= '0';
+        habilitar_moeda <= '1';
         baixar_estoque <= '0';
         liberar_produto <= '0';
         liberar_troco <= '0';
@@ -78,7 +78,7 @@ begin
         
         case estado_atual is
             when ESPERA =>
-                habilitar_moeda <= not inserir_moeda;
+                habilitar_moeda <= inserir_moeda;
                 estado_out(0) <= '1';
                 
             when AVALIA_COMPRA =>
@@ -98,7 +98,7 @@ begin
                 
             when ERRO_ESTOQUE =>
                 sem_estoque <= '1';
-					 devolver_moedas <= '1';
+ 					 devolver_moedas <= '1';
                 limpar_soma <= '1';
                 estado_out(4) <= '1';
         end case;
