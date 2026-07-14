@@ -1,5 +1,5 @@
 Fitter report for top_level
-Wed Jul 01 09:56:12 2026
+Wed Jul 08 10:07:53 2026
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -62,18 +62,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Wed Jul 01 09:56:12 2026           ;
+; Fitter Status                      ; Successful - Wed Jul 08 10:07:53 2026           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; top_level                                       ;
 ; Top-level Entity Name              ; top_level                                       ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C20F484C7                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 821 / 18,752 ( 4 % )                            ;
-;     Total combinational functions  ; 815 / 18,752 ( 4 % )                            ;
-;     Dedicated logic registers      ; 220 / 18,752 ( 1 % )                            ;
-; Total registers                    ; 220                                             ;
-; Total pins                         ; 36 / 315 ( 11 % )                               ;
+; Total logic elements               ; 898 / 18,752 ( 5 % )                            ;
+;     Total combinational functions  ; 891 / 18,752 ( 5 % )                            ;
+;     Dedicated logic registers      ; 280 / 18,752 ( 1 % )                            ;
+; Total registers                    ; 280                                             ;
+; Total pins                         ; 41 / 315 ( 13 % )                               ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 239,616 ( 0 % )                             ;
 ; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                                  ;
@@ -149,8 +149,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 1076 ( 0.00 % )    ;
-;     -- Achieved     ; 0 / 1076 ( 0.00 % )    ;
+;     -- Requested    ; 0 / 1217 ( 0.00 % )    ;
+;     -- Achieved     ; 0 / 1217 ( 0.00 % )    ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -173,7 +173,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 1073    ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 1214    ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 3       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -181,7 +181,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in Q:/output_files/top_level.pin.
+The pin-out file can be found in C:/Users/mikae/OneDrive/Documentos/circuitos/output_files/top_level.pin.
 
 
 +--------------------------------------------------------------------+
@@ -189,28 +189,28 @@ The pin-out file can be found in Q:/output_files/top_level.pin.
 +---------------------------------------------+----------------------+
 ; Resource                                    ; Usage                ;
 +---------------------------------------------+----------------------+
-; Total logic elements                        ; 821 / 18,752 ( 4 % ) ;
-;     -- Combinational with no register       ; 601                  ;
-;     -- Register only                        ; 6                    ;
-;     -- Combinational with a register        ; 214                  ;
+; Total logic elements                        ; 898 / 18,752 ( 5 % ) ;
+;     -- Combinational with no register       ; 618                  ;
+;     -- Register only                        ; 7                    ;
+;     -- Combinational with a register        ; 273                  ;
 ;                                             ;                      ;
 ; Logic element usage by number of LUT inputs ;                      ;
-;     -- 4 input functions                    ; 240                  ;
+;     -- 4 input functions                    ; 260                  ;
 ;     -- 3 input functions                    ; 212                  ;
-;     -- <=2 input functions                  ; 363                  ;
-;     -- Register only                        ; 6                    ;
+;     -- <=2 input functions                  ; 419                  ;
+;     -- Register only                        ; 7                    ;
 ;                                             ;                      ;
 ; Logic elements by mode                      ;                      ;
-;     -- normal mode                          ; 511                  ;
-;     -- arithmetic mode                      ; 304                  ;
+;     -- normal mode                          ; 533                  ;
+;     -- arithmetic mode                      ; 358                  ;
 ;                                             ;                      ;
-; Total registers*                            ; 220 / 19,649 ( 1 % ) ;
-;     -- Dedicated logic registers            ; 220 / 18,752 ( 1 % ) ;
+; Total registers*                            ; 280 / 19,649 ( 1 % ) ;
+;     -- Dedicated logic registers            ; 280 / 18,752 ( 1 % ) ;
 ;     -- I/O registers                        ; 0 / 897 ( 0 % )      ;
 ;                                             ;                      ;
-; Total LABs:  partially or completely used   ; 66 / 1,172 ( 6 % )   ;
+; Total LABs:  partially or completely used   ; 71 / 1,172 ( 6 % )   ;
 ; Virtual pins                                ; 0                    ;
-; I/O pins                                    ; 36 / 315 ( 11 % )    ;
+; I/O pins                                    ; 41 / 315 ( 13 % )    ;
 ;     -- Clock pins                           ; 5 / 8 ( 63 % )       ;
 ;                                             ;                      ;
 ; Global signals                              ; 2                    ;
@@ -224,11 +224,11 @@ The pin-out file can be found in Q:/output_files/top_level.pin.
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )        ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )        ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%         ;
-; Peak interconnect usage (total/H/V)         ; 2% / 2% / 1%         ;
-; Maximum fan-out                             ; 220                  ;
-; Highest non-global fan-out                  ; 54                   ;
-; Total fan-out                               ; 3203                 ;
-; Average fan-out                             ; 2.96                 ;
+; Peak interconnect usage (total/H/V)         ; 1% / 2% / 1%         ;
+; Maximum fan-out                             ; 280                  ;
+; Highest non-global fan-out                  ; 90                   ;
+; Total fan-out                               ; 3689                 ;
+; Average fan-out                             ; 3.02                 ;
 +---------------------------------------------+----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -241,28 +241,28 @@ The pin-out file can be found in Q:/output_files/top_level.pin.
 +---------------------------------------------+---------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                 ; Low                            ;
 ;                                             ;                     ;                                ;
-; Total logic elements                        ; 821 / 18752 ( 4 % ) ; 0 / 18752 ( 0 % )              ;
-;     -- Combinational with no register       ; 601                 ; 0                              ;
-;     -- Register only                        ; 6                   ; 0                              ;
-;     -- Combinational with a register        ; 214                 ; 0                              ;
+; Total logic elements                        ; 898 / 18752 ( 5 % ) ; 0 / 18752 ( 0 % )              ;
+;     -- Combinational with no register       ; 618                 ; 0                              ;
+;     -- Register only                        ; 7                   ; 0                              ;
+;     -- Combinational with a register        ; 273                 ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Logic element usage by number of LUT inputs ;                     ;                                ;
-;     -- 4 input functions                    ; 240                 ; 0                              ;
+;     -- 4 input functions                    ; 260                 ; 0                              ;
 ;     -- 3 input functions                    ; 212                 ; 0                              ;
-;     -- <=2 input functions                  ; 363                 ; 0                              ;
-;     -- Register only                        ; 6                   ; 0                              ;
+;     -- <=2 input functions                  ; 419                 ; 0                              ;
+;     -- Register only                        ; 7                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Logic elements by mode                      ;                     ;                                ;
-;     -- normal mode                          ; 511                 ; 0                              ;
-;     -- arithmetic mode                      ; 304                 ; 0                              ;
+;     -- normal mode                          ; 533                 ; 0                              ;
+;     -- arithmetic mode                      ; 358                 ; 0                              ;
 ;                                             ;                     ;                                ;
-; Total registers                             ; 220                 ; 0                              ;
-;     -- Dedicated logic registers            ; 220 / 18752 ( 1 % ) ; 0 / 18752 ( 0 % )              ;
+; Total registers                             ; 280                 ; 0                              ;
+;     -- Dedicated logic registers            ; 280 / 18752 ( 1 % ) ; 0 / 18752 ( 0 % )              ;
 ;                                             ;                     ;                                ;
-; Total LABs:  partially or completely used   ; 66 / 1172 ( 6 % )   ; 0 / 1172 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 71 / 1172 ( 6 % )   ; 0 / 1172 ( 0 % )               ;
 ;                                             ;                     ;                                ;
 ; Virtual pins                                ; 0                   ; 0                              ;
-; I/O pins                                    ; 36                  ; 0                              ;
+; I/O pins                                    ; 41                  ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 52 ( 0 % )      ; 0 / 52 ( 0 % )                 ;
 ; Total memory bits                           ; 0                   ; 0                              ;
 ; Total RAM block bits                        ; 0                   ; 0                              ;
@@ -275,8 +275,8 @@ The pin-out file can be found in Q:/output_files/top_level.pin.
 ;     -- Registered Output Connections        ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Internal Connections                        ;                     ;                                ;
-;     -- Total Connections                    ; 3203                ; 0                              ;
-;     -- Registered Connections               ; 635                 ; 0                              ;
+;     -- Total Connections                    ; 3689                ; 0                              ;
+;     -- Registered Connections               ; 774                 ; 0                              ;
 ;                                             ;                     ;                                ;
 ; External Connections                        ;                     ;                                ;
 ;     -- Top                                  ; 0                   ; 0                              ;
@@ -284,7 +284,7 @@ The pin-out file can be found in Q:/output_files/top_level.pin.
 ;                                             ;                     ;                                ;
 ; Partition Interface                         ;                     ;                                ;
 ;     -- Input Ports                          ; 11                  ; 0                              ;
-;     -- Output Ports                         ; 25                  ; 0                              ;
+;     -- Output Ports                         ; 30                  ; 0                              ;
 ;     -- Bidir Ports                          ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Registered Ports                            ;                     ;                                ;
@@ -349,6 +349,11 @@ The pin-out file can be found in Q:/output_files/top_level.pin.
 ; hex_unidades[5] ; F1    ; 2        ; 0            ; 20           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; hex_unidades[6] ; E2    ; 2        ; 0            ; 20           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; led_devolver    ; U19   ; 6        ; 50           ; 4            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; led_estados[0]  ; U22   ; 6        ; 50           ; 7            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; led_estados[1]  ; U21   ; 6        ; 50           ; 7            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; led_estados[2]  ; V22   ; 6        ; 50           ; 7            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; led_estados[3]  ; V21   ; 6        ; 50           ; 6            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; led_estados[4]  ; W22   ; 6        ; 50           ; 5            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; led_liberar     ; R20   ; 6        ; 50           ; 10           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; led_sem_estoque ; Y19   ; 6        ; 50           ; 2            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; led_troco       ; R19   ; 6        ; 50           ; 8            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
@@ -365,7 +370,7 @@ The pin-out file can be found in Q:/output_files/top_level.pin.
 ; 3        ; 0 / 43 ( 0 % )   ; 3.3V          ; --           ;
 ; 4        ; 0 / 40 ( 0 % )   ; 3.3V          ; --           ;
 ; 5        ; 2 / 39 ( 5 % )   ; 3.3V          ; --           ;
-; 6        ; 9 / 36 ( 25 % )  ; 3.3V          ; --           ;
+; 6        ; 14 / 36 ( 39 % ) ; 3.3V          ; --           ;
 ; 7        ; 2 / 40 ( 5 % )   ; 3.3V          ; --           ;
 ; 8        ; 2 / 43 ( 5 % )   ; 3.3V          ; --           ;
 +----------+------------------+---------------+--------------+
@@ -792,8 +797,8 @@ The pin-out file can be found in Q:/output_files/top_level.pin.
 ; U18      ; 170        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U19      ; 172        ; 6        ; led_devolver                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; U20      ; 176        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; U21      ; 182        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; U22      ; 183        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; U21      ; 182        ; 6        ; led_estados[1]                           ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; U22      ; 183        ; 6        ; led_estados[0]                           ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; V1       ; 65         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V2       ; 66         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V3       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -814,8 +819,8 @@ The pin-out file can be found in Q:/output_files/top_level.pin.
 ; V18      ;            ;          ; GND_PLL4                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; V19      ; 166        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V20      ; 173        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; V21      ; 180        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; V22      ; 181        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; V21      ; 180        ; 6        ; led_estados[3]                           ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; V22      ; 181        ; 6        ; led_estados[2]                           ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; W1       ; 71         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; W2       ; 72         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; W3       ; 75         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -837,7 +842,7 @@ The pin-out file can be found in Q:/output_files/top_level.pin.
 ; W19      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; W20      ; 167        ; 6        ; ~LVDS91p/nCEO~                           ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; W21      ; 174        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; W22      ; 175        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; W22      ; 175        ; 6        ; led_estados[4]                           ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; Y1       ; 73         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; Y2       ; 74         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; Y3       ; 77         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -906,9 +911,9 @@ Note: User assignments will override these defaults. The user specified values a
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                                            ; Library Name ;
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |top_level                                ; 821 (1)     ; 220 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 36   ; 0            ; 601 (1)      ; 6 (0)             ; 214 (0)          ; |top_level                                                                                                                     ; work         ;
+; |top_level                                ; 898 (1)     ; 280 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 41   ; 0            ; 618 (1)      ; 7 (0)             ; 273 (0)          ; |top_level                                                                                                                     ; work         ;
 ;    |datapath:U_BLOCO_DADOS|               ; 102 (102)   ; 36 (36)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 65 (65)      ; 0 (0)             ; 37 (37)          ; |top_level|datapath:U_BLOCO_DADOS                                                                                              ; work         ;
-;    |debounce:U_FILTRO1|                   ; 29 (29)     ; 21 (21)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 2 (2)             ; 19 (19)          ; |top_level|debounce:U_FILTRO1                                                                                                  ; work         ;
+;    |debounce:U_FILTRO1|                   ; 29 (29)     ; 21 (21)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 1 (1)             ; 20 (20)          ; |top_level|debounce:U_FILTRO1                                                                                                  ; work         ;
 ;    |debounce:U_FILTRO2|                   ; 29 (29)     ; 21 (21)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 2 (2)             ; 19 (19)          ; |top_level|debounce:U_FILTRO2                                                                                                  ; work         ;
 ;    |debounce:U_FILTRO3|                   ; 29 (29)     ; 21 (21)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 1 (1)             ; 20 (20)          ; |top_level|debounce:U_FILTRO3                                                                                                  ; work         ;
 ;    |display_7seg:U_DISP|                  ; 442 (58)    ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 442 (58)     ; 0 (0)             ; 0 (0)            ; |top_level|display_7seg:U_DISP                                                                                                 ; work         ;
@@ -929,10 +934,14 @@ Note: User assignments will override these defaults. The user specified values a
 ;             |sign_div_unsign_1nh:divider| ; 132 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 132 (0)      ; 0 (0)             ; 0 (0)            ; |top_level|display_7seg:U_DISP|lpm_divide:Mod1|lpm_divide_q7m:auto_generated|sign_div_unsign_1nh:divider                       ; work         ;
 ;                |alt_u_div_45f:divider|    ; 132 (132)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 132 (132)    ; 0 (0)             ; 0 (0)            ; |top_level|display_7seg:U_DISP|lpm_divide:Mod1|lpm_divide_q7m:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_45f:divider ; work         ;
 ;    |led_timer:U_LED_DEVOLVER|             ; 66 (66)     ; 29 (29)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 37 (37)      ; 0 (0)             ; 29 (29)          ; |top_level|led_timer:U_LED_DEVOLVER                                                                                            ; work         ;
-;    |led_timer:U_LED_LIBERAR|              ; 38 (38)     ; 29 (29)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 29 (29)          ; |top_level|led_timer:U_LED_LIBERAR                                                                                             ; work         ;
-;    |led_timer:U_LED_SEM_ESTOQUE|          ; 38 (38)     ; 29 (29)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 29 (29)          ; |top_level|led_timer:U_LED_SEM_ESTOQUE                                                                                         ; work         ;
+;    |led_timer:U_LED_EST1|                 ; 38 (38)     ; 29 (29)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 29 (29)          ; |top_level|led_timer:U_LED_EST1                                                                                                ; work         ;
+;    |led_timer:U_LED_EST2|                 ; 30 (30)     ; 29 (29)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 1 (1)             ; 28 (28)          ; |top_level|led_timer:U_LED_EST2                                                                                                ; work         ;
+;    |led_timer:U_LED_EST3|                 ; 38 (38)     ; 29 (29)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 29 (29)          ; |top_level|led_timer:U_LED_EST3                                                                                                ; work         ;
+;    |led_timer:U_LED_EST4|                 ; 30 (30)     ; 29 (29)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 1 (1)             ; 28 (28)          ; |top_level|led_timer:U_LED_EST4                                                                                                ; work         ;
+;    |led_timer:U_LED_LIBERAR|              ; 9 (9)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 1 (1)            ; |top_level|led_timer:U_LED_LIBERAR                                                                                             ; work         ;
+;    |led_timer:U_LED_SEM_ESTOQUE|          ; 9 (9)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 1 (1)            ; |top_level|led_timer:U_LED_SEM_ESTOQUE                                                                                         ; work         ;
 ;    |led_timer:U_LED_TROCO|                ; 40 (40)     ; 29 (29)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 11 (11)      ; 1 (1)             ; 28 (28)          ; |top_level|led_timer:U_LED_TROCO                                                                                               ; work         ;
-;    |mef:U_CONTROLE|                       ; 8 (8)       ; 5 (5)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 5 (5)            ; |top_level|mef:U_CONTROLE                                                                                                      ; work         ;
+;    |mef:U_CONTROLE|                       ; 8 (8)       ; 5 (5)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 6 (6)            ; |top_level|mef:U_CONTROLE                                                                                                      ; work         ;
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -946,6 +955,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; led_troco         ; Output   ; --            ; --            ; --                    ; --  ;
 ; led_devolver      ; Output   ; --            ; --            ; --                    ; --  ;
 ; led_sem_estoque   ; Output   ; --            ; --            ; --                    ; --  ;
+; led_estados[0]    ; Output   ; --            ; --            ; --                    ; --  ;
+; led_estados[1]    ; Output   ; --            ; --            ; --                    ; --  ;
+; led_estados[2]    ; Output   ; --            ; --            ; --                    ; --  ;
+; led_estados[3]    ; Output   ; --            ; --            ; --                    ; --  ;
+; led_estados[4]    ; Output   ; --            ; --            ; --                    ; --  ;
 ; hex_centenas[0]   ; Output   ; --            ; --            ; --                    ; --  ;
 ; hex_centenas[1]   ; Output   ; --            ; --            ; --                    ; --  ;
 ; hex_centenas[2]   ; Output   ; --            ; --            ; --                    ; --  ;
@@ -975,9 +989,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ch_valor_moeda[2] ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
 ; ch_valor_moeda[0] ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
 ; ch_valor_moeda[1] ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
-; btn_inserir_moeda ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; btn_desistir      ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; btn_confirmar     ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; btn_desistir      ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; btn_inserir_moeda ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 +-------------------+----------+---------------+---------------+-----------------------+-----+
 
 
@@ -994,34 +1008,36 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ch_valor_moeda[2]                         ;                   ;         ;
 ; ch_valor_moeda[0]                         ;                   ;         ;
 ; ch_valor_moeda[1]                         ;                   ;         ;
-; btn_inserir_moeda                         ;                   ;         ;
-;      - debounce:U_FILTRO3|botao_estavel~0 ; 1                 ; 6       ;
-;      - debounce:U_FILTRO3|contador[0]~20  ; 1                 ; 6       ;
-; btn_desistir                              ;                   ;         ;
-;      - debounce:U_FILTRO2|botao_estavel~0 ; 0                 ; 6       ;
-;      - debounce:U_FILTRO2|contador[2]~20  ; 0                 ; 6       ;
 ; btn_confirmar                             ;                   ;         ;
 ;      - debounce:U_FILTRO1|botao_estavel~0 ; 1                 ; 6       ;
-;      - debounce:U_FILTRO1|contador[16]~20 ; 1                 ; 6       ;
+;      - debounce:U_FILTRO1|contador[12]~20 ; 1                 ; 6       ;
+; btn_desistir                              ;                   ;         ;
+;      - debounce:U_FILTRO2|botao_estavel~0 ; 0                 ; 6       ;
+;      - debounce:U_FILTRO2|contador[15]~20 ; 0                 ; 6       ;
+; btn_inserir_moeda                         ;                   ;         ;
+;      - debounce:U_FILTRO3|botao_estavel~0 ; 0                 ; 6       ;
+;      - debounce:U_FILTRO3|contador[15]~20 ; 0                 ; 6       ;
 +-------------------------------------------+-------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                          ;
-+---------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name                                        ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+---------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; ch_reset                                    ; PIN_L22            ; 220     ; Async. clear ; yes    ; Global Clock         ; GCLK6            ; --                        ;
-; clk_50                                      ; PIN_L1             ; 220     ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; datapath:U_BLOCO_DADOS|soma_atual[0]~30     ; LCCOMB_X18_Y15_N30 ; 10      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; debounce:U_FILTRO1|contador[16]~20          ; LCCOMB_X27_Y14_N22 ; 18      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; debounce:U_FILTRO2|contador[2]~20           ; LCCOMB_X42_Y17_N22 ; 18      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; debounce:U_FILTRO3|contador[0]~20           ; LCCOMB_X49_Y13_N18 ; 18      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; led_timer:U_LED_LIBERAR|contador[4]~32      ; LCCOMB_X40_Y18_N16 ; 28      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[25]~32 ; LCCOMB_X23_Y11_N0  ; 28      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
-; led_timer:U_LED_TROCO|contador[20]~32       ; LCCOMB_X20_Y16_N28 ; 28      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
-; mef:U_CONTROLE|WideOr0~0                    ; LCCOMB_X18_Y15_N26 ; 10      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-+---------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                      ;
++-----------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                                    ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-----------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; ch_reset                                ; PIN_L22            ; 280     ; Async. clear ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; clk_50                                  ; PIN_L1             ; 280     ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
+; datapath:U_BLOCO_DADOS|soma_atual[1]~30 ; LCCOMB_X26_Y13_N6  ; 10      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; debounce:U_FILTRO1|contador[12]~20      ; LCCOMB_X37_Y13_N22 ; 18      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; debounce:U_FILTRO2|contador[15]~20      ; LCCOMB_X35_Y13_N24 ; 18      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; debounce:U_FILTRO3|contador[15]~20      ; LCCOMB_X30_Y13_N22 ; 18      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; led_timer:U_LED_EST1|contador[26]~32    ; LCCOMB_X30_Y11_N0  ; 28      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; led_timer:U_LED_EST2|contador[5]~32     ; LCCOMB_X22_Y11_N18 ; 28      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; led_timer:U_LED_EST3|contador[2]~32     ; LCCOMB_X30_Y16_N0  ; 28      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; led_timer:U_LED_EST4|contador[27]~32    ; LCCOMB_X24_Y11_N22 ; 28      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; led_timer:U_LED_TROCO|contador[12]~32   ; LCCOMB_X24_Y14_N30 ; 28      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; mef:U_CONTROLE|WideOr0~0                ; LCCOMB_X26_Y13_N18 ; 10      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
++-----------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------+
@@ -1029,8 +1045,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------+----------+---------+----------------------+------------------+---------------------------+
 ; Name     ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +----------+----------+---------+----------------------+------------------+---------------------------+
-; ch_reset ; PIN_L22  ; 220     ; Global Clock         ; GCLK6            ; --                        ;
-; clk_50   ; PIN_L1   ; 220     ; Global Clock         ; GCLK2            ; --                        ;
+; ch_reset ; PIN_L22  ; 280     ; Global Clock         ; GCLK6            ; --                        ;
+; clk_50   ; PIN_L1   ; 280     ; Global Clock         ; GCLK2            ; --                        ;
 +----------+----------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1039,14 +1055,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; Name                                                                                                                                            ; Fan-Out ;
 +-------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; ~GND                                                                                                                                            ; 54      ;
+; ~GND                                                                                                                                            ; 90      ;
 ; display_7seg:U_DISP|lpm_divide:Mod0|lpm_divide_q7m:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_45f:divider|add_sub_9_result_int[10]~16 ; 44      ;
 ; mef:U_CONTROLE|estado_atual.ERRO_ESTOQUE                                                                                                        ; 41      ;
+; mef:U_CONTROLE|estado_atual.DEVOLUCAO                                                                                                           ; 41      ;
 ; led_timer:U_LED_DEVOLVER|LessThan0~8                                                                                                            ; 29      ;
-; mef:U_CONTROLE|estado_atual.DEVOLUCAO                                                                                                           ; 29      ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[25]~32                                                                                                     ; 28      ;
-; led_timer:U_LED_TROCO|contador[20]~32                                                                                                           ; 28      ;
-; led_timer:U_LED_LIBERAR|contador[4]~32                                                                                                          ; 28      ;
+; led_timer:U_LED_EST3|contador[2]~32                                                                                                             ; 28      ;
+; led_timer:U_LED_EST1|contador[26]~32                                                                                                            ; 28      ;
+; led_timer:U_LED_EST4|contador[27]~32                                                                                                            ; 28      ;
+; led_timer:U_LED_TROCO|contador[12]~32                                                                                                           ; 28      ;
+; led_timer:U_LED_EST2|contador[5]~32                                                                                                             ; 28      ;
 ; display_7seg:U_DISP|lpm_divide:Div0|lpm_divide_dem:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_g2f:divider|add_sub_7_result_int[8]~12  ; 26      ;
 ; mef:U_CONTROLE|estado_atual.ENTREGA_PRODUTO                                                                                                     ; 25      ;
 ; display_7seg:U_DISP|lpm_divide:Mod0|lpm_divide_q7m:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_45f:divider|add_sub_8_result_int[9]~14  ; 25      ;
@@ -1060,10 +1078,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; display_7seg:U_DISP|lpm_divide:Mod0|lpm_divide_q7m:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_45f:divider|add_sub_7_result_int[8]~12  ; 20      ;
 ; ch_produto[1]                                                                                                                                   ; 19      ;
 ; display_7seg:U_DISP|lpm_divide:Div0|lpm_divide_dem:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_g2f:divider|add_sub_8_result_int[8]~12  ; 19      ;
-; debounce:U_FILTRO1|contador[16]~20                                                                                                              ; 18      ;
-; debounce:U_FILTRO2|contador[2]~20                                                                                                               ; 18      ;
-; debounce:U_FILTRO3|contador[0]~20                                                                                                               ; 18      ;
+; debounce:U_FILTRO3|contador[15]~20                                                                                                              ; 18      ;
+; debounce:U_FILTRO2|contador[15]~20                                                                                                              ; 18      ;
+; debounce:U_FILTRO1|contador[12]~20                                                                                                              ; 18      ;
 ; display_7seg:U_DISP|lpm_divide:Div1|lpm_divide_aem:auto_generated|sign_div_unsign_klh:divider|alt_u_div_a2f:divider|add_sub_8_result_int[5]~8   ; 18      ;
+; mef:U_CONTROLE|estado_atual.AVALIA_COMPRA                                                                                                       ; 17      ;
 ; display_7seg:U_DISP|lpm_divide:Mod1|lpm_divide_q7m:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_45f:divider|add_sub_5_result_int[6]~10  ; 17      ;
 ; display_7seg:U_DISP|lpm_divide:Mod0|lpm_divide_q7m:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_45f:divider|add_sub_6_result_int[7]~10  ; 17      ;
 ; display_7seg:U_DISP|lpm_divide:Div1|lpm_divide_aem:auto_generated|sign_div_unsign_klh:divider|alt_u_div_a2f:divider|add_sub_6_result_int[5]~8   ; 16      ;
@@ -1076,7 +1095,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; datapath:U_BLOCO_DADOS|soma_atual[3]                                                                                                            ; 11      ;
 ; datapath:U_BLOCO_DADOS|soma_atual[4]                                                                                                            ; 11      ;
 ; mef:U_CONTROLE|liberar_troco~0                                                                                                                  ; 10      ;
-; datapath:U_BLOCO_DADOS|soma_atual[0]~30                                                                                                         ; 10      ;
+; datapath:U_BLOCO_DADOS|soma_atual[1]~30                                                                                                         ; 10      ;
 ; mef:U_CONTROLE|WideOr0~0                                                                                                                        ; 10      ;
 ; display_7seg:U_DISP|lpm_divide:Mod1|lpm_divide_q7m:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_45f:divider|StageOut[91]~135            ; 10      ;
 ; display_7seg:U_DISP|lpm_divide:Mod1|lpm_divide_q7m:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_45f:divider|StageOut[92]~134            ; 9       ;
@@ -1092,12 +1111,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ch_valor_moeda[0]                                                                                                                               ; 6       ;
 ; ch_valor_moeda[2]                                                                                                                               ; 6       ;
 ; display_7seg:U_DISP|Equal21~0                                                                                                                   ; 6       ;
+; mef:U_CONTROLE|estado_atual.ESPERA                                                                                                              ; 6       ;
 ; datapath:U_BLOCO_DADOS|soma_atual[0]                                                                                                            ; 6       ;
 ; ch_valor_moeda[1]                                                                                                                               ; 5       ;
 ; datapath:U_BLOCO_DADOS|estq_trident[0]                                                                                                          ; 5       ;
 ; datapath:U_BLOCO_DADOS|estq_snickers[0]                                                                                                         ; 5       ;
-; mef:U_CONTROLE|estado_atual.ESPERA                                                                                                              ; 5       ;
-; mef:U_CONTROLE|estado_atual.AVALIA_COMPRA                                                                                                       ; 5       ;
 ; display_7seg:U_DISP|WideNor2~0                                                                                                                  ; 5       ;
 ; display_7seg:U_DISP|lpm_divide:Div1|lpm_divide_aem:auto_generated|sign_div_unsign_klh:divider|alt_u_div_a2f:divider|add_sub_9_result_int[5]~8   ; 5       ;
 ; display_7seg:U_DISP|lpm_divide:Mod0|lpm_divide_q7m:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_45f:divider|StageOut[93]~153            ; 4       ;
@@ -1107,11 +1125,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; display_7seg:U_DISP|lpm_divide:Mod0|lpm_divide_q7m:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_45f:divider|StageOut[97]~141            ; 4       ;
 ; display_7seg:U_DISP|lpm_divide:Mod0|lpm_divide_q7m:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_45f:divider|StageOut[98]~140            ; 4       ;
 ; display_7seg:U_DISP|lpm_divide:Mod0|lpm_divide_q7m:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_45f:divider|StageOut[99]~139            ; 4       ;
-; debounce:U_FILTRO1|botao_estavel                                                                                                                ; 4       ;
-; debounce:U_FILTRO2|botao_estavel                                                                                                                ; 4       ;
+; debounce:U_FILTRO3|botao_estavel                                                                                                                ; 4       ;
 ; datapath:U_BLOCO_DADOS|estq_trident[3]~0                                                                                                        ; 4       ;
 ; datapath:U_BLOCO_DADOS|estq_snickers[3]~0                                                                                                       ; 4       ;
-; debounce:U_FILTRO3|botao_estavel                                                                                                                ; 4       ;
+; debounce:U_FILTRO2|botao_estavel                                                                                                                ; 4       ;
+; debounce:U_FILTRO1|botao_estavel                                                                                                                ; 4       ;
 ; datapath:U_BLOCO_DADOS|estq_kitkat[0]                                                                                                           ; 4       ;
 ; datapath:U_BLOCO_DADOS|estq_sonho_valsa[0]                                                                                                      ; 4       ;
 ; datapath:U_BLOCO_DADOS|LessThan2~0                                                                                                              ; 4       ;
@@ -1146,7 +1164,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; display_7seg:U_DISP|lpm_divide:Mod1|lpm_divide_q7m:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_45f:divider|StageOut[74]~164            ; 3       ;
 ; display_7seg:U_DISP|lpm_divide:Mod1|lpm_divide_q7m:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_45f:divider|StageOut[75]~163            ; 3       ;
 ; display_7seg:U_DISP|lpm_divide:Mod1|lpm_divide_q7m:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_45f:divider|StageOut[77]~161            ; 3       ;
-; debounce:U_FILTRO2|botao_pulso                                                                                                                  ; 3       ;
 ; datapath:U_BLOCO_DADOS|LessThan3~0                                                                                                              ; 3       ;
 ; datapath:U_BLOCO_DADOS|estq_kitkat[1]                                                                                                           ; 3       ;
 ; datapath:U_BLOCO_DADOS|LessThan0~0                                                                                                              ; 3       ;
@@ -1159,6 +1176,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; datapath:U_BLOCO_DADOS|estq_bis_extra[1]                                                                                                        ; 3       ;
 ; datapath:U_BLOCO_DADOS|LessThan6~0                                                                                                              ; 3       ;
 ; datapath:U_BLOCO_DADOS|estq_mms[1]                                                                                                              ; 3       ;
+; debounce:U_FILTRO2|botao_pulso                                                                                                                  ; 3       ;
 ; display_7seg:U_DISP|WideOr12~0                                                                                                                  ; 3       ;
 ; display_7seg:U_DISP|WideNor2~4                                                                                                                  ; 3       ;
 ; display_7seg:U_DISP|lpm_divide:Mod1|lpm_divide_q7m:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_45f:divider|StageOut[82]~133            ; 3       ;
@@ -1171,9 +1189,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; display_7seg:U_DISP|lpm_divide:Mod0|lpm_divide_q7m:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_45f:divider|add_sub_9_result_int[9]~14  ; 3       ;
 ; display_7seg:U_DISP|lpm_divide:Mod0|lpm_divide_q7m:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_45f:divider|add_sub_9_result_int[8]~12  ; 3       ;
 ; display_7seg:U_DISP|lpm_divide:Mod0|lpm_divide_q7m:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_45f:divider|add_sub_9_result_int[7]~10  ; 3       ;
-; btn_confirmar                                                                                                                                   ; 2       ;
-; btn_desistir                                                                                                                                    ; 2       ;
 ; btn_inserir_moeda                                                                                                                               ; 2       ;
+; btn_desistir                                                                                                                                    ; 2       ;
+; btn_confirmar                                                                                                                                   ; 2       ;
 ; display_7seg:U_DISP|lpm_divide:Div1|lpm_divide_aem:auto_generated|sign_div_unsign_klh:divider|alt_u_div_a2f:divider|StageOut[35]~103            ; 2       ;
 ; display_7seg:U_DISP|lpm_divide:Mod0|lpm_divide_q7m:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_45f:divider|StageOut[83]~150            ; 2       ;
 ; display_7seg:U_DISP|lpm_divide:Mod0|lpm_divide_q7m:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_45f:divider|StageOut[73]~149            ; 2       ;
@@ -1232,9 +1250,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; display_7seg:U_DISP|lpm_divide:Mod0|lpm_divide_q7m:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_45f:divider|StageOut[86]~136            ; 2       ;
 ; display_7seg:U_DISP|lpm_divide:Mod0|lpm_divide_q7m:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_45f:divider|StageOut[87]~135            ; 2       ;
 ; display_7seg:U_DISP|lpm_divide:Mod0|lpm_divide_q7m:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_45f:divider|StageOut[88]~134            ; 2       ;
-; debounce:U_FILTRO1|Equal0~5                                                                                                                     ; 2       ;
-; debounce:U_FILTRO2|Equal0~5                                                                                                                     ; 2       ;
 ; debounce:U_FILTRO3|Equal0~5                                                                                                                     ; 2       ;
+; debounce:U_FILTRO2|Equal0~5                                                                                                                     ; 2       ;
+; debounce:U_FILTRO1|Equal0~5                                                                                                                     ; 2       ;
 ; datapath:U_BLOCO_DADOS|estq_kitkat[3]~1                                                                                                         ; 2       ;
 ; datapath:U_BLOCO_DADOS|estq_kitkat[3]~0                                                                                                         ; 2       ;
 ; datapath:U_BLOCO_DADOS|estq_sonho_valsa[3]~0                                                                                                    ; 2       ;
@@ -1245,7 +1263,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; datapath:U_BLOCO_DADOS|estq_bis_extra[3]~0                                                                                                      ; 2       ;
 ; datapath:U_BLOCO_DADOS|estq_mms[3]~1                                                                                                            ; 2       ;
 ; datapath:U_BLOCO_DADOS|estq_mms[3]~0                                                                                                            ; 2       ;
-; debounce:U_FILTRO1|botao_pulso                                                                                                                  ; 2       ;
+; led_timer:U_LED_EST3|LessThan0~7                                                                                                                ; 2       ;
+; led_timer:U_LED_EST3|LessThan0~5                                                                                                                ; 2       ;
+; led_timer:U_LED_EST3|LessThan0~4                                                                                                                ; 2       ;
+; led_timer:U_LED_EST1|LessThan0~7                                                                                                                ; 2       ;
+; led_timer:U_LED_EST1|LessThan0~5                                                                                                                ; 2       ;
+; led_timer:U_LED_EST1|LessThan0~4                                                                                                                ; 2       ;
 ; datapath:U_BLOCO_DADOS|Mux9~4                                                                                                                   ; 2       ;
 ; datapath:U_BLOCO_DADOS|Mux9~3                                                                                                                   ; 2       ;
 ; datapath:U_BLOCO_DADOS|estq_kitkat[2]                                                                                                           ; 2       ;
@@ -1257,6 +1280,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; datapath:U_BLOCO_DADOS|estq_bis_extra[2]                                                                                                        ; 2       ;
 ; datapath:U_BLOCO_DADOS|estq_mms[2]                                                                                                              ; 2       ;
 ; datapath:U_BLOCO_DADOS|estq_snickers[3]                                                                                                         ; 2       ;
+; debounce:U_FILTRO1|botao_pulso                                                                                                                  ; 2       ;
+; led_timer:U_LED_SEM_ESTOQUE|led_saida~0                                                                                                         ; 2       ;
 ; led_timer:U_LED_SEM_ESTOQUE|LessThan0~7                                                                                                         ; 2       ;
 ; led_timer:U_LED_SEM_ESTOQUE|LessThan0~5                                                                                                         ; 2       ;
 ; led_timer:U_LED_SEM_ESTOQUE|LessThan0~4                                                                                                         ; 2       ;
@@ -1295,6 +1320,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; datapath:U_BLOCO_DADOS|Mux2~0                                                                                                                   ; 2       ;
 ; datapath:U_BLOCO_DADOS|Mux1~0                                                                                                                   ; 2       ;
 ; led_timer:U_LED_TROCO|LessThan0~8                                                                                                               ; 2       ;
+; led_timer:U_LED_LIBERAR|led_saida~0                                                                                                             ; 2       ;
 ; led_timer:U_LED_LIBERAR|LessThan0~7                                                                                                             ; 2       ;
 ; led_timer:U_LED_LIBERAR|LessThan0~5                                                                                                             ; 2       ;
 ; led_timer:U_LED_LIBERAR|LessThan0~4                                                                                                             ; 2       ;
@@ -1314,42 +1340,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; display_7seg:U_DISP|lpm_divide:Mod0|lpm_divide_q7m:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_45f:divider|StageOut[97]~122            ; 2       ;
 ; display_7seg:U_DISP|lpm_divide:Mod0|lpm_divide_q7m:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_45f:divider|StageOut[98]~121            ; 2       ;
 ; display_7seg:U_DISP|lpm_divide:Mod0|lpm_divide_q7m:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_45f:divider|StageOut[99]~120            ; 2       ;
-; debounce:U_FILTRO1|contador[17]                                                                                                                 ; 2       ;
-; debounce:U_FILTRO1|contador[16]                                                                                                                 ; 2       ;
-; debounce:U_FILTRO1|contador[15]                                                                                                                 ; 2       ;
-; debounce:U_FILTRO1|contador[14]                                                                                                                 ; 2       ;
-; debounce:U_FILTRO1|contador[12]                                                                                                                 ; 2       ;
-; debounce:U_FILTRO1|contador[13]                                                                                                                 ; 2       ;
-; debounce:U_FILTRO1|contador[11]                                                                                                                 ; 2       ;
-; debounce:U_FILTRO1|contador[10]                                                                                                                 ; 2       ;
-; debounce:U_FILTRO1|contador[9]                                                                                                                  ; 2       ;
-; debounce:U_FILTRO1|contador[8]                                                                                                                  ; 2       ;
-; debounce:U_FILTRO1|contador[7]                                                                                                                  ; 2       ;
-; debounce:U_FILTRO1|contador[4]                                                                                                                  ; 2       ;
-; debounce:U_FILTRO1|contador[6]                                                                                                                  ; 2       ;
-; debounce:U_FILTRO1|contador[5]                                                                                                                  ; 2       ;
-; debounce:U_FILTRO1|contador[3]                                                                                                                  ; 2       ;
-; debounce:U_FILTRO1|contador[2]                                                                                                                  ; 2       ;
-; debounce:U_FILTRO1|contador[1]                                                                                                                  ; 2       ;
-; debounce:U_FILTRO1|contador[0]                                                                                                                  ; 2       ;
-; debounce:U_FILTRO2|contador[17]                                                                                                                 ; 2       ;
-; debounce:U_FILTRO2|contador[16]                                                                                                                 ; 2       ;
-; debounce:U_FILTRO2|contador[15]                                                                                                                 ; 2       ;
-; debounce:U_FILTRO2|contador[14]                                                                                                                 ; 2       ;
-; debounce:U_FILTRO2|contador[12]                                                                                                                 ; 2       ;
-; debounce:U_FILTRO2|contador[13]                                                                                                                 ; 2       ;
-; debounce:U_FILTRO2|contador[11]                                                                                                                 ; 2       ;
-; debounce:U_FILTRO2|contador[10]                                                                                                                 ; 2       ;
-; debounce:U_FILTRO2|contador[9]                                                                                                                  ; 2       ;
-; debounce:U_FILTRO2|contador[8]                                                                                                                  ; 2       ;
-; debounce:U_FILTRO2|contador[7]                                                                                                                  ; 2       ;
-; debounce:U_FILTRO2|contador[4]                                                                                                                  ; 2       ;
-; debounce:U_FILTRO2|contador[6]                                                                                                                  ; 2       ;
-; debounce:U_FILTRO2|contador[5]                                                                                                                  ; 2       ;
-; debounce:U_FILTRO2|contador[3]                                                                                                                  ; 2       ;
-; debounce:U_FILTRO2|contador[2]                                                                                                                  ; 2       ;
-; debounce:U_FILTRO2|contador[1]                                                                                                                  ; 2       ;
-; debounce:U_FILTRO2|contador[0]                                                                                                                  ; 2       ;
 ; debounce:U_FILTRO3|contador[17]                                                                                                                 ; 2       ;
 ; debounce:U_FILTRO3|contador[16]                                                                                                                 ; 2       ;
 ; debounce:U_FILTRO3|contador[15]                                                                                                                 ; 2       ;
@@ -1368,34 +1358,124 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; debounce:U_FILTRO3|contador[2]                                                                                                                  ; 2       ;
 ; debounce:U_FILTRO3|contador[1]                                                                                                                  ; 2       ;
 ; debounce:U_FILTRO3|contador[0]                                                                                                                  ; 2       ;
+; debounce:U_FILTRO2|contador[17]                                                                                                                 ; 2       ;
+; debounce:U_FILTRO2|contador[16]                                                                                                                 ; 2       ;
+; debounce:U_FILTRO2|contador[15]                                                                                                                 ; 2       ;
+; debounce:U_FILTRO2|contador[14]                                                                                                                 ; 2       ;
+; debounce:U_FILTRO2|contador[12]                                                                                                                 ; 2       ;
+; debounce:U_FILTRO2|contador[13]                                                                                                                 ; 2       ;
+; debounce:U_FILTRO2|contador[11]                                                                                                                 ; 2       ;
+; debounce:U_FILTRO2|contador[10]                                                                                                                 ; 2       ;
+; debounce:U_FILTRO2|contador[9]                                                                                                                  ; 2       ;
+; debounce:U_FILTRO2|contador[8]                                                                                                                  ; 2       ;
+; debounce:U_FILTRO2|contador[7]                                                                                                                  ; 2       ;
+; debounce:U_FILTRO2|contador[4]                                                                                                                  ; 2       ;
+; debounce:U_FILTRO2|contador[6]                                                                                                                  ; 2       ;
+; debounce:U_FILTRO2|contador[5]                                                                                                                  ; 2       ;
+; debounce:U_FILTRO2|contador[3]                                                                                                                  ; 2       ;
+; debounce:U_FILTRO2|contador[2]                                                                                                                  ; 2       ;
+; debounce:U_FILTRO2|contador[1]                                                                                                                  ; 2       ;
+; debounce:U_FILTRO2|contador[0]                                                                                                                  ; 2       ;
+; debounce:U_FILTRO1|contador[17]                                                                                                                 ; 2       ;
+; debounce:U_FILTRO1|contador[16]                                                                                                                 ; 2       ;
+; debounce:U_FILTRO1|contador[15]                                                                                                                 ; 2       ;
+; debounce:U_FILTRO1|contador[14]                                                                                                                 ; 2       ;
+; debounce:U_FILTRO1|contador[12]                                                                                                                 ; 2       ;
+; debounce:U_FILTRO1|contador[13]                                                                                                                 ; 2       ;
+; debounce:U_FILTRO1|contador[11]                                                                                                                 ; 2       ;
+; debounce:U_FILTRO1|contador[10]                                                                                                                 ; 2       ;
+; debounce:U_FILTRO1|contador[9]                                                                                                                  ; 2       ;
+; debounce:U_FILTRO1|contador[8]                                                                                                                  ; 2       ;
+; debounce:U_FILTRO1|contador[7]                                                                                                                  ; 2       ;
+; debounce:U_FILTRO1|contador[4]                                                                                                                  ; 2       ;
+; debounce:U_FILTRO1|contador[6]                                                                                                                  ; 2       ;
+; debounce:U_FILTRO1|contador[5]                                                                                                                  ; 2       ;
+; debounce:U_FILTRO1|contador[3]                                                                                                                  ; 2       ;
+; debounce:U_FILTRO1|contador[2]                                                                                                                  ; 2       ;
+; debounce:U_FILTRO1|contador[1]                                                                                                                  ; 2       ;
+; debounce:U_FILTRO1|contador[0]                                                                                                                  ; 2       ;
+; led_timer:U_LED_EST3|contador[27]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST3|contador[26]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST3|contador[25]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST3|contador[24]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST3|contador[23]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST3|contador[22]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST3|contador[21]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST3|contador[20]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST3|contador[19]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST3|contador[18]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST3|contador[17]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST3|contador[16]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST3|contador[15]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST3|contador[14]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST3|contador[13]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST3|contador[12]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST3|contador[11]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST3|contador[10]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST3|contador[9]                                                                                                                ; 2       ;
+; led_timer:U_LED_EST3|contador[8]                                                                                                                ; 2       ;
+; led_timer:U_LED_EST3|contador[7]                                                                                                                ; 2       ;
+; led_timer:U_LED_EST3|contador[6]                                                                                                                ; 2       ;
+; led_timer:U_LED_EST3|contador[5]                                                                                                                ; 2       ;
+; led_timer:U_LED_EST3|contador[4]                                                                                                                ; 2       ;
+; led_timer:U_LED_EST3|contador[3]                                                                                                                ; 2       ;
+; led_timer:U_LED_EST3|contador[2]                                                                                                                ; 2       ;
+; led_timer:U_LED_EST3|contador[1]                                                                                                                ; 2       ;
+; led_timer:U_LED_EST1|contador[27]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST1|contador[26]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST1|contador[25]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST1|contador[24]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST1|contador[23]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST1|contador[22]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST1|contador[21]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST1|contador[20]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST1|contador[19]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST1|contador[18]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST1|contador[17]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST1|contador[16]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST1|contador[15]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST1|contador[14]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST1|contador[13]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST1|contador[12]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST1|contador[11]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST1|contador[10]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST1|contador[9]                                                                                                                ; 2       ;
+; led_timer:U_LED_EST1|contador[8]                                                                                                                ; 2       ;
+; led_timer:U_LED_EST1|contador[7]                                                                                                                ; 2       ;
+; led_timer:U_LED_EST1|contador[6]                                                                                                                ; 2       ;
+; led_timer:U_LED_EST1|contador[5]                                                                                                                ; 2       ;
+; led_timer:U_LED_EST1|contador[4]                                                                                                                ; 2       ;
+; led_timer:U_LED_EST1|contador[3]                                                                                                                ; 2       ;
+; led_timer:U_LED_EST1|contador[2]                                                                                                                ; 2       ;
+; led_timer:U_LED_EST1|contador[1]                                                                                                                ; 2       ;
 ; datapath:U_BLOCO_DADOS|LessThan8~18                                                                                                             ; 2       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[27]                                                                                                        ; 2       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[26]                                                                                                        ; 2       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[25]                                                                                                        ; 2       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[24]                                                                                                        ; 2       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[23]                                                                                                        ; 2       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[22]                                                                                                        ; 2       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[21]                                                                                                        ; 2       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[20]                                                                                                        ; 2       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[19]                                                                                                        ; 2       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[18]                                                                                                        ; 2       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[17]                                                                                                        ; 2       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[16]                                                                                                        ; 2       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[15]                                                                                                        ; 2       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[14]                                                                                                        ; 2       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[13]                                                                                                        ; 2       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[12]                                                                                                        ; 2       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[11]                                                                                                        ; 2       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[10]                                                                                                        ; 2       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[9]                                                                                                         ; 2       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[8]                                                                                                         ; 2       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[7]                                                                                                         ; 2       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[6]                                                                                                         ; 2       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[5]                                                                                                         ; 2       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[4]                                                                                                         ; 2       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[3]                                                                                                         ; 2       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[2]                                                                                                         ; 2       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[1]                                                                                                         ; 2       ;
+; led_timer:U_LED_EST4|contador[27]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST4|contador[26]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST4|contador[25]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST4|contador[24]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST4|contador[23]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST4|contador[22]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST4|contador[21]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST4|contador[20]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST4|contador[19]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST4|contador[18]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST4|contador[17]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST4|contador[16]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST4|contador[15]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST4|contador[14]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST4|contador[13]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST4|contador[12]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST4|contador[11]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST4|contador[10]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST4|contador[9]                                                                                                                ; 2       ;
+; led_timer:U_LED_EST4|contador[8]                                                                                                                ; 2       ;
+; led_timer:U_LED_EST4|contador[7]                                                                                                                ; 2       ;
+; led_timer:U_LED_EST4|contador[6]                                                                                                                ; 2       ;
+; led_timer:U_LED_EST4|contador[5]                                                                                                                ; 2       ;
+; led_timer:U_LED_EST4|contador[4]                                                                                                                ; 2       ;
+; led_timer:U_LED_EST4|contador[3]                                                                                                                ; 2       ;
+; led_timer:U_LED_EST4|contador[2]                                                                                                                ; 2       ;
+; led_timer:U_LED_EST4|contador[1]                                                                                                                ; 2       ;
 ; led_timer:U_LED_TROCO|contador[27]                                                                                                              ; 2       ;
 ; led_timer:U_LED_TROCO|contador[26]                                                                                                              ; 2       ;
 ; led_timer:U_LED_TROCO|contador[25]                                                                                                              ; 2       ;
@@ -1423,33 +1503,33 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; led_timer:U_LED_TROCO|contador[3]                                                                                                               ; 2       ;
 ; led_timer:U_LED_TROCO|contador[2]                                                                                                               ; 2       ;
 ; led_timer:U_LED_TROCO|contador[1]                                                                                                               ; 2       ;
-; led_timer:U_LED_LIBERAR|contador[27]                                                                                                            ; 2       ;
-; led_timer:U_LED_LIBERAR|contador[26]                                                                                                            ; 2       ;
-; led_timer:U_LED_LIBERAR|contador[25]                                                                                                            ; 2       ;
-; led_timer:U_LED_LIBERAR|contador[24]                                                                                                            ; 2       ;
-; led_timer:U_LED_LIBERAR|contador[23]                                                                                                            ; 2       ;
-; led_timer:U_LED_LIBERAR|contador[22]                                                                                                            ; 2       ;
-; led_timer:U_LED_LIBERAR|contador[21]                                                                                                            ; 2       ;
-; led_timer:U_LED_LIBERAR|contador[20]                                                                                                            ; 2       ;
-; led_timer:U_LED_LIBERAR|contador[19]                                                                                                            ; 2       ;
-; led_timer:U_LED_LIBERAR|contador[18]                                                                                                            ; 2       ;
-; led_timer:U_LED_LIBERAR|contador[17]                                                                                                            ; 2       ;
-; led_timer:U_LED_LIBERAR|contador[16]                                                                                                            ; 2       ;
-; led_timer:U_LED_LIBERAR|contador[15]                                                                                                            ; 2       ;
-; led_timer:U_LED_LIBERAR|contador[14]                                                                                                            ; 2       ;
-; led_timer:U_LED_LIBERAR|contador[13]                                                                                                            ; 2       ;
-; led_timer:U_LED_LIBERAR|contador[12]                                                                                                            ; 2       ;
-; led_timer:U_LED_LIBERAR|contador[11]                                                                                                            ; 2       ;
-; led_timer:U_LED_LIBERAR|contador[10]                                                                                                            ; 2       ;
-; led_timer:U_LED_LIBERAR|contador[9]                                                                                                             ; 2       ;
-; led_timer:U_LED_LIBERAR|contador[8]                                                                                                             ; 2       ;
-; led_timer:U_LED_LIBERAR|contador[7]                                                                                                             ; 2       ;
-; led_timer:U_LED_LIBERAR|contador[6]                                                                                                             ; 2       ;
-; led_timer:U_LED_LIBERAR|contador[5]                                                                                                             ; 2       ;
-; led_timer:U_LED_LIBERAR|contador[4]                                                                                                             ; 2       ;
-; led_timer:U_LED_LIBERAR|contador[3]                                                                                                             ; 2       ;
-; led_timer:U_LED_LIBERAR|contador[2]                                                                                                             ; 2       ;
-; led_timer:U_LED_LIBERAR|contador[1]                                                                                                             ; 2       ;
+; led_timer:U_LED_EST2|contador[27]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST2|contador[26]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST2|contador[25]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST2|contador[24]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST2|contador[23]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST2|contador[22]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST2|contador[21]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST2|contador[20]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST2|contador[19]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST2|contador[18]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST2|contador[17]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST2|contador[16]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST2|contador[15]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST2|contador[14]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST2|contador[13]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST2|contador[12]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST2|contador[11]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST2|contador[10]                                                                                                               ; 2       ;
+; led_timer:U_LED_EST2|contador[9]                                                                                                                ; 2       ;
+; led_timer:U_LED_EST2|contador[8]                                                                                                                ; 2       ;
+; led_timer:U_LED_EST2|contador[7]                                                                                                                ; 2       ;
+; led_timer:U_LED_EST2|contador[6]                                                                                                                ; 2       ;
+; led_timer:U_LED_EST2|contador[5]                                                                                                                ; 2       ;
+; led_timer:U_LED_EST2|contador[4]                                                                                                                ; 2       ;
+; led_timer:U_LED_EST2|contador[3]                                                                                                                ; 2       ;
+; led_timer:U_LED_EST2|contador[2]                                                                                                                ; 2       ;
+; led_timer:U_LED_EST2|contador[1]                                                                                                                ; 2       ;
 ; display_7seg:U_DISP|lpm_divide:Mod1|lpm_divide_q7m:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_45f:divider|add_sub_9_result_int[3]~4   ; 2       ;
 ; display_7seg:U_DISP|lpm_divide:Mod1|lpm_divide_q7m:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_45f:divider|add_sub_9_result_int[2]~2   ; 2       ;
 ; display_7seg:U_DISP|lpm_divide:Mod1|lpm_divide_q7m:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_45f:divider|add_sub_9_result_int[1]~0   ; 2       ;
@@ -1548,29 +1628,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; display_7seg:U_DISP|lpm_divide:Div0|lpm_divide_dem:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_g2f:divider|StageOut[68]~87             ; 1       ;
 ; display_7seg:U_DISP|lpm_divide:Div0|lpm_divide_dem:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_g2f:divider|StageOut[69]~86             ; 1       ;
 ; display_7seg:U_DISP|lpm_divide:Div0|lpm_divide_dem:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_g2f:divider|StageOut[70]~85             ; 1       ;
-; debounce:U_FILTRO1|botao_estavel~0                                                                                                              ; 1       ;
-; debounce:U_FILTRO1|Equal0~4                                                                                                                     ; 1       ;
-; debounce:U_FILTRO1|Equal0~3                                                                                                                     ; 1       ;
-; debounce:U_FILTRO1|Equal0~2                                                                                                                     ; 1       ;
-; debounce:U_FILTRO1|Equal0~1                                                                                                                     ; 1       ;
-; debounce:U_FILTRO1|Equal0~0                                                                                                                     ; 1       ;
-; debounce:U_FILTRO2|botao_estavel~0                                                                                                              ; 1       ;
-; debounce:U_FILTRO2|Equal0~4                                                                                                                     ; 1       ;
-; debounce:U_FILTRO2|Equal0~3                                                                                                                     ; 1       ;
-; debounce:U_FILTRO2|Equal0~2                                                                                                                     ; 1       ;
-; debounce:U_FILTRO2|Equal0~1                                                                                                                     ; 1       ;
-; debounce:U_FILTRO2|Equal0~0                                                                                                                     ; 1       ;
 ; debounce:U_FILTRO3|botao_estavel~0                                                                                                              ; 1       ;
 ; debounce:U_FILTRO3|Equal0~4                                                                                                                     ; 1       ;
 ; debounce:U_FILTRO3|Equal0~3                                                                                                                     ; 1       ;
 ; debounce:U_FILTRO3|Equal0~2                                                                                                                     ; 1       ;
 ; debounce:U_FILTRO3|Equal0~1                                                                                                                     ; 1       ;
 ; debounce:U_FILTRO3|Equal0~0                                                                                                                     ; 1       ;
-; debounce:U_FILTRO1|process_0~0                                                                                                                  ; 1       ;
-; debounce:U_FILTRO1|botao_ant                                                                                                                    ; 1       ;
+; debounce:U_FILTRO2|botao_estavel~0                                                                                                              ; 1       ;
+; debounce:U_FILTRO2|Equal0~4                                                                                                                     ; 1       ;
+; debounce:U_FILTRO2|Equal0~3                                                                                                                     ; 1       ;
+; debounce:U_FILTRO2|Equal0~2                                                                                                                     ; 1       ;
+; debounce:U_FILTRO2|Equal0~1                                                                                                                     ; 1       ;
+; debounce:U_FILTRO2|Equal0~0                                                                                                                     ; 1       ;
+; debounce:U_FILTRO1|botao_estavel~0                                                                                                              ; 1       ;
+; debounce:U_FILTRO1|Equal0~4                                                                                                                     ; 1       ;
+; debounce:U_FILTRO1|Equal0~3                                                                                                                     ; 1       ;
+; debounce:U_FILTRO1|Equal0~2                                                                                                                     ; 1       ;
+; debounce:U_FILTRO1|Equal0~1                                                                                                                     ; 1       ;
+; debounce:U_FILTRO1|Equal0~0                                                                                                                     ; 1       ;
 ; led_timer:U_LED_DEVOLVER|contador~27                                                                                                            ; 1       ;
-; debounce:U_FILTRO2|process_0~0                                                                                                                  ; 1       ;
-; debounce:U_FILTRO2|botao_ant                                                                                                                    ; 1       ;
+; debounce:U_FILTRO3|process_0~0                                                                                                                  ; 1       ;
+; debounce:U_FILTRO3|botao_ant                                                                                                                    ; 1       ;
+; mef:U_CONTROLE|proximo_estado.AVALIA_COMPRA~0                                                                                                   ; 1       ;
 ; datapath:U_BLOCO_DADOS|estq_kitkat[1]~4                                                                                                         ; 1       ;
 ; datapath:U_BLOCO_DADOS|estq_kitkat[0]~3                                                                                                         ; 1       ;
 ; datapath:U_BLOCO_DADOS|estq_kitkat[2]~2                                                                                                         ; 1       ;
@@ -1601,11 +1680,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; datapath:U_BLOCO_DADOS|estq_snickers[0]~2                                                                                                       ; 1       ;
 ; datapath:U_BLOCO_DADOS|estq_snickers[2]~1                                                                                                       ; 1       ;
 ; datapath:U_BLOCO_DADOS|Add7~0                                                                                                                   ; 1       ;
-; debounce:U_FILTRO3|process_0~0                                                                                                                  ; 1       ;
-; debounce:U_FILTRO3|botao_ant                                                                                                                    ; 1       ;
-; mef:U_CONTROLE|Selector0~0                                                                                                                      ; 1       ;
-; mef:U_CONTROLE|proximo_estado.AVALIA_COMPRA~1                                                                                                   ; 1       ;
-; mef:U_CONTROLE|proximo_estado.AVALIA_COMPRA~0                                                                                                   ; 1       ;
+; debounce:U_FILTRO2|process_0~0                                                                                                                  ; 1       ;
+; debounce:U_FILTRO2|botao_ant                                                                                                                    ; 1       ;
+; debounce:U_FILTRO1|process_0~0                                                                                                                  ; 1       ;
+; debounce:U_FILTRO1|botao_ant                                                                                                                    ; 1       ;
 ; led_timer:U_LED_DEVOLVER|contador~26                                                                                                            ; 1       ;
 ; led_timer:U_LED_DEVOLVER|contador~25                                                                                                            ; 1       ;
 ; led_timer:U_LED_DEVOLVER|contador~24                                                                                                            ; 1       ;
@@ -1637,8 +1715,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; mef:U_CONTROLE|Selector2~0                                                                                                                      ; 1       ;
 ; mef:U_CONTROLE|proximo_estado.DEVOLUCAO~0                                                                                                       ; 1       ;
 ; mef:U_CONTROLE|Selector1~0                                                                                                                      ; 1       ;
-; datapath:U_BLOCO_DADOS|Mux9~2                                                                                                                   ; 1       ;
-; datapath:U_BLOCO_DADOS|Mux9~0                                                                                                                   ; 1       ;
 ; debounce:U_FILTRO3|botao_pulso                                                                                                                  ; 1       ;
 ; datapath:U_BLOCO_DADOS|incremento~4                                                                                                             ; 1       ;
 ; datapath:U_BLOCO_DADOS|incremento~3                                                                                                             ; 1       ;
@@ -1647,7 +1723,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; datapath:U_BLOCO_DADOS|incremento~1                                                                                                             ; 1       ;
 ; datapath:U_BLOCO_DADOS|incremento~0                                                                                                             ; 1       ;
 ; datapath:U_BLOCO_DADOS|Equal0~0                                                                                                                 ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|led_saida~0                                                                                                         ; 1       ;
+; led_timer:U_LED_EST3|led_saida~0                                                                                                                ; 1       ;
+; led_timer:U_LED_EST3|LessThan0~6                                                                                                                ; 1       ;
+; led_timer:U_LED_EST3|LessThan0~3                                                                                                                ; 1       ;
+; led_timer:U_LED_EST3|LessThan0~2                                                                                                                ; 1       ;
+; led_timer:U_LED_EST3|LessThan0~1                                                                                                                ; 1       ;
+; led_timer:U_LED_EST3|LessThan0~0                                                                                                                ; 1       ;
+; led_timer:U_LED_EST1|led_saida~0                                                                                                                ; 1       ;
+; led_timer:U_LED_EST1|LessThan0~6                                                                                                                ; 1       ;
+; led_timer:U_LED_EST1|LessThan0~3                                                                                                                ; 1       ;
+; led_timer:U_LED_EST1|LessThan0~2                                                                                                                ; 1       ;
+; led_timer:U_LED_EST1|LessThan0~1                                                                                                                ; 1       ;
+; led_timer:U_LED_EST1|LessThan0~0                                                                                                                ; 1       ;
+; mef:U_CONTROLE|Selector0~1                                                                                                                      ; 1       ;
+; datapath:U_BLOCO_DADOS|Mux9~2                                                                                                                   ; 1       ;
+; datapath:U_BLOCO_DADOS|Mux9~0                                                                                                                   ; 1       ;
+; mef:U_CONTROLE|Selector0~0                                                                                                                      ; 1       ;
 ; led_timer:U_LED_SEM_ESTOQUE|LessThan0~6                                                                                                         ; 1       ;
 ; led_timer:U_LED_SEM_ESTOQUE|LessThan0~3                                                                                                         ; 1       ;
 ; led_timer:U_LED_SEM_ESTOQUE|LessThan0~2                                                                                                         ; 1       ;
@@ -1671,7 +1762,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; led_timer:U_LED_TROCO|LessThan0~2                                                                                                               ; 1       ;
 ; led_timer:U_LED_TROCO|LessThan0~1                                                                                                               ; 1       ;
 ; led_timer:U_LED_TROCO|LessThan0~0                                                                                                               ; 1       ;
-; led_timer:U_LED_LIBERAR|led_saida~0                                                                                                             ; 1       ;
 ; led_timer:U_LED_LIBERAR|LessThan0~6                                                                                                             ; 1       ;
 ; led_timer:U_LED_LIBERAR|LessThan0~3                                                                                                             ; 1       ;
 ; led_timer:U_LED_LIBERAR|LessThan0~2                                                                                                             ; 1       ;
@@ -1837,80 +1927,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; display_7seg:U_DISP|lpm_divide:Div0|lpm_divide_dem:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_g2f:divider|StageOut[53]~56             ; 1       ;
 ; display_7seg:U_DISP|lpm_divide:Div0|lpm_divide_dem:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_g2f:divider|StageOut[54]~55             ; 1       ;
 ; display_7seg:U_DISP|lpm_divide:Div0|lpm_divide_dem:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_g2f:divider|StageOut[54]~54             ; 1       ;
+; led_timer:U_LED_EST4|led_saida                                                                                                                  ; 1       ;
+; led_timer:U_LED_EST3|led_saida                                                                                                                  ; 1       ;
+; led_timer:U_LED_EST2|led_saida                                                                                                                  ; 1       ;
+; led_timer:U_LED_EST1|led_saida                                                                                                                  ; 1       ;
 ; led_timer:U_LED_SEM_ESTOQUE|led_saida                                                                                                           ; 1       ;
 ; led_timer:U_LED_DEVOLVER|led_saida                                                                                                              ; 1       ;
 ; led_timer:U_LED_TROCO|led_saida                                                                                                                 ; 1       ;
 ; led_timer:U_LED_LIBERAR|led_saida                                                                                                               ; 1       ;
-; debounce:U_FILTRO1|contador[17]~53                                                                                                              ; 1       ;
-; debounce:U_FILTRO1|contador[16]~52                                                                                                              ; 1       ;
-; debounce:U_FILTRO1|contador[16]~51                                                                                                              ; 1       ;
-; debounce:U_FILTRO1|contador[15]~50                                                                                                              ; 1       ;
-; debounce:U_FILTRO1|contador[15]~49                                                                                                              ; 1       ;
-; debounce:U_FILTRO1|contador[14]~48                                                                                                              ; 1       ;
-; debounce:U_FILTRO1|contador[14]~47                                                                                                              ; 1       ;
-; debounce:U_FILTRO1|contador[13]~46                                                                                                              ; 1       ;
-; debounce:U_FILTRO1|contador[13]~45                                                                                                              ; 1       ;
-; debounce:U_FILTRO1|contador[12]~44                                                                                                              ; 1       ;
-; debounce:U_FILTRO1|contador[12]~43                                                                                                              ; 1       ;
-; debounce:U_FILTRO1|contador[11]~42                                                                                                              ; 1       ;
-; debounce:U_FILTRO1|contador[11]~41                                                                                                              ; 1       ;
-; debounce:U_FILTRO1|contador[10]~40                                                                                                              ; 1       ;
-; debounce:U_FILTRO1|contador[10]~39                                                                                                              ; 1       ;
-; debounce:U_FILTRO1|contador[9]~38                                                                                                               ; 1       ;
-; debounce:U_FILTRO1|contador[9]~37                                                                                                               ; 1       ;
-; debounce:U_FILTRO1|contador[8]~36                                                                                                               ; 1       ;
-; debounce:U_FILTRO1|contador[8]~35                                                                                                               ; 1       ;
-; debounce:U_FILTRO1|contador[7]~34                                                                                                               ; 1       ;
-; debounce:U_FILTRO1|contador[7]~33                                                                                                               ; 1       ;
-; debounce:U_FILTRO1|contador[6]~32                                                                                                               ; 1       ;
-; debounce:U_FILTRO1|contador[6]~31                                                                                                               ; 1       ;
-; debounce:U_FILTRO1|contador[5]~30                                                                                                               ; 1       ;
-; debounce:U_FILTRO1|contador[5]~29                                                                                                               ; 1       ;
-; debounce:U_FILTRO1|contador[4]~28                                                                                                               ; 1       ;
-; debounce:U_FILTRO1|contador[4]~27                                                                                                               ; 1       ;
-; debounce:U_FILTRO1|contador[3]~26                                                                                                               ; 1       ;
-; debounce:U_FILTRO1|contador[3]~25                                                                                                               ; 1       ;
-; debounce:U_FILTRO1|contador[2]~24                                                                                                               ; 1       ;
-; debounce:U_FILTRO1|contador[2]~23                                                                                                               ; 1       ;
-; debounce:U_FILTRO1|contador[1]~22                                                                                                               ; 1       ;
-; debounce:U_FILTRO1|contador[1]~21                                                                                                               ; 1       ;
-; debounce:U_FILTRO1|contador[0]~19                                                                                                               ; 1       ;
-; debounce:U_FILTRO1|contador[0]~18                                                                                                               ; 1       ;
-; debounce:U_FILTRO2|contador[17]~53                                                                                                              ; 1       ;
-; debounce:U_FILTRO2|contador[16]~52                                                                                                              ; 1       ;
-; debounce:U_FILTRO2|contador[16]~51                                                                                                              ; 1       ;
-; debounce:U_FILTRO2|contador[15]~50                                                                                                              ; 1       ;
-; debounce:U_FILTRO2|contador[15]~49                                                                                                              ; 1       ;
-; debounce:U_FILTRO2|contador[14]~48                                                                                                              ; 1       ;
-; debounce:U_FILTRO2|contador[14]~47                                                                                                              ; 1       ;
-; debounce:U_FILTRO2|contador[13]~46                                                                                                              ; 1       ;
-; debounce:U_FILTRO2|contador[13]~45                                                                                                              ; 1       ;
-; debounce:U_FILTRO2|contador[12]~44                                                                                                              ; 1       ;
-; debounce:U_FILTRO2|contador[12]~43                                                                                                              ; 1       ;
-; debounce:U_FILTRO2|contador[11]~42                                                                                                              ; 1       ;
-; debounce:U_FILTRO2|contador[11]~41                                                                                                              ; 1       ;
-; debounce:U_FILTRO2|contador[10]~40                                                                                                              ; 1       ;
-; debounce:U_FILTRO2|contador[10]~39                                                                                                              ; 1       ;
-; debounce:U_FILTRO2|contador[9]~38                                                                                                               ; 1       ;
-; debounce:U_FILTRO2|contador[9]~37                                                                                                               ; 1       ;
-; debounce:U_FILTRO2|contador[8]~36                                                                                                               ; 1       ;
-; debounce:U_FILTRO2|contador[8]~35                                                                                                               ; 1       ;
-; debounce:U_FILTRO2|contador[7]~34                                                                                                               ; 1       ;
-; debounce:U_FILTRO2|contador[7]~33                                                                                                               ; 1       ;
-; debounce:U_FILTRO2|contador[6]~32                                                                                                               ; 1       ;
-; debounce:U_FILTRO2|contador[6]~31                                                                                                               ; 1       ;
-; debounce:U_FILTRO2|contador[5]~30                                                                                                               ; 1       ;
-; debounce:U_FILTRO2|contador[5]~29                                                                                                               ; 1       ;
-; debounce:U_FILTRO2|contador[4]~28                                                                                                               ; 1       ;
-; debounce:U_FILTRO2|contador[4]~27                                                                                                               ; 1       ;
-; debounce:U_FILTRO2|contador[3]~26                                                                                                               ; 1       ;
-; debounce:U_FILTRO2|contador[3]~25                                                                                                               ; 1       ;
-; debounce:U_FILTRO2|contador[2]~24                                                                                                               ; 1       ;
-; debounce:U_FILTRO2|contador[2]~23                                                                                                               ; 1       ;
-; debounce:U_FILTRO2|contador[1]~22                                                                                                               ; 1       ;
-; debounce:U_FILTRO2|contador[1]~21                                                                                                               ; 1       ;
-; debounce:U_FILTRO2|contador[0]~19                                                                                                               ; 1       ;
-; debounce:U_FILTRO2|contador[0]~18                                                                                                               ; 1       ;
 ; debounce:U_FILTRO3|contador[17]~53                                                                                                              ; 1       ;
 ; debounce:U_FILTRO3|contador[16]~52                                                                                                              ; 1       ;
 ; debounce:U_FILTRO3|contador[16]~51                                                                                                              ; 1       ;
@@ -1946,99 +1970,91 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; debounce:U_FILTRO3|contador[1]~21                                                                                                               ; 1       ;
 ; debounce:U_FILTRO3|contador[0]~19                                                                                                               ; 1       ;
 ; debounce:U_FILTRO3|contador[0]~18                                                                                                               ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[27]~83                                                                                                     ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[26]~82                                                                                                     ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[26]~81                                                                                                     ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[25]~80                                                                                                     ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[25]~79                                                                                                     ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[24]~78                                                                                                     ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[24]~77                                                                                                     ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[23]~76                                                                                                     ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[23]~75                                                                                                     ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[22]~74                                                                                                     ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[22]~73                                                                                                     ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[21]~72                                                                                                     ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[21]~71                                                                                                     ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[20]~70                                                                                                     ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[20]~69                                                                                                     ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[19]~68                                                                                                     ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[19]~67                                                                                                     ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[18]~66                                                                                                     ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[18]~65                                                                                                     ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[17]~64                                                                                                     ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[17]~63                                                                                                     ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[16]~62                                                                                                     ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[16]~61                                                                                                     ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[15]~60                                                                                                     ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[15]~59                                                                                                     ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[14]~58                                                                                                     ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[14]~57                                                                                                     ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[13]~56                                                                                                     ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[13]~55                                                                                                     ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[12]~54                                                                                                     ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[12]~53                                                                                                     ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[11]~52                                                                                                     ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[11]~51                                                                                                     ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[10]~50                                                                                                     ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[10]~49                                                                                                     ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[9]~48                                                                                                      ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[9]~47                                                                                                      ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[8]~46                                                                                                      ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[8]~45                                                                                                      ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[7]~44                                                                                                      ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[7]~43                                                                                                      ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[6]~42                                                                                                      ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[6]~41                                                                                                      ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[5]~40                                                                                                      ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[5]~39                                                                                                      ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[4]~38                                                                                                      ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[4]~37                                                                                                      ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[3]~36                                                                                                      ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[3]~35                                                                                                      ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[2]~34                                                                                                      ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[2]~33                                                                                                      ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[1]~31                                                                                                      ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[1]~30                                                                                                      ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[0]~29                                                                                                      ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[0]~28                                                                                                      ; 1       ;
-; led_timer:U_LED_SEM_ESTOQUE|contador[0]                                                                                                         ; 1       ;
-; led_timer:U_LED_DEVOLVER|Add0~54                                                                                                                ; 1       ;
-; led_timer:U_LED_DEVOLVER|Add0~53                                                                                                                ; 1       ;
-; led_timer:U_LED_DEVOLVER|Add0~52                                                                                                                ; 1       ;
-; led_timer:U_LED_DEVOLVER|Add0~51                                                                                                                ; 1       ;
-; led_timer:U_LED_DEVOLVER|Add0~50                                                                                                                ; 1       ;
-; led_timer:U_LED_DEVOLVER|Add0~49                                                                                                                ; 1       ;
-; led_timer:U_LED_DEVOLVER|Add0~48                                                                                                                ; 1       ;
-; led_timer:U_LED_DEVOLVER|Add0~47                                                                                                                ; 1       ;
-; led_timer:U_LED_DEVOLVER|Add0~46                                                                                                                ; 1       ;
-; led_timer:U_LED_DEVOLVER|Add0~45                                                                                                                ; 1       ;
-; led_timer:U_LED_DEVOLVER|Add0~44                                                                                                                ; 1       ;
-; led_timer:U_LED_DEVOLVER|Add0~43                                                                                                                ; 1       ;
-; led_timer:U_LED_DEVOLVER|Add0~42                                                                                                                ; 1       ;
-; led_timer:U_LED_DEVOLVER|Add0~41                                                                                                                ; 1       ;
-; led_timer:U_LED_DEVOLVER|Add0~40                                                                                                                ; 1       ;
-; led_timer:U_LED_DEVOLVER|Add0~39                                                                                                                ; 1       ;
-; led_timer:U_LED_DEVOLVER|Add0~38                                                                                                                ; 1       ;
-; led_timer:U_LED_DEVOLVER|Add0~37                                                                                                                ; 1       ;
-; led_timer:U_LED_DEVOLVER|Add0~36                                                                                                                ; 1       ;
-; led_timer:U_LED_DEVOLVER|Add0~35                                                                                                                ; 1       ;
-; led_timer:U_LED_DEVOLVER|Add0~34                                                                                                                ; 1       ;
-; led_timer:U_LED_DEVOLVER|Add0~33                                                                                                                ; 1       ;
-; led_timer:U_LED_DEVOLVER|Add0~32                                                                                                                ; 1       ;
-; led_timer:U_LED_DEVOLVER|Add0~31                                                                                                                ; 1       ;
-; led_timer:U_LED_DEVOLVER|Add0~30                                                                                                                ; 1       ;
-; led_timer:U_LED_DEVOLVER|Add0~29                                                                                                                ; 1       ;
-; led_timer:U_LED_DEVOLVER|Add0~28                                                                                                                ; 1       ;
-; led_timer:U_LED_DEVOLVER|Add0~27                                                                                                                ; 1       ;
-; led_timer:U_LED_DEVOLVER|Add0~26                                                                                                                ; 1       ;
-; led_timer:U_LED_DEVOLVER|Add0~25                                                                                                                ; 1       ;
-; led_timer:U_LED_DEVOLVER|Add0~24                                                                                                                ; 1       ;
-; led_timer:U_LED_DEVOLVER|Add0~23                                                                                                                ; 1       ;
-; led_timer:U_LED_DEVOLVER|Add0~22                                                                                                                ; 1       ;
-; led_timer:U_LED_DEVOLVER|Add0~21                                                                                                                ; 1       ;
-; led_timer:U_LED_DEVOLVER|Add0~20                                                                                                                ; 1       ;
-; led_timer:U_LED_DEVOLVER|Add0~19                                                                                                                ; 1       ;
-; led_timer:U_LED_DEVOLVER|Add0~18                                                                                                                ; 1       ;
+; debounce:U_FILTRO2|contador[17]~53                                                                                                              ; 1       ;
+; debounce:U_FILTRO2|contador[16]~52                                                                                                              ; 1       ;
+; debounce:U_FILTRO2|contador[16]~51                                                                                                              ; 1       ;
+; debounce:U_FILTRO2|contador[15]~50                                                                                                              ; 1       ;
+; debounce:U_FILTRO2|contador[15]~49                                                                                                              ; 1       ;
+; debounce:U_FILTRO2|contador[14]~48                                                                                                              ; 1       ;
+; debounce:U_FILTRO2|contador[14]~47                                                                                                              ; 1       ;
+; debounce:U_FILTRO2|contador[13]~46                                                                                                              ; 1       ;
+; debounce:U_FILTRO2|contador[13]~45                                                                                                              ; 1       ;
+; debounce:U_FILTRO2|contador[12]~44                                                                                                              ; 1       ;
+; debounce:U_FILTRO2|contador[12]~43                                                                                                              ; 1       ;
+; debounce:U_FILTRO2|contador[11]~42                                                                                                              ; 1       ;
+; debounce:U_FILTRO2|contador[11]~41                                                                                                              ; 1       ;
+; debounce:U_FILTRO2|contador[10]~40                                                                                                              ; 1       ;
+; debounce:U_FILTRO2|contador[10]~39                                                                                                              ; 1       ;
+; debounce:U_FILTRO2|contador[9]~38                                                                                                               ; 1       ;
+; debounce:U_FILTRO2|contador[9]~37                                                                                                               ; 1       ;
+; debounce:U_FILTRO2|contador[8]~36                                                                                                               ; 1       ;
+; debounce:U_FILTRO2|contador[8]~35                                                                                                               ; 1       ;
+; debounce:U_FILTRO2|contador[7]~34                                                                                                               ; 1       ;
+; debounce:U_FILTRO2|contador[7]~33                                                                                                               ; 1       ;
+; debounce:U_FILTRO2|contador[6]~32                                                                                                               ; 1       ;
+; debounce:U_FILTRO2|contador[6]~31                                                                                                               ; 1       ;
+; debounce:U_FILTRO2|contador[5]~30                                                                                                               ; 1       ;
+; debounce:U_FILTRO2|contador[5]~29                                                                                                               ; 1       ;
+; debounce:U_FILTRO2|contador[4]~28                                                                                                               ; 1       ;
+; debounce:U_FILTRO2|contador[4]~27                                                                                                               ; 1       ;
+; debounce:U_FILTRO2|contador[3]~26                                                                                                               ; 1       ;
+; debounce:U_FILTRO2|contador[3]~25                                                                                                               ; 1       ;
+; debounce:U_FILTRO2|contador[2]~24                                                                                                               ; 1       ;
+; debounce:U_FILTRO2|contador[2]~23                                                                                                               ; 1       ;
+; debounce:U_FILTRO2|contador[1]~22                                                                                                               ; 1       ;
+; debounce:U_FILTRO2|contador[1]~21                                                                                                               ; 1       ;
+; debounce:U_FILTRO2|contador[0]~19                                                                                                               ; 1       ;
+; debounce:U_FILTRO2|contador[0]~18                                                                                                               ; 1       ;
+; debounce:U_FILTRO1|contador[17]~53                                                                                                              ; 1       ;
+; debounce:U_FILTRO1|contador[16]~52                                                                                                              ; 1       ;
+; debounce:U_FILTRO1|contador[16]~51                                                                                                              ; 1       ;
+; debounce:U_FILTRO1|contador[15]~50                                                                                                              ; 1       ;
+; debounce:U_FILTRO1|contador[15]~49                                                                                                              ; 1       ;
+; debounce:U_FILTRO1|contador[14]~48                                                                                                              ; 1       ;
+; debounce:U_FILTRO1|contador[14]~47                                                                                                              ; 1       ;
+; debounce:U_FILTRO1|contador[13]~46                                                                                                              ; 1       ;
+; debounce:U_FILTRO1|contador[13]~45                                                                                                              ; 1       ;
+; debounce:U_FILTRO1|contador[12]~44                                                                                                              ; 1       ;
+; debounce:U_FILTRO1|contador[12]~43                                                                                                              ; 1       ;
+; debounce:U_FILTRO1|contador[11]~42                                                                                                              ; 1       ;
+; debounce:U_FILTRO1|contador[11]~41                                                                                                              ; 1       ;
+; debounce:U_FILTRO1|contador[10]~40                                                                                                              ; 1       ;
+; debounce:U_FILTRO1|contador[10]~39                                                                                                              ; 1       ;
+; debounce:U_FILTRO1|contador[9]~38                                                                                                               ; 1       ;
+; debounce:U_FILTRO1|contador[9]~37                                                                                                               ; 1       ;
+; debounce:U_FILTRO1|contador[8]~36                                                                                                               ; 1       ;
+; debounce:U_FILTRO1|contador[8]~35                                                                                                               ; 1       ;
+; debounce:U_FILTRO1|contador[7]~34                                                                                                               ; 1       ;
+; debounce:U_FILTRO1|contador[7]~33                                                                                                               ; 1       ;
+; debounce:U_FILTRO1|contador[6]~32                                                                                                               ; 1       ;
+; debounce:U_FILTRO1|contador[6]~31                                                                                                               ; 1       ;
+; debounce:U_FILTRO1|contador[5]~30                                                                                                               ; 1       ;
+; debounce:U_FILTRO1|contador[5]~29                                                                                                               ; 1       ;
+; debounce:U_FILTRO1|contador[4]~28                                                                                                               ; 1       ;
+; debounce:U_FILTRO1|contador[4]~27                                                                                                               ; 1       ;
+; debounce:U_FILTRO1|contador[3]~26                                                                                                               ; 1       ;
+; debounce:U_FILTRO1|contador[3]~25                                                                                                               ; 1       ;
+; debounce:U_FILTRO1|contador[2]~24                                                                                                               ; 1       ;
+; debounce:U_FILTRO1|contador[2]~23                                                                                                               ; 1       ;
+; debounce:U_FILTRO1|contador[1]~22                                                                                                               ; 1       ;
+; debounce:U_FILTRO1|contador[1]~21                                                                                                               ; 1       ;
+; debounce:U_FILTRO1|contador[0]~19                                                                                                               ; 1       ;
+; debounce:U_FILTRO1|contador[0]~18                                                                                                               ; 1       ;
+; led_timer:U_LED_EST3|contador[27]~83                                                                                                            ; 1       ;
+; led_timer:U_LED_EST3|contador[26]~82                                                                                                            ; 1       ;
+; led_timer:U_LED_EST3|contador[26]~81                                                                                                            ; 1       ;
+; led_timer:U_LED_EST3|contador[25]~80                                                                                                            ; 1       ;
+; led_timer:U_LED_EST3|contador[25]~79                                                                                                            ; 1       ;
+; led_timer:U_LED_EST3|contador[24]~78                                                                                                            ; 1       ;
+; led_timer:U_LED_EST3|contador[24]~77                                                                                                            ; 1       ;
+; led_timer:U_LED_EST3|contador[23]~76                                                                                                            ; 1       ;
+; led_timer:U_LED_EST3|contador[23]~75                                                                                                            ; 1       ;
+; led_timer:U_LED_EST3|contador[22]~74                                                                                                            ; 1       ;
+; led_timer:U_LED_EST3|contador[22]~73                                                                                                            ; 1       ;
+; led_timer:U_LED_EST3|contador[21]~72                                                                                                            ; 1       ;
+; led_timer:U_LED_EST3|contador[21]~71                                                                                                            ; 1       ;
+; led_timer:U_LED_EST3|contador[20]~70                                                                                                            ; 1       ;
+; led_timer:U_LED_EST3|contador[20]~69                                                                                                            ; 1       ;
 +-------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -2047,151 +2063,150 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+------------------------+
 ; Other Routing Resource Type ; Usage                  ;
 +-----------------------------+------------------------+
-; Block interconnects         ; 701 / 54,004 ( 1 % )   ;
-; C16 interconnects           ; 6 / 2,100 ( < 1 % )    ;
-; C4 interconnects            ; 211 / 36,000 ( < 1 % ) ;
-; Direct links                ; 303 / 54,004 ( < 1 % ) ;
+; Block interconnects         ; 769 / 54,004 ( 1 % )   ;
+; C16 interconnects           ; 7 / 2,100 ( < 1 % )    ;
+; C4 interconnects            ; 241 / 36,000 ( < 1 % ) ;
+; Direct links                ; 340 / 54,004 ( < 1 % ) ;
 ; Global clocks               ; 2 / 16 ( 13 % )        ;
-; Local interconnects         ; 439 / 18,752 ( 2 % )   ;
-; R24 interconnects           ; 16 / 1,900 ( < 1 % )   ;
-; R4 interconnects            ; 261 / 46,920 ( < 1 % ) ;
+; Local interconnects         ; 499 / 18,752 ( 3 % )   ;
+; R24 interconnects           ; 17 / 1,900 ( < 1 % )   ;
+; R4 interconnects            ; 314 / 46,920 ( < 1 % ) ;
 +-----------------------------+------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 12.44) ; Number of LABs  (Total = 66) ;
+; Number of Logic Elements  (Average = 12.65) ; Number of LABs  (Total = 71) ;
 +---------------------------------------------+------------------------------+
-; 1                                           ; 5                            ;
-; 2                                           ; 2                            ;
-; 3                                           ; 1                            ;
+; 1                                           ; 8                            ;
+; 2                                           ; 1                            ;
+; 3                                           ; 0                            ;
 ; 4                                           ; 0                            ;
-; 5                                           ; 4                            ;
-; 6                                           ; 0                            ;
-; 7                                           ; 1                            ;
+; 5                                           ; 1                            ;
+; 6                                           ; 2                            ;
+; 7                                           ; 2                            ;
 ; 8                                           ; 1                            ;
-; 9                                           ; 1                            ;
-; 10                                          ; 1                            ;
-; 11                                          ; 4                            ;
-; 12                                          ; 1                            ;
-; 13                                          ; 3                            ;
-; 14                                          ; 3                            ;
-; 15                                          ; 6                            ;
-; 16                                          ; 33                           ;
+; 9                                           ; 2                            ;
+; 10                                          ; 0                            ;
+; 11                                          ; 5                            ;
+; 12                                          ; 0                            ;
+; 13                                          ; 1                            ;
+; 14                                          ; 0                            ;
+; 15                                          ; 5                            ;
+; 16                                          ; 43                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.11) ; Number of LABs  (Total = 66) ;
+; LAB-wide Signals  (Average = 1.18) ; Number of LABs  (Total = 71) ;
 +------------------------------------+------------------------------+
-; 1 Async. clear                     ; 30                           ;
-; 1 Clock                            ; 30                           ;
+; 1 Async. clear                     ; 33                           ;
+; 1 Clock                            ; 33                           ;
 ; 1 Clock enable                     ; 2                            ;
-; 1 Sync. clear                      ; 5                            ;
-; 1 Sync. load                       ; 6                            ;
+; 1 Sync. clear                      ; 6                            ;
+; 1 Sync. load                       ; 10                           ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 15.24) ; Number of LABs  (Total = 66) ;
+; Number of Signals Sourced  (Average = 16.07) ; Number of LABs  (Total = 71) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 5                            ;
+; 1                                            ; 8                            ;
 ; 2                                            ; 1                            ;
 ; 3                                            ; 0                            ;
-; 4                                            ; 1                            ;
-; 5                                            ; 2                            ;
-; 6                                            ; 2                            ;
-; 7                                            ; 1                            ;
-; 8                                            ; 2                            ;
-; 9                                            ; 0                            ;
-; 10                                           ; 3                            ;
+; 4                                            ; 0                            ;
+; 5                                            ; 1                            ;
+; 6                                            ; 1                            ;
+; 7                                            ; 3                            ;
+; 8                                            ; 1                            ;
+; 9                                            ; 2                            ;
+; 10                                           ; 1                            ;
 ; 11                                           ; 3                            ;
-; 12                                           ; 3                            ;
-; 13                                           ; 1                            ;
-; 14                                           ; 1                            ;
-; 15                                           ; 9                            ;
-; 16                                           ; 12                           ;
-; 17                                           ; 0                            ;
-; 18                                           ; 2                            ;
-; 19                                           ; 3                            ;
-; 20                                           ; 1                            ;
+; 12                                           ; 0                            ;
+; 13                                           ; 0                            ;
+; 14                                           ; 2                            ;
+; 15                                           ; 6                            ;
+; 16                                           ; 17                           ;
+; 17                                           ; 2                            ;
+; 18                                           ; 0                            ;
+; 19                                           ; 4                            ;
+; 20                                           ; 0                            ;
 ; 21                                           ; 1                            ;
-; 22                                           ; 0                            ;
+; 22                                           ; 1                            ;
 ; 23                                           ; 0                            ;
-; 24                                           ; 1                            ;
+; 24                                           ; 0                            ;
 ; 25                                           ; 2                            ;
 ; 26                                           ; 0                            ;
 ; 27                                           ; 3                            ;
-; 28                                           ; 0                            ;
-; 29                                           ; 2                            ;
-; 30                                           ; 5                            ;
+; 28                                           ; 2                            ;
+; 29                                           ; 1                            ;
+; 30                                           ; 8                            ;
+; 31                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 7.08) ; Number of LABs  (Total = 66) ;
+; Number of Signals Sourced Out  (Average = 7.14) ; Number of LABs  (Total = 71) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 8                            ;
+; 1                                               ; 11                           ;
 ; 2                                               ; 4                            ;
 ; 3                                               ; 10                           ;
-; 4                                               ; 3                            ;
-; 5                                               ; 2                            ;
-; 6                                               ; 2                            ;
-; 7                                               ; 7                            ;
-; 8                                               ; 5                            ;
+; 4                                               ; 2                            ;
+; 5                                               ; 0                            ;
+; 6                                               ; 0                            ;
+; 7                                               ; 11                           ;
+; 8                                               ; 10                           ;
 ; 9                                               ; 3                            ;
-; 10                                              ; 3                            ;
-; 11                                              ; 3                            ;
-; 12                                              ; 8                            ;
+; 10                                              ; 1                            ;
+; 11                                              ; 5                            ;
+; 12                                              ; 2                            ;
 ; 13                                              ; 4                            ;
-; 14                                              ; 2                            ;
-; 15                                              ; 0                            ;
-; 16                                              ; 2                            ;
+; 14                                              ; 0                            ;
+; 15                                              ; 3                            ;
+; 16                                              ; 5                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 10.38) ; Number of LABs  (Total = 66) ;
+; Number of Distinct Inputs  (Average = 10.31) ; Number of LABs  (Total = 71) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
 ; 2                                            ; 2                            ;
-; 3                                            ; 2                            ;
+; 3                                            ; 3                            ;
 ; 4                                            ; 8                            ;
-; 5                                            ; 5                            ;
-; 6                                            ; 5                            ;
+; 5                                            ; 4                            ;
+; 6                                            ; 9                            ;
 ; 7                                            ; 6                            ;
 ; 8                                            ; 3                            ;
-; 9                                            ; 2                            ;
-; 10                                           ; 1                            ;
+; 9                                            ; 3                            ;
+; 10                                           ; 3                            ;
 ; 11                                           ; 2                            ;
-; 12                                           ; 3                            ;
-; 13                                           ; 4                            ;
+; 12                                           ; 1                            ;
+; 13                                           ; 6                            ;
 ; 14                                           ; 2                            ;
-; 15                                           ; 6                            ;
-; 16                                           ; 2                            ;
-; 17                                           ; 3                            ;
-; 18                                           ; 3                            ;
-; 19                                           ; 2                            ;
-; 20                                           ; 2                            ;
-; 21                                           ; 0                            ;
+; 15                                           ; 4                            ;
+; 16                                           ; 4                            ;
+; 17                                           ; 1                            ;
+; 18                                           ; 0                            ;
+; 19                                           ; 4                            ;
+; 20                                           ; 1                            ;
+; 21                                           ; 3                            ;
 ; 22                                           ; 0                            ;
 ; 23                                           ; 0                            ;
-; 24                                           ; 1                            ;
-; 25                                           ; 0                            ;
-; 26                                           ; 0                            ;
-; 27                                           ; 1                            ;
+; 24                                           ; 0                            ;
+; 25                                           ; 2                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -2251,7 +2266,7 @@ Info (176353): Automatically promoted node ch_reset (placed in PIN L22 (CLK4, LV
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
@@ -2265,11 +2280,16 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (11888): Total time spent on timing analysis during the Fitter is 0.23 seconds.
 Info (306004): Started post-fitting delay annotation
-Warning (306006): Found 25 output pins without output pin load capacitance assignment
+Warning (306006): Found 30 output pins without output pin load capacitance assignment
     Info (306007): Pin "led_liberar" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "led_troco" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "led_devolver" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "led_sem_estoque" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "led_estados[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "led_estados[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "led_estados[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "led_estados[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "led_estados[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "hex_centenas[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "hex_centenas[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "hex_centenas[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -2296,17 +2316,17 @@ Info (306004): Started post-fitting delay annotation
 Info (306005): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
-Info (144001): Generated suppressed messages file Q:/output_files/top_level.fit.smsg
+Info (144001): Generated suppressed messages file C:/Users/mikae/OneDrive/Documentos/circuitos/output_files/top_level.fit.smsg
 Info: Quartus II 32-bit Fitter was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 484 megabytes
-    Info: Processing ended: Wed Jul 01 09:56:12 2026
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Processing ended: Wed Jul 08 10:07:53 2026
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:04
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in Q:/output_files/top_level.fit.smsg.
+The suppressed messages can be found in C:/Users/mikae/OneDrive/Documentos/circuitos/output_files/top_level.fit.smsg.
 
 
